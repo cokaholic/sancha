@@ -30,7 +30,7 @@
                                  options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading)
                               attributes:attributeDic
                                  context:nil];
-    size = CGSizeMake(frame.size.width, frame.size.height+1);
+    size = CGSizeMake(frame.size.width, frame.size.height);
     
     return size;
 }

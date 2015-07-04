@@ -14,6 +14,7 @@
 		38D2CE7C1B478B1A00110146 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D2CE7B1B478B1A00110146 /* libxml2.dylib */; };
 		38D2CE821B47B9CC00110146 /* EventDetailData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE811B47B9CC00110146 /* EventDetailData.m */; };
 		9F85226B1B47B793007B7A23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD61B477E9B003A7464 /* AppDelegate.m */; };
+		9F8522711B47CCD0007B7A23 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */; };
 		9FF3EAD41B477E9B003A7464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD31B477E9B003A7464 /* main.m */; };
 		9FF3EADF1B477E9B003A7464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF3EADE1B477E9B003A7464 /* Images.xcassets */; };
 		9FF3EAEE1B477E9B003A7464 /* sanchaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAED1B477E9B003A7464 /* sanchaTests.m */; };
@@ -46,6 +47,8 @@
 		38D2CE7B1B478B1A00110146 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		38D2CE801B47B9CC00110146 /* EventDetailData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailData.h; sourceTree = "<group>"; };
 		38D2CE811B47B9CC00110146 /* EventDetailData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailData.m; sourceTree = "<group>"; };
+		9F85226F1B47CCD0007B7A23 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		9FF3EACE1B477E9B003A7464 /* sancha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sancha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF3EAD21B477E9B003A7464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FF3EAD31B477E9B003A7464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				9FF3EAD61B477E9B003A7464 /* AppDelegate.m */,
 				9FF3EAF71B478247003A7464 /* RootViewController.h */,
 				9FF3EAF81B478247003A7464 /* RootViewController.m */,
+				9F85226F1B47CCD0007B7A23 /* EventDetailViewController.h */,
+				9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */,
 				9FF3EAFA1B478552003A7464 /* EventTableViewCell.h */,
 				9FF3EAFB1B478552003A7464 /* EventTableViewCell.m */,
 				9FF3EAFD1B478B09003A7464 /* Common.h */,
@@ -325,6 +330,7 @@
 				9FF3EAD41B477E9B003A7464 /* main.m in Sources */,
 				38D2CE731B47855800110146 /* EventData.m in Sources */,
 				38D2CE7A1B478AF600110146 /* HTMLParser.m in Sources */,
+				9F8522711B47CCD0007B7A23 /* EventDetailViewController.m in Sources */,
 				9FF3EAF91B478247003A7464 /* RootViewController.m in Sources */,
 				38D2CE821B47B9CC00110146 /* EventDetailData.m in Sources */,
 			);

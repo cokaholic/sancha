@@ -122,8 +122,6 @@
 
 - (void)initCellWithData:(EventData *)data
 {
-    NSLog(@"%@",data.date);
-    
     NSDictionary *dateDictionary = [Common dateConvertToDateDictionary:data.date];
     
     _yearLabel.text = [NSString stringWithFormat:@"%@",dateDictionary[@"year"]];

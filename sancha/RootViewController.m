@@ -11,6 +11,7 @@
 #import "EventTableViewCell.h"
 #import "EventDataManager.h"
 #import "EventData.h"
+#import "EventDetailViewController.h"
 #import <UIScrollView+PullToRefreshCoreText.h>
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -22,7 +23,8 @@
 
 @implementation RootViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     [self initData];
@@ -44,6 +46,7 @@
     _eventTableView.delegate = self;
     _eventTableView.separatorStyle = NO;
     _eventTableView.backgroundColor = CLEAR_COLOR;
+    _eventTableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
     [self.view addSubview:_eventTableView];
     
     __weak typeof(self) weakSelf = self;
@@ -68,6 +71,13 @@
 - (void)setUI
 {
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 #pragma mark - UITableView DataSource
@@ -106,6 +116,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    EventData *eventData = (EventData *)_manager.dataList[indexPath.row];
+    EventDetailViewController *eventDetailViewController = [[EventDetailViewController alloc]init];
+    eventDetailViewController.detailURL = eventData.detailURL;
+    [self .navigationController pushViewController:eventDetailViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
