@@ -52,8 +52,6 @@
 		38D2CE7B1B478B1A00110146 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		38D2CE801B47B9CC00110146 /* EventDetailData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailData.h; sourceTree = "<group>"; };
 		38D2CE811B47B9CC00110146 /* EventDetailData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailData.m; sourceTree = "<group>"; };
-		9F85226F1B47CCD0007B7A23 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
-		9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		38D2CE8F1B48034000110146 /* PrefectureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefectureViewController.h; sourceTree = "<group>"; };
 		38D2CE901B48034000110146 /* PrefectureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefectureViewController.m; sourceTree = "<group>"; };
 		38D2CE921B48066100110146 /* PrefectureCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefectureCellData.h; sourceTree = "<group>"; };
@@ -64,6 +62,8 @@
 		38D2CE9C1B480E0F00110146 /* PerformerCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformerCellData.m; sourceTree = "<group>"; };
 		38D2CE9E1B480E6600110146 /* FilteringManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteringManager.h; sourceTree = "<group>"; };
 		38D2CE9F1B480E6600110146 /* FilteringManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilteringManager.m; sourceTree = "<group>"; };
+		9F85226F1B47CCD0007B7A23 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		9FF3EACE1B477E9B003A7464 /* sancha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sancha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF3EAD21B477E9B003A7464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FF3EAD31B477E9B003A7464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +103,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38C07A851B4827BE00635668 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				38D2CE741B478ADE00110146 /* HTMLParser */,
+				9FF3EAFD1B478B09003A7464 /* Common.h */,
+				9FF3EAFE1B478B09003A7464 /* Common.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		38C07A861B4827D600635668 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38C07A891B48283300635668 /* Manager */,
+				38D2CE711B47855800110146 /* EventData.h */,
+				38D2CE721B47855800110146 /* EventData.m */,
+				38D2CE801B47B9CC00110146 /* EventDetailData.h */,
+				38D2CE811B47B9CC00110146 /* EventDetailData.m */,
+				38D2CE921B48066100110146 /* PrefectureCellData.h */,
+				38D2CE931B48066100110146 /* PrefectureCellData.m */,
+				38D2CE9B1B480E0F00110146 /* PerformerCellData.h */,
+				38D2CE9C1B480E0F00110146 /* PerformerCellData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		38C07A871B48280600635668 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9FF3EAF71B478247003A7464 /* RootViewController.h */,
+				9FF3EAF81B478247003A7464 /* RootViewController.m */,
+				9F85226F1B47CCD0007B7A23 /* EventDetailViewController.h */,
+				9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */,
+				38D2CE8F1B48034000110146 /* PrefectureViewController.h */,
+				38D2CE901B48034000110146 /* PrefectureViewController.m */,
+				38D2CE981B480D7000110146 /* PerformerViewController.h */,
+				38D2CE991B480D7000110146 /* PerformerViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		38C07A881B48282100635668 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FF3EAFA1B478552003A7464 /* EventTableViewCell.h */,
+				9FF3EAFB1B478552003A7464 /* EventTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		38C07A891B48283300635668 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				38D2CE6E1B47840A00110146 /* EventDataManager.h */,
+				38D2CE6F1B47840B00110146 /* EventDataManager.m */,
+				38D2CE9E1B480E6600110146 /* FilteringManager.h */,
+				38D2CE9F1B480E6600110146 /* FilteringManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		38C07A8A1B4828A000635668 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9FF3EAD51B477E9B003A7464 /* AppDelegate.h */,
+				9FF3EAD61B477E9B003A7464 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 		38D2CE741B478ADE00110146 /* HTMLParser */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,33 +217,11 @@
 		9FF3EAD01B477E9B003A7464 /* sancha */ = {
 			isa = PBXGroup;
 			children = (
-				9FF3EAD51B477E9B003A7464 /* AppDelegate.h */,
-				9FF3EAD61B477E9B003A7464 /* AppDelegate.m */,
-				9FF3EAF71B478247003A7464 /* RootViewController.h */,
-				9FF3EAF81B478247003A7464 /* RootViewController.m */,
-				9F85226F1B47CCD0007B7A23 /* EventDetailViewController.h */,
-				9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */,
-				9FF3EAFA1B478552003A7464 /* EventTableViewCell.h */,
-				9FF3EAFB1B478552003A7464 /* EventTableViewCell.m */,
-				9FF3EAFD1B478B09003A7464 /* Common.h */,
-				9FF3EAFE1B478B09003A7464 /* Common.m */,
-				38D2CE6E1B47840A00110146 /* EventDataManager.h */,
-				38D2CE6F1B47840B00110146 /* EventDataManager.m */,
-				38D2CE711B47855800110146 /* EventData.h */,
-				38D2CE721B47855800110146 /* EventData.m */,
-				38D2CE801B47B9CC00110146 /* EventDetailData.h */,
-				38D2CE811B47B9CC00110146 /* EventDetailData.m */,
-				38D2CE8F1B48034000110146 /* PrefectureViewController.h */,
-				38D2CE901B48034000110146 /* PrefectureViewController.m */,
-				38D2CE921B48066100110146 /* PrefectureCellData.h */,
-				38D2CE931B48066100110146 /* PrefectureCellData.m */,
-				38D2CE981B480D7000110146 /* PerformerViewController.h */,
-				38D2CE991B480D7000110146 /* PerformerViewController.m */,
-				38D2CE9B1B480E0F00110146 /* PerformerCellData.h */,
-				38D2CE9C1B480E0F00110146 /* PerformerCellData.m */,
-				38D2CE9E1B480E6600110146 /* FilteringManager.h */,
-				38D2CE9F1B480E6600110146 /* FilteringManager.m */,
-				38D2CE741B478ADE00110146 /* HTMLParser */,
+				38C07A8A1B4828A000635668 /* AppDelegate */,
+				38C07A851B4827BE00635668 /* Util */,
+				38C07A861B4827D600635668 /* Model */,
+				38C07A871B48280600635668 /* ViewController */,
+				38C07A881B48282100635668 /* View */,
 				9FF3EADE1B477E9B003A7464 /* Images.xcassets */,
 				9FF3EAD11B477E9B003A7464 /* Supporting Files */,
 			);
