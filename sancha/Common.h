@@ -14,6 +14,7 @@
 #define EVENT_CELL_HEIGHT 90
 #define DEFAULT_FONT(fontSize) [UIFont fontWithName:@"HiraKakuProN-W3" size:fontSize]
 #define DEFAULT_BOLD_FONT(fontSize) [UIFont fontWithName:@"HiraKakuProN-W6" size:fontSize]
+#define REFRESH_TEXT_FONT(fontSize) [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:fontSize]
 #define DEFAULT_TEXT_COLOR [UIColor colorWithRed:100.0f/255.0f green:100.0f/255.0f blue:100.0f/255.0f alpha:1.0]
 #define MAIN_COLOR [UIColor colorWithRed:72.0f/255.0f green:211.0f/255.0f blue:178.0f/255.0f alpha:1.0]
 #define CANCEL_COLOR [UIColor colorWithRed:247.0/255.0 green:93/255.0 blue:72/255.0 alpha:1]

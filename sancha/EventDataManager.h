@@ -14,6 +14,6 @@
 @property(nonatomic, retain, readonly) NSArray *performers;
 
 + (EventDataManager *) sharedManager;
-
+- (void) loadData;
 
 @end

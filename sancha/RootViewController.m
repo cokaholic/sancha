@@ -11,13 +11,13 @@
 #import "EventTableViewCell.h"
 #import "EventDataManager.h"
 #import "EventData.h"
+#import <UIScrollView+PullToRefreshCoreText.h>
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
-{
-    UITableView *_eventTableView;
-    NSMutableArray *_eventItemArray;
-    EventDataManager *_manager;
-}
+
+@property (nonatomic, retain) EventDataManager *manager;
+@property (nonatomic, retain) UITableView *eventTableView;
+
 @end
 
 @implementation RootViewController
@@ -45,6 +45,24 @@
     _eventTableView.separatorStyle = NO;
     _eventTableView.backgroundColor = CLEAR_COLOR;
     [self.view addSubview:_eventTableView];
+    
+    __weak typeof(self) weakSelf = self;
+    [_eventTableView addPullToRefreshWithPullText:@"Pull To Refresh"
+                                    pullTextColor:[UIColor blackColor]
+                                     pullTextFont:REFRESH_TEXT_FONT(30)
+                                   refreshingText:@"Refreshing"
+                              refreshingTextColor:MAIN_COLOR
+                               refreshingTextFont:REFRESH_TEXT_FONT(30)
+                                           action:^{
+                                               dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0L), ^{
+                                                   
+                                                   [weakSelf.manager loadData];
+                                                   dispatch_async(dispatch_get_main_queue(), ^{
+                                                       [weakSelf.eventTableView reloadData];
+                                                       [weakSelf.eventTableView finishLoading];
+                                                   });
+                                               });
+                                           }];
 }
 
 - (void)setUI
