@@ -12,8 +12,8 @@
 		38D2CE791B478AF600110146 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE761B478AF600110146 /* HTMLNode.m */; };
 		38D2CE7A1B478AF600110146 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE781B478AF600110146 /* HTMLParser.m */; };
 		38D2CE7C1B478B1A00110146 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D2CE7B1B478B1A00110146 /* libxml2.dylib */; };
+		9F85226B1B47B793007B7A23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD61B477E9B003A7464 /* AppDelegate.m */; };
 		9FF3EAD41B477E9B003A7464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD31B477E9B003A7464 /* main.m */; };
-		9FF3EAD71B477E9B003A7464 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD61B477E9B003A7464 /* AppDelegate.m */; };
 		9FF3EADF1B477E9B003A7464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF3EADE1B477E9B003A7464 /* Images.xcassets */; };
 		9FF3EAEE1B477E9B003A7464 /* sanchaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAED1B477E9B003A7464 /* sanchaTests.m */; };
 		9FF3EAF91B478247003A7464 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAF81B478247003A7464 /* RootViewController.m */; };
@@ -82,16 +82,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		51E01855AC8EB1CDC7490D0C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				111E302BAAD08455688221FF /* Pods-sancha.debug.xcconfig */,
-				F3D91AA0B8DEFD3662D3685F /* Pods-sancha.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-                };
-
 		38D2CE741B478ADE00110146 /* HTMLParser */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +91,15 @@
 				38D2CE781B478AF600110146 /* HTMLParser.m */,
 			);
 			name = HTMLParser;
+			sourceTree = "<group>";
+		};
+		51E01855AC8EB1CDC7490D0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				111E302BAAD08455688221FF /* Pods-sancha.debug.xcconfig */,
+				F3D91AA0B8DEFD3662D3685F /* Pods-sancha.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		9FF3EAC51B477E9B003A7464 = {
@@ -313,11 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F85226B1B47B793007B7A23 /* AppDelegate.m in Sources */,
 				9FF3EAFC1B478552003A7464 /* EventTableViewCell.m in Sources */,
-				9FF3EAD71B477E9B003A7464 /* AppDelegate.m in Sources */,
 				9FF3EAFF1B478B09003A7464 /* Common.m in Sources */,
 				38D2CE701B47840B00110146 /* EventDataManager.m in Sources */,
-				9FF3EAD71B477E9B003A7464 /* AppDelegate.m in Sources */,
 				38D2CE791B478AF600110146 /* HTMLNode.m in Sources */,
 				9FF3EAD41B477E9B003A7464 /* main.m in Sources */,
 				38D2CE731B47855800110146 /* EventData.m in Sources */,
