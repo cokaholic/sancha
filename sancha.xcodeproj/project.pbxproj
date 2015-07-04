@@ -10,9 +10,7 @@
 		9FF3EAD41B477E9B003A7464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD31B477E9B003A7464 /* main.m */; };
 		9FF3EAD71B477E9B003A7464 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD61B477E9B003A7464 /* AppDelegate.m */; };
 		9FF3EADA1B477E9B003A7464 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD91B477E9B003A7464 /* ViewController.m */; };
-		9FF3EADD1B477E9B003A7464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF3EADB1B477E9B003A7464 /* Main.storyboard */; };
 		9FF3EADF1B477E9B003A7464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF3EADE1B477E9B003A7464 /* Images.xcassets */; };
-		9FF3EAE21B477E9B003A7464 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF3EAE01B477E9B003A7464 /* LaunchScreen.xib */; };
 		9FF3EAEE1B477E9B003A7464 /* sanchaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAED1B477E9B003A7464 /* sanchaTests.m */; };
 /* End PBXBuildFile section */
 
@@ -34,9 +32,7 @@
 		9FF3EAD61B477E9B003A7464 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9FF3EAD81B477E9B003A7464 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9FF3EAD91B477E9B003A7464 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9FF3EADC1B477E9B003A7464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FF3EADE1B477E9B003A7464 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9FF3EAE11B477E9B003A7464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9FF3EAE71B477E9B003A7464 /* sanchaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sanchaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF3EAEC1B477E9B003A7464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FF3EAED1B477E9B003A7464 /* sanchaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sanchaTests.m; sourceTree = "<group>"; };
@@ -85,9 +81,7 @@
 				9FF3EAD61B477E9B003A7464 /* AppDelegate.m */,
 				9FF3EAD81B477E9B003A7464 /* ViewController.h */,
 				9FF3EAD91B477E9B003A7464 /* ViewController.m */,
-				9FF3EADB1B477E9B003A7464 /* Main.storyboard */,
 				9FF3EADE1B477E9B003A7464 /* Images.xcassets */,
-				9FF3EAE01B477E9B003A7464 /* LaunchScreen.xib */,
 				9FF3EAD11B477E9B003A7464 /* Supporting Files */,
 			);
 			path = sancha;
@@ -199,8 +193,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FF3EADD1B477E9B003A7464 /* Main.storyboard in Resources */,
-				9FF3EAE21B477E9B003A7464 /* LaunchScreen.xib in Resources */,
 				9FF3EADF1B477E9B003A7464 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,25 +234,6 @@
 			targetProxy = 9FF3EAE81B477E9B003A7464 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		9FF3EADB1B477E9B003A7464 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FF3EADC1B477E9B003A7464 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9FF3EAE01B477E9B003A7464 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FF3EAE11B477E9B003A7464 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9FF3EAEF1B477E9B003A7464 /* Debug */ = {
@@ -347,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = sancha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = sancha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
