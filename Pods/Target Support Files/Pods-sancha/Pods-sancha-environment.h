@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_ARChromeActivity 0
 #define COCOAPODS_VERSION_PATCH_ARChromeActivity 2
 
+// AutoScrollLabel
+#define COCOAPODS_POD_AVAILABLE_AutoScrollLabel
+#define COCOAPODS_VERSION_MAJOR_AutoScrollLabel 0
+#define COCOAPODS_VERSION_MINOR_AutoScrollLabel 4
+#define COCOAPODS_VERSION_PATCH_AutoScrollLabel 1
+
 // KINWebBrowser
 #define COCOAPODS_POD_AVAILABLE_KINWebBrowser
 #define COCOAPODS_VERSION_MAJOR_KINWebBrowser 1

@@ -10,11 +10,14 @@
 #import "EventDetailData.h"
 #import "Common.h"
 #import <KINWebBrowserViewController.h>
+#import <AutoScrollLabel/CBAutoScrollLabel.h>
 
 @interface EventDetailViewController ()
 {
+    CBAutoScrollLabel *_navBarTitleLabel;
     UIScrollView *_backScrollView;
     UIView *_backWhiteView;
+    
     UITextView *_eventTitleTextView;
     UITextView *_performerTextView;
     UITextView *_dateTextView;
@@ -56,6 +59,14 @@
 
 - (void)initUI
 {
+    _navBarTitleLabel = [[CBAutoScrollLabel alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width-80, 44)];
+    _navBarTitleLabel.textColor = DEFAULT_TEXT_COLOR;
+    _navBarTitleLabel.font = DEFAULT_FONT(16);
+    _navBarTitleLabel.scrollSpeed = 35;
+    _navBarTitleLabel.labelSpacing = 30;
+    _navBarTitleLabel.pauseInterval = 2.0;
+    _navBarTitleLabel.scrollDirection = CBAutoScrollDirectionLeft;
+    self.navigationItem.titleView = _navBarTitleLabel;
     
     self.view.backgroundColor = BACKGROUND_COLOR;
     
@@ -201,6 +212,7 @@
 
 - (void)setUI
 {
+    _navBarTitleLabel.text = _eventDetailData.title;
     _performerTitleLabel.text = @"出演者";
     _dateTitleLabel.text = @"開催日時";
     _locationTitleLabel.text = @"会場";
@@ -237,11 +249,13 @@
     
     textViewSize = [Common sizeOfString:_eventDetailData.howTo inFont:DEFAULT_FONT(16) maxWidth:[Common screenSize].width - 30];
     
-    _howToTextView.frame = CGRectMake(0, CGRectGetMaxY(_howToTitleLabel.frame), [Common screenSize].width - 10, textViewSize.height*0.85);
+    _howToTextView.frame = CGRectMake(0, CGRectGetMaxY(_howToTitleLabel.frame), [Common screenSize].width - 10, textViewSize.height);
     if (textViewSize.height<150) {
         _howToTextView.frame = CGRectMake(0, CGRectGetMaxY(_howToTitleLabel.frame), [Common screenSize].width - 10, textViewSize.height + 30);
     }
     _howToTextView.text = _eventDetailData.howTo;
+    
+    NSLog(@"%@",_eventDetailData.howTo);
     
     _officialHPIconImageView.center = CGPointMake(_officialHPIconImageView.center.x, _officialHPIconImageView.center.y + CGRectGetMaxY(_howToTextView.frame));
     _officialHPTitleLabel.center = CGPointMake(_officialHPTitleLabel.center.x, _officialHPTitleLabel.center.y  + CGRectGetMaxY(_howToTextView.frame));

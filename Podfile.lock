@@ -1,5 +1,6 @@
 PODS:
   - ARChromeActivity (1.0.2)
+  - AutoScrollLabel (0.4.1)
   - KINWebBrowser (1.2.5):
     - ARChromeActivity (= 1.0.2)
     - TUSafariActivity (= 1.0.2)
@@ -9,6 +10,7 @@ PODS:
   - TUSafariActivity (1.0.2)
 
 DEPENDENCIES:
+  - AutoScrollLabel
   - KINWebBrowser
   - PullToRefreshCoreText (~> 0.2)
   - RATreeView (~> 1.0.3)
@@ -16,6 +18,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ARChromeActivity: 6488aedc8dd0624b103ea8caf6218e52692aaf77
+  AutoScrollLabel: afe272014f82c707c9203f1383f3fe4e32443fa2
   KINWebBrowser: 773e75882717d735cc37772cf71d5eb2b28554fe
   PullToRefreshCoreText: c843e71fc5ae5b033c0281067368905efd05c7b2
   RATreeView: abb5e11bb2f955c7f58b1295d2b0eab1de7c2920

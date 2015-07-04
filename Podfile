@@ -8,6 +8,7 @@ target 'sancha' do
   source 'https://github.com/CocoaPods/Specs.git'
   pod 'PullToRefreshCoreText', '~> 0.2'
   pod 'KINWebBrowser'
+  pod 'AutoScrollLabel'
 end
 
 target 'sanchaTests' do
