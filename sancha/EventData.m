@@ -80,7 +80,30 @@
 }
 
 - (void)parsePerformers:(HTMLNode *)node {
-    self.performers = [node.contents componentsSeparatedByString:@"、"];
+    NSString *str = node.contents;
+    int pre = -1;
+    unichar open = [@"(" characterAtIndex:0];
+    unichar close = [@")" characterAtIndex:0];
+    unichar delim = [@"、" characterAtIndex:0];
+    int stack = 0;
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i = 0; i < str.length; ++i) {
+        unichar c = [str characterAtIndex:i];
+        if (c == open) {
+            stack++;
+        } else if (c == close) {
+            stack--;
+        } else if (c == delim && stack == 0) {
+            NSString *performer = [str substringWithRange:NSMakeRange(pre+1, i-pre-1)];
+            NSString *trimmed = [performer stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            [array addObject:trimmed];
+            pre = i;
+        }
+    }
+    NSString *performer = [str substringWithRange:NSMakeRange(pre+1, str.length - pre - 1)];
+    NSString *trimmed = [performer stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    [array addObject:trimmed];
+    self.performers = [NSArray arrayWithArray:array];
 }
 
 @end

@@ -11,7 +11,7 @@
 @interface EventDataManager : NSObject
 
 @property(nonatomic, retain, readonly) NSArray *dataList;
-
+@property(nonatomic, retain, readonly) NSArray *performers;
 
 + (EventDataManager *) sharedManager;
 

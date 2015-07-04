@@ -12,6 +12,7 @@
 
 @interface EventDataManager ()
 @property(nonatomic, retain, readwrite) NSArray* dataList;
+@property(nonatomic, retain, readwrite) NSArray* performers;
 @end
 
 @implementation EventDataManager
@@ -28,7 +29,8 @@ static EventDataManager *shared;
 - (id) init {
     self = [super init];
     if (self) {
-        self.dataList = [[NSArray alloc] init];
+        self.dataList = [NSArray array];
+        self.performers = [NSArray array];
         [self loadData];
     }
     return self;
@@ -45,6 +47,18 @@ static EventDataManager *shared;
         return;
     }
     [self parseHTML:html];
+    
+    // set performeœrs
+    NSMutableSet *set = [NSMutableSet set];
+    for (EventData *event in self.dataList) {
+        for (NSString *performer in event.performers) {
+            [set addObject:performer];
+        }
+    }
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
+    NSArray *sortedPerformers = [set.allObjects sortedArrayUsingDescriptors:@[sortDescriptor]];
+    
+    self.performers = [NSArray arrayWithArray:sortedPerformers];
 }
 
 - (void) parseHTML:(NSString*)html {
