@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EventData.h"
 
 @interface EventTableViewCell : UITableViewCell
 
-- (void)initCellWithData:(NSDictionary *)data;
+- (void)initCellWithData:(EventData *)data;
 
 @end

@@ -35,5 +35,7 @@
 + (NSMutableAttributedString *)attributedTextWithString:(NSString *)string lineHeight:(CGFloat)height;
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
 + (NSArray *)getMonthDay: (NSString *)string;
++ (NSDictionary *)dateConvertToDateDictionary:(NSDate *)date;
++ (NSString *)checkMinute:(NSNumber *)minute;
 
 @end

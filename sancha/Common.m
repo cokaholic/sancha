@@ -83,6 +83,21 @@
     return dateArray;
 }
 
++ (NSDictionary *)dateConvertToDateDictionary:(NSDate *)date
+{
+    NSCalendar *gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [gregorian components:NSCalendarUnitMinute | NSCalendarUnitHour |NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:date];
+    
+    NSMutableDictionary *dateDictionary = [[NSMutableDictionary alloc]init];
+    [dateDictionary setObject:[NSNumber numberWithInteger:[components minute]] forKey:@"minute"];
+    [dateDictionary setObject:[NSNumber numberWithInteger:[components hour]] forKey:@"hour"];
+    [dateDictionary setObject:[NSNumber numberWithInteger:[components day]] forKey:@"day"];
+    [dateDictionary setObject:[NSNumber numberWithInteger:[components month]] forKey:@"month"];
+    [dateDictionary setObject:[NSNumber numberWithInteger:[components year]] forKey:@"year"];
+    
+    return [dateDictionary mutableCopy];
+}
+
 + (NSString *)checkNullValue:(id)object
 {
     if (!object || [object isKindOfClass:[NSNull class]]) {
@@ -108,6 +123,19 @@
                               delegate:nil
                      cancelButtonTitle:nil
                      otherButtonTitles:@"OK", nil] show];
+}
+
++ (NSString *)checkMinute:(NSNumber *)minute
+{
+    if ([minute intValue]==0) {
+        return @"00";
+    }
+    else if ([minute stringValue].length == 1) {
+        return [NSString stringWithFormat:@"0%@",minute];
+    }
+    else{
+        return [minute stringValue];
+    }
 }
 
 @end

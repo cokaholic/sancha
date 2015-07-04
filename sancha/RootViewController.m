@@ -9,11 +9,14 @@
 #import "RootViewController.h"
 #import "Common.h"
 #import "EventTableViewCell.h"
+#import "EventDataManager.h"
+#import "EventData.h"
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
 {
     UITableView *_eventTableView;
     NSMutableArray *_eventItemArray;
+    EventDataManager *_manager;
 }
 @end
 
@@ -29,21 +32,7 @@
 
 - (void)initData
 {
-    _eventItemArray = [[NSMutableArray alloc]init];
-    
-    //TEST
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
-    [_eventItemArray addObject:@"test"];
+    _manager = [EventDataManager sharedManager];
 }
 
 - (void)initUI
@@ -72,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _eventItemArray.count;
+    return _manager.dataList.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,7 +76,9 @@
         cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     
-    [cell initCellWithData:[[NSDictionary alloc]init]];
+    EventData *eventData = (EventData *)_manager.dataList[indexPath.row];
+    
+    [cell initCellWithData:eventData];
     
     return cell;
 }

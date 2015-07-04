@@ -117,21 +117,42 @@
     _actorsLabel.textAlignment = NSTextAlignmentLeft;
     [baseView addSubview:_actorsLabel];
     
-    //TEST
-    _yearLabel.text = @"2015";
-    _monthAndDayLabel.text = @"07/04";
-    _timeLabel.text = @"14:00";
-    _titleLabel.attributedText = [Common attributedTextWithString:@"とある科学の超電磁砲 -レールガン- 第３期 第１話先行上映会 at 秋葉原UDX"
-                                                       lineHeight:5];
-    _locationLabel.text = @"鹿児島県";
-    _actorsLabel.text = @"豊崎愛生、小倉唯、浅倉杏美";
-    
     [self addSubview:baseView];
 }
 
-- (void)initCellWithData:(NSDictionary *)data
+- (void)initCellWithData:(EventData *)data
 {
+    NSLog(@"%@",data.date);
     
+    NSDictionary *dateDictionary = [Common dateConvertToDateDictionary:data.date];
+    
+    _yearLabel.text = [NSString stringWithFormat:@"%@",dateDictionary[@"year"]];
+    _monthAndDayLabel.text = [NSString stringWithFormat:@"%@/%@",dateDictionary[@"month"],dateDictionary[@"day"]];
+    if (data.timeUndefined) {
+        _timeLabel.text = @"未定";
+    }
+    else {
+        NSString *minuteString = [Common checkMinute:dateDictionary[@"minute"]];
+        _timeLabel.text = [NSString stringWithFormat:@"%@:%@",dateDictionary[@"hour"], minuteString];
+    }
+    _titleLabel.attributedText = [Common attributedTextWithString:data.title
+                                                       lineHeight:5];
+    _locationLabel.text = data.prefecture;
+    
+    NSMutableString *performersString = [[NSMutableString alloc]init];
+    
+    for (int i=0; i<data.performers.count; i++) {
+        NSString *performer = (NSString *)data.performers[i];
+        
+        if (i==0) {
+            [performersString appendString:performer];
+        }
+        else{
+            [performersString appendFormat:@", %@",performer];
+        }
+    }
+    
+    _actorsLabel.text = (NSString *)performersString;
 }
 
 @end
