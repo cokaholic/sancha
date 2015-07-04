@@ -12,6 +12,7 @@
 		38D2CE791B478AF600110146 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE761B478AF600110146 /* HTMLNode.m */; };
 		38D2CE7A1B478AF600110146 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE781B478AF600110146 /* HTMLParser.m */; };
 		38D2CE7C1B478B1A00110146 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D2CE7B1B478B1A00110146 /* libxml2.dylib */; };
+		38D2CE821B47B9CC00110146 /* EventDetailData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE811B47B9CC00110146 /* EventDetailData.m */; };
 		9F85226B1B47B793007B7A23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD61B477E9B003A7464 /* AppDelegate.m */; };
 		9FF3EAD41B477E9B003A7464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD31B477E9B003A7464 /* main.m */; };
 		9FF3EADF1B477E9B003A7464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF3EADE1B477E9B003A7464 /* Images.xcassets */; };
@@ -43,6 +44,8 @@
 		38D2CE771B478AF600110146 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
 		38D2CE781B478AF600110146 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
 		38D2CE7B1B478B1A00110146 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		38D2CE801B47B9CC00110146 /* EventDetailData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailData.h; sourceTree = "<group>"; };
+		38D2CE811B47B9CC00110146 /* EventDetailData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailData.m; sourceTree = "<group>"; };
 		9FF3EACE1B477E9B003A7464 /* sancha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sancha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF3EAD21B477E9B003A7464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FF3EAD31B477E9B003A7464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				38D2CE6F1B47840B00110146 /* EventDataManager.m */,
 				38D2CE711B47855800110146 /* EventData.h */,
 				38D2CE721B47855800110146 /* EventData.m */,
+				38D2CE801B47B9CC00110146 /* EventDetailData.h */,
+				38D2CE811B47B9CC00110146 /* EventDetailData.m */,
 				38D2CE741B478ADE00110146 /* HTMLParser */,
 				9FF3EADE1B477E9B003A7464 /* Images.xcassets */,
 				9FF3EAD11B477E9B003A7464 /* Supporting Files */,
@@ -321,6 +326,7 @@
 				38D2CE731B47855800110146 /* EventData.m in Sources */,
 				38D2CE7A1B478AF600110146 /* HTMLParser.m in Sources */,
 				9FF3EAF91B478247003A7464 /* RootViewController.m in Sources */,
+				38D2CE821B47B9CC00110146 /* EventDetailData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
