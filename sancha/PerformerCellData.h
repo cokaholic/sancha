@@ -10,4 +10,10 @@
 
 @interface PerformerCellData : NSObject
 
+@property(nonatomic, retain, readonly) NSString *name;
+@property(nonatomic, assign) BOOL checked;
+
+- (id)initWithPerformerName:(NSString *)name;
+
+
 @end
