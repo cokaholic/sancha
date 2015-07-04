@@ -12,6 +12,9 @@
 		9FF3EADF1B477E9B003A7464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF3EADE1B477E9B003A7464 /* Images.xcassets */; };
 		9FF3EAEE1B477E9B003A7464 /* sanchaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAED1B477E9B003A7464 /* sanchaTests.m */; };
 		9FF3EAF91B478247003A7464 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAF81B478247003A7464 /* RootViewController.m */; };
+		9FF3EAFC1B478552003A7464 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAFB1B478552003A7464 /* EventTableViewCell.m */; };
+		9FF3EAFF1B478B09003A7464 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAFE1B478B09003A7464 /* Common.m */; };
+		F35F601FD36B6EE2D1E924A7 /* libPods-sancha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B187908D7DDED19C0DD6E6D7 /* libPods-sancha.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		111E302BAAD08455688221FF /* Pods-sancha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sancha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sancha/Pods-sancha.debug.xcconfig"; sourceTree = "<group>"; };
 		9FF3EACE1B477E9B003A7464 /* sancha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sancha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF3EAD21B477E9B003A7464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FF3EAD31B477E9B003A7464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,6 +40,12 @@
 		9FF3EAED1B477E9B003A7464 /* sanchaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sanchaTests.m; sourceTree = "<group>"; };
 		9FF3EAF71B478247003A7464 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		9FF3EAF81B478247003A7464 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		9FF3EAFA1B478552003A7464 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		9FF3EAFB1B478552003A7464 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		9FF3EAFD1B478B09003A7464 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		9FF3EAFE1B478B09003A7464 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		B187908D7DDED19C0DD6E6D7 /* libPods-sancha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D91AA0B8DEFD3662D3685F /* Pods-sancha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sancha.release.xcconfig"; path = "Pods/Target Support Files/Pods-sancha/Pods-sancha.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35F601FD36B6EE2D1E924A7 /* libPods-sancha.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +67,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51E01855AC8EB1CDC7490D0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				111E302BAAD08455688221FF /* Pods-sancha.debug.xcconfig */,
+				F3D91AA0B8DEFD3662D3685F /* Pods-sancha.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9FF3EAC51B477E9B003A7464 = {
 			isa = PBXGroup;
 			children = (
 				9FF3EAD01B477E9B003A7464 /* sancha */,
 				9FF3EAEA1B477E9B003A7464 /* sanchaTests */,
 				9FF3EACF1B477E9B003A7464 /* Products */,
+				51E01855AC8EB1CDC7490D0C /* Pods */,
+				CC2A30EC3A715A39D2A20AFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +103,10 @@
 				9FF3EAD61B477E9B003A7464 /* AppDelegate.m */,
 				9FF3EAF71B478247003A7464 /* RootViewController.h */,
 				9FF3EAF81B478247003A7464 /* RootViewController.m */,
+				9FF3EAFA1B478552003A7464 /* EventTableViewCell.h */,
+				9FF3EAFB1B478552003A7464 /* EventTableViewCell.m */,
+				9FF3EAFD1B478B09003A7464 /* Common.h */,
+				9FF3EAFE1B478B09003A7464 /* Common.m */,
 				9FF3EADE1B477E9B003A7464 /* Images.xcassets */,
 				9FF3EAD11B477E9B003A7464 /* Supporting Files */,
 			);
@@ -113,6 +139,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CC2A30EC3A715A39D2A20AFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B187908D7DDED19C0DD6E6D7 /* libPods-sancha.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FF3EAF11B477E9B003A7464 /* Build configuration list for PBXNativeTarget "sancha" */;
 			buildPhases = (
+				5CB97AB167C5477384203583 /* Check Pods Manifest.lock */,
 				9FF3EACA1B477E9B003A7464 /* Sources */,
 				9FF3EACB1B477E9B003A7464 /* Frameworks */,
 				9FF3EACC1B477E9B003A7464 /* Resources */,
+				AFC7723D72D74AB8C0E4AFE6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,12 +242,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CB97AB167C5477384203583 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AFC7723D72D74AB8C0E4AFE6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sancha/Pods-sancha-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9FF3EACA1B477E9B003A7464 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF3EAFC1B478552003A7464 /* EventTableViewCell.m in Sources */,
 				9FF3EAD71B477E9B003A7464 /* AppDelegate.m in Sources */,
+				9FF3EAFF1B478B09003A7464 /* Common.m in Sources */,
 				9FF3EAD41B477E9B003A7464 /* main.m in Sources */,
 				9FF3EAF91B478247003A7464 /* RootViewController.m in Sources */,
 			);
@@ -318,6 +389,7 @@
 		};
 		9FF3EAF21B477E9B003A7464 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 111E302BAAD08455688221FF /* Pods-sancha.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -329,6 +401,7 @@
 		};
 		9FF3EAF31B477E9B003A7464 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3D91AA0B8DEFD3662D3685F /* Pods-sancha.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

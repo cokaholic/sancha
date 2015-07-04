@@ -7,31 +7,100 @@
 //
 
 #import "RootViewController.h"
+#import "Common.h"
+#import "EventTableViewCell.h"
 
-@interface RootViewController ()
-
+@interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
+{
+    UITableView *_eventTableView;
+    NSMutableArray *_eventItemArray;
+}
 @end
 
 @implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self initData];
+    [self initUI];
+    [self setUI];
+}
+
+- (void)initData
+{
+    _eventItemArray = [[NSMutableArray alloc]init];
+    
+    //TEST
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+    [_eventItemArray addObject:@"test"];
+}
+
+- (void)initUI
+{
+    self.view.backgroundColor = BACKGROUND_COLOR;
+    
+    _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - STATUSBAR_HEIGHT)];
+    _eventTableView.dataSource = self;
+    _eventTableView.delegate = self;
+    _eventTableView.separatorStyle = NO;
+    _eventTableView.backgroundColor = CLEAR_COLOR;
+    [self.view addSubview:_eventTableView];
+}
+
+- (void)setUI
+{
+    
+}
+
+#pragma mark - UITableView DataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _eventItemArray.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return EVENT_CELL_HEIGHT;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if (!cell) {
+        cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
+    [cell initCellWithData:[[NSDictionary alloc]init]];
+    
+    return cell;
+}
+
+#pragma mark - UITableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
