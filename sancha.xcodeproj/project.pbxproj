@@ -17,6 +17,7 @@
 		38D2CE941B48066100110146 /* PrefectureCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE931B48066100110146 /* PrefectureCellData.m */; };
 		38D2CE9A1B480D7000110146 /* PerformerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE991B480D7000110146 /* PerformerViewController.m */; };
 		38D2CE9D1B480E0F00110146 /* PerformerCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE9C1B480E0F00110146 /* PerformerCellData.m */; };
+		38D2CEA01B480E6600110146 /* FilteringManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE9F1B480E6600110146 /* FilteringManager.m */; };
 		9F85226B1B47B793007B7A23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD61B477E9B003A7464 /* AppDelegate.m */; };
 		9F8522711B47CCD0007B7A23 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */; };
 		9FF3EAD41B477E9B003A7464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD31B477E9B003A7464 /* main.m */; };
@@ -61,6 +62,8 @@
 		38D2CE991B480D7000110146 /* PerformerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformerViewController.m; sourceTree = "<group>"; };
 		38D2CE9B1B480E0F00110146 /* PerformerCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformerCellData.h; sourceTree = "<group>"; };
 		38D2CE9C1B480E0F00110146 /* PerformerCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformerCellData.m; sourceTree = "<group>"; };
+		38D2CE9E1B480E6600110146 /* FilteringManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteringManager.h; sourceTree = "<group>"; };
+		38D2CE9F1B480E6600110146 /* FilteringManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilteringManager.m; sourceTree = "<group>"; };
 		9FF3EACE1B477E9B003A7464 /* sancha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sancha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF3EAD21B477E9B003A7464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FF3EAD31B477E9B003A7464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				38D2CE991B480D7000110146 /* PerformerViewController.m */,
 				38D2CE9B1B480E0F00110146 /* PerformerCellData.h */,
 				38D2CE9C1B480E0F00110146 /* PerformerCellData.m */,
+				38D2CE9E1B480E6600110146 /* FilteringManager.h */,
+				38D2CE9F1B480E6600110146 /* FilteringManager.m */,
 				38D2CE741B478ADE00110146 /* HTMLParser */,
 				9FF3EADE1B477E9B003A7464 /* Images.xcassets */,
 				9FF3EAD11B477E9B003A7464 /* Supporting Files */,
@@ -356,6 +361,7 @@
 				38D2CE7A1B478AF600110146 /* HTMLParser.m in Sources */,
 				9F8522711B47CCD0007B7A23 /* EventDetailViewController.m in Sources */,
 				9FF3EAF91B478247003A7464 /* RootViewController.m in Sources */,
+				38D2CEA01B480E6600110146 /* FilteringManager.m in Sources */,
 				38D2CE821B47B9CC00110146 /* EventDetailData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

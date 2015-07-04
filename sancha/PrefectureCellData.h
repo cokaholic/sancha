@@ -12,7 +12,6 @@
 
 @property(nonatomic, retain, readonly) NSString *name;
 @property(nonatomic, assign) BOOL checked;
-@property(nonatomic, assign) NSInteger rowNumber;
 
 - (id)initWithPrefectureString:(NSString *)name;
 

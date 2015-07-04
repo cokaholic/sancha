@@ -7,6 +7,7 @@
 //
 
 #import "PrefectureCellData.h"
+#import "FilteringManager.h"
 
 @interface PrefectureCellData ()
 
@@ -17,22 +18,18 @@
 
 @implementation PrefectureCellData
 
-- (id)initWithPrefectureString:(NSString *)string {
+- (id)initWithPrefectureString:(NSString *)name {
     self = [super init];
     if (self) {
-        self.name = string;
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        NSString *key = [@"p:" stringByAppendingString:self.name];
-        self.checked = [userDefaults boolForKey:key];
+        self.name = name;
+        _checked = [[FilteringManager sharedManager] isFilteredPrefecture:name];
     }
     return self;
 }
 
 - (void)setChecked:(BOOL)checked {
     _checked = checked;
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *key = [@"p:" stringByAppendingString:self.name];
-    [userDefaults setBool:checked forKey:key];
+    [[FilteringManager sharedManager] setBOOL:checked forPrefecture:self.name];
 }
 
 @end
