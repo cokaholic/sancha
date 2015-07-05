@@ -16,4 +16,6 @@
 + (EventDataManager *) sharedManager;
 - (void) loadData;
 
+- (NSArray *) getFilteredDataList;
+
 @end

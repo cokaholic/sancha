@@ -67,6 +67,16 @@ static FilteringManager *shared;
     return [self.userDefaults boolForKey:[self getKeyPerformer:name]];
 }
 
+- (BOOL)isFilteredEvent:(EventData *)event {
+    if ([self isFilteredPrefecture:event.prefecture]) return YES;
+    for (NSString *performer in event.performers) {
+        if ([self isFilteredPerformer:performer]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 - (NSArray *)getFilteredPrefectures {
     NSMutableArray *res;
     for (NSString *name in self.prefectures) {
@@ -86,6 +96,5 @@ static FilteringManager *shared;
     }
     return [NSArray arrayWithArray:res];
 }
-
 
 @end
