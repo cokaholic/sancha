@@ -39,6 +39,7 @@
 - (void)initData
 {
     _manager = [EventDataManager sharedManager];
+    _searchData = [NSMutableArray arrayWithCapacity:_manager.dataList.count];
     _dataList = @[];
 }
 
@@ -99,8 +100,6 @@
     _searchController.searchResultsTableView.frame = CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT);
 
     _eventTableView.tableHeaderView = searchBar;
-    
-    
 }
 
 - (void)setUI
@@ -125,7 +124,6 @@
 
 - (void)loadFilteredData
 {
-    _searchData = [NSMutableArray arrayWithCapacity: _dataList.count];
     _dataList = [_manager getFilteredDataList];
     [_eventTableView reloadData];
 }
@@ -157,7 +155,7 @@
         cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
 
-    EventData *eventData = (EventData *)_dataList[indexPath.row];
+    EventData *eventData;
     
     if(tableView == self.searchController.searchResultsTableView) {
         eventData = (EventData *)_searchData[indexPath.row];
@@ -177,7 +175,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    EventData *eventData = (EventData *)_dataList[indexPath.row];
+    EventData *eventData;
     
     if(tableView == self.searchController.searchResultsTableView) {
         eventData = (EventData *)_searchData[indexPath.row];
