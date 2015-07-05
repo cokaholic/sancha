@@ -7,917 +7,699 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00DE0DB36DA1D6324A2B7990 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66E1F6D3D8489DC4AB5B9CE /* CoreGraphics.framework */; };
-		036291A9F146FDB538361063 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE76BFE1F0CF7A0066D9C7F /* QuartzCore.framework */; };
-		04ADBF24993D5B65E4DDC872 /* no.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AA5A7E73FB31CF7455A92A6D /* no.lproj */; };
-		0870FB368CCFBA008FAE72FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E51455A4A0A5B55DDEA6F /* Foundation.framework */; };
-		0BEE76BD110412AB3EC98F6A /* RATreeView+TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC79A15DB7A90582DE6B149 /* RATreeView+TableViewDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0FDBC782C2C8AC9BF9B7A8E1 /* RATreeView_ClassExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = E50A5BCC6F038052F66F3CDE /* RATreeView_ClassExtension.h */; };
-		141CC3DC4C9963CDFE8C9820 /* RATreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = C4293E0CE25C8DE82EC872AD /* RATreeNode.h */; };
-		186A3ED0B8BCE25480AE550D /* RABatchChanges.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E3F0570788A933417F9BC2 /* RABatchChanges.h */; };
-		1A4BCC3CEDBD53A8B400A218 /* safari~iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD753A962FF3C01815517503 /* safari~iPad@2x.png */; };
-		1ED59EA37638B8A33ABD9AC3 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2B041FAAC19CB00FE14007F3 /* it.lproj */; };
-		20E7E99E63AE99A7A3A8ECD1 /* RATreeNodeItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B4C33FDEA84E061A0941570F /* RATreeNodeItem.h */; };
-		27667A6A9CCC96A254D6C2E2 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 353D2D1B862D8F3463254CD3 /* de.lproj */; };
-		2DA30264E3881FCC4D726D9A /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9DD05F5E510B5095B07AD5 /* SVProgressHUD.m */; };
-		2DD6B6EBBB02C301B02655E3 /* RATreeNodeCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3491F1763E57FDD473522B09 /* RATreeNodeCollectionController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		2E3EE280BDC6F47572738F84 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD28067CB7F3A008C777CAF5 /* SVIndefiniteAnimatedView.m */; };
-		339574E6001E368B0FC6684F /* safari~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = BC97EFC643005392A5EB28E7 /* safari~iPad.png */; };
-		365DAA04ADC40C17F68B2576 /* RATreeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DEE573DFD9D5FEE34085984 /* RATreeView.h */; };
-		3BCCDEBF9D8BD7AFA8F4CD3A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5F6FBB40532C1D07E3CA6A /* CoreText.framework */; };
-		3D827FFFBA3CDF7210C6F6F9 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = DC1ED38D3D5FA008606F0D1C /* nl.lproj */; };
-		3F4AF387A6B3BE441E828515 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E51455A4A0A5B55DDEA6F /* Foundation.framework */; };
-		412D98AD5842D4BEFCFE8492 /* Pods-sancha-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC02F5AB17D8004BFFEB5F92 /* Pods-sancha-dummy.m */; };
-		4407174204EC975404568FA4 /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AB5914EABB6838E203676360 /* vi.lproj */; };
-		46CCE230746701BCD0954CF1 /* RATreeNode_ClassExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = F4C3A1925DABD7EEAC427E5C /* RATreeNode_ClassExtension.h */; };
-		477625C7C255AFCF6BF03F46 /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7AC7DAABD6A283DE83DD922A /* ko.lproj */; };
-		4C324C8DE675EBD6166F6595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E51455A4A0A5B55DDEA6F /* Foundation.framework */; };
-		4EFA0759CA1A2C28FB11E58F /* PullToRefreshCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDED71B1EBFF95FE2E4D5292 /* PullToRefreshCoreTextView.m */; };
-		4FC1BA1918022B6C9C37F2FA /* Pods-sancha-ARChromeActivity-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA30845571B2F556AFE4BCB /* Pods-sancha-ARChromeActivity-dummy.m */; };
-		4FF33DE41F8166FECE09583A /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C913BBCA34177BCBB7799999 /* en.lproj */; };
-		536E95183220451C8A88AB35 /* RATreeView+UIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8E6404EF0E1CD9CB7ECEED /* RATreeView+UIScrollView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		557EF5660B0CD124841CB9AF /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C67D12FE6843710C15B9CFF2 /* sv.lproj */; };
-		5858B7C46E0DF254E4228BAB /* KINWebBrowserViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3DE015181E00F4C8238C9A9 /* KINWebBrowserViewController.h */; };
-		587DC7068BD11950F0E85AA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E51455A4A0A5B55DDEA6F /* Foundation.framework */; };
-		5BA11081D259E45EDB98CAD2 /* RATreeView+RATreeNodeCollectionControllerDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BBF69DDE07612D98764558A /* RATreeView+RATreeNodeCollectionControllerDataSource.h */; };
-		5F62AFF6E677EC68BBF0C886 /* TUSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A3672852B7E5CE0F57146C /* TUSafariActivity.m */; };
-		6343987D02F8A312AAB11489 /* RATreeNodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD6765C06C417DADCE5AFF2 /* RATreeNodeController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6358595A0D2E11A6B3F0ECD8 /* RATreeView+TableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B5D0DF45F72E176009E726 /* RATreeView+TableViewDelegate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6667F340D9E2C34E329CA781 /* RATreeNodeCollectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = EE7440D679C3079FCCF1D767 /* RATreeNodeCollectionController.h */; };
-		6751668FCB326BFAA1DE5B9D /* RATreeView+RATreeNodeCollectionControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C187775545FBC5DE2F458B /* RATreeView+RATreeNodeCollectionControllerDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		67F5DAA7A982C7566AE198FD /* RATreeView+Enums.h in Headers */ = {isa = PBXBuildFile; fileRef = BF424F30D015917C1E7E7B55 /* RATreeView+Enums.h */; };
-		6C5C6CB83751985527E72E3E /* safari.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E42A3A5FBAC2E683DE85DCA /* safari.png */; };
-		6DE73563E4DA5512B1765652 /* Pods-sancha-AutoScrollLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 703264BFD2E6E841CFE7DBE9 /* Pods-sancha-AutoScrollLabel-dummy.m */; };
-		77EB6A18ECF94C37FAD98150 /* RATreeView+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 29963CF9B5BA34CDDF81E082 /* RATreeView+Private.h */; };
-		783B2AFD301AB881877563DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E51455A4A0A5B55DDEA6F /* Foundation.framework */; };
-		81CDE579F2F045A0D10FE0E5 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CEA631D64A965FCF58ADF24F /* fr.lproj */; };
-		81E0151D3370155C0711BBA4 /* PullToRefreshCoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5800EB0D80E9E05215BB7A /* PullToRefreshCoreTextView.h */; };
-		849D88DB430B1D7CBDAA58D1 /* eu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 073DAAB0613D3E0E1D92DA3E /* eu.lproj */; };
-		87CC5F86C95655FF2C078D40 /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 715C39C17C46C5CA6573E1BA /* pt.lproj */; };
-		881B60D3910A5741F1D090CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E51455A4A0A5B55DDEA6F /* Foundation.framework */; };
-		88AB8619FA2F1A87F2118020 /* fi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 229CA84F45A42C4E21D31532 /* fi.lproj */; };
-		8D2244EB3A54E733060F6625 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 889155F72DD8C86DCB009335 /* SVIndefiniteAnimatedView.h */; };
-		8F2427F45CCC0F1066E0F718 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 921D12CD1B3919DB4708C771 /* es.lproj */; };
-		92F7C65F02C5AE9BC075AEE3 /* safari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF786C571CCBD35AD1B4EB52 /* safari@2x.png */; };
-		983B53CB963E7DA10A42CC50 /* UIScrollView+PullToRefreshCoreText.m in Sources */ = {isa = PBXBuildFile; fileRef = D51BF0FE47BABF3F159442FC /* UIScrollView+PullToRefreshCoreText.m */; };
-		9B0433C1C261C3F84EB0C1F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E51455A4A0A5B55DDEA6F /* Foundation.framework */; };
-		A46C7E98D6548043892243C6 /* safari@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D48DCB66FE7687BD9CCA9D1B /* safari@3x.png */; };
-		A51415D0DD87C8ED019557F8 /* RABatchChanges.m in Sources */ = {isa = PBXBuildFile; fileRef = E45101C824B9EC92B3EBD2AC /* RABatchChanges.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A82465D18A922909672D6861 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = A2BFE4435D72EBE94790CABC /* SVProgressHUD.h */; };
-		A9923E0896094AE2EC4307F5 /* Pods-sancha-TUSafariActivity-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B66A77E16700DAC93C4F9 /* Pods-sancha-TUSafariActivity-dummy.m */; };
-		B32063D33113CC38389C2ECC /* ARChromeActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = D54591F5C7D7428DFE9FDE59 /* ARChromeActivity.h */; };
-		B46CEB0A4A0FC77AFE594DDE /* RATreeView+TableViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AFF1F8C193D64781C180B9F /* RATreeView+TableViewDelegate.h */; };
-		B825BFF71CB3E45431EBAA82 /* RATreeView+Enums.m in Sources */ = {isa = PBXBuildFile; fileRef = 88044BF7B2FF702C9B18D205 /* RATreeView+Enums.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B89EA5C02E22803ADEE06994 /* RATreeNodeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A560A4B3F15721E4079DB08 /* RATreeNodeItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BAEACFCA3840EB560442A9DB /* RATreeView+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F2FAC7715A4BEC071B4CAD /* RATreeView+Private.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BB68731AA6A58FDA332904AB /* RATreeNodeItem+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B2F90F9260181BACA18C9E /* RATreeNodeItem+Private.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C12F0780F8B6CC843B99350A /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F37C3FCE6862EE155BC33056 /* pl.lproj */; };
-		C1F7C4B976D09F1236B8D5B9 /* UIScrollView+PullToRefreshCoreText.h in Headers */ = {isa = PBXBuildFile; fileRef = 154A83519AEEA8D73B3D46ED /* UIScrollView+PullToRefreshCoreText.h */; };
-		C335D2515D36985139C7936C /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 63B080CD9D0CFC7ACD41BBD5 /* ja.lproj */; };
-		C83D34736A24FB04D8B187D1 /* Pods-sancha-PullToRefreshCoreText-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4389029BBBFBA68E7BBB9E2C /* Pods-sancha-PullToRefreshCoreText-dummy.m */; };
-		CF8FCB334D9820E95976C56C /* RATreeNodeItem+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD42D7D131E4D5FB154BE4D /* RATreeNodeItem+Private.h */; };
-		CFA091FF4C5B39D9B9D19889 /* RATreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B43E80406AFDF557EB10EA /* RATreeNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CFC9FCB2AA602A47D7B22D69 /* RATreeView+UIScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA244BF92E9852225D475B /* RATreeView+UIScrollView.h */; };
-		D028DE91E385647E9E60F022 /* Pods-sancha-RATreeView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F19E6A7CA50A61B6408281 /* Pods-sancha-RATreeView-dummy.m */; };
-		D3F160BBC2FC930DABD4A75C /* ARChromeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 485DB8AF889844CD5793AEB9 /* ARChromeActivity.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D71F3A9EF4896611055663E3 /* Pods-sancha-KINWebBrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A5F86FBADA60D2C9217B7B /* Pods-sancha-KINWebBrowser-dummy.m */; };
-		D8894E900E61DC723B0D4C1C /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1CE60A39D418D7F69DB4952C /* sk.lproj */; };
-		DB6112176B87689472C54313 /* RATreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0F0855721709AB6C480AD /* RATreeView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E1BEBFF439BB07F01AA28DB1 /* TUSafariActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1BCAC355D8432545EBDF0C /* TUSafariActivity.h */; };
-		E22A156D7967A074DF6E8F14 /* CBAutoScrollLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = F01F36BBD20F834A7A404DEF /* CBAutoScrollLabel.h */; };
-		E55746B43791C8304ECCF893 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D772710CEFA4DC0FCA4F8537 /* ru.lproj */; };
-		E59306B67BBB7DC27391E523 /* zh_CN.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B6661CE40CDCB48D6DA2E3BB /* zh_CN.lproj */; };
-		E8C99BC5FBB94DAE8BF9337D /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D4FCF16A6C6F04CBD88242C9 /* cs.lproj */; };
-		EFFF8201A0CE293DDFD51872 /* RATreeNodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 96ABDB987B3D33C72544C5B2 /* RATreeNodeController.h */; };
-		F13830477B9F696A5D63768F /* KINWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50541201A979E46704018A55 /* KINWebBrowserViewController.m */; };
-		F52EC422F0CE79754D05FCC1 /* RATreeView+TableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = E73BD2FF042FBF1662234666 /* RATreeView+TableViewDataSource.h */; };
-		F6A38B0362FB74C392E9B4B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707E51455A4A0A5B55DDEA6F /* Foundation.framework */; };
-		F816312E3A37AE36F6CA726A /* Pods-sancha-SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D692F9A028E9A53E86FD57F3 /* Pods-sancha-SVProgressHUD-dummy.m */; };
-		F98065351DD5A6377B0253E7 /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F68E0829BA243A4EE92B3C /* CBAutoScrollLabel.m */; };
-		FB4C439B050621F006CFFBF6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE76BFE1F0CF7A0066D9C7F /* QuartzCore.framework */; };
-		FED3612862B7021AEB8E032B /* RATreeNodeItem+ClassExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 341C476EA88799CFE8B72808 /* RATreeNodeItem+ClassExtension.h */; };
+		0308C6E881D91A49A5C17002 /* Pods-sancha-SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7AB426CD4C35FC37FE5B78 /* Pods-sancha-SVProgressHUD-dummy.m */; };
+		0B25BF583049F15D33E036E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51D353776E819DC78FABF3 /* Foundation.framework */; };
+		0DB9F9F37387952556CBBBA5 /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5024A0966B14DFEFA6039054 /* cs.lproj */; };
+		1024964C453148129839787D /* Pods-sancha-AutoScrollLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4A90A3223F68FDE375E0C25 /* Pods-sancha-AutoScrollLabel-dummy.m */; };
+		1A97B8171F52C5CF51B18C90 /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D97A1D1B07FDA8C90B7B8F11 /* sk.lproj */; };
+		2136F0F916F96DA97595D9B1 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B275514616A8E9C5D771167F /* de.lproj */; };
+		25C58D4D8797647CA1AD3883 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E38C2A39F8BF664BDF37B07 /* SVProgressHUD.h */; };
+		2DCA756A3661397A2E427B6D /* Pods-sancha-KINWebBrowser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E72B300E37D0D146FDE187 /* Pods-sancha-KINWebBrowser-dummy.m */; };
+		30FB4ADFDFFF41E10E3E4D44 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A1286EF22206950E9568A92C /* ja.lproj */; };
+		31EF9150A82551908F0749D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51D353776E819DC78FABF3 /* Foundation.framework */; };
+		358F0FB9781428D3E8429B3F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0157A9973560A2C1FDBF64E /* QuartzCore.framework */; };
+		35B513301A679DF2860AD541 /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AB051F91BE8A34D49622A7F8 /* vi.lproj */; };
+		3800FEFC6CB82B11068CC49B /* CBAutoScrollLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = DD5459C628D5CE41EA1D9CB4 /* CBAutoScrollLabel.h */; };
+		4232702AF49A309459B104A5 /* KINWebBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DC4CDC485B70EC75CCE3C2 /* KINWebBrowserViewController.m */; };
+		4419359B0A18AC95F087F3FE /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 206ECA2DADD6AC93C2325D11 /* ru.lproj */; };
+		458B165DC0EA340C8C3F9FC9 /* Pods-sancha-ARChromeActivity-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F0D1DB268E08EF53FE7A1D /* Pods-sancha-ARChromeActivity-dummy.m */; };
+		48FEA806DDC3A889F3B07323 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E063E5AAE10CC320A7EB83 /* SVProgressHUD.m */; };
+		51D9EF70CAC202E64620D05C /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F867617B0C6EE39D03D14CEA /* CBAutoScrollLabel.m */; };
+		52985FD2CC8FFF4D45D873F9 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0E67B3B4018DEB61869F1EBA /* en.lproj */; };
+		5497FA29A7613BA0A12326DD /* PullToRefreshCoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C981B0376F570A52318F155 /* PullToRefreshCoreTextView.h */; };
+		5792D76D1C810A1AE016697B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0157A9973560A2C1FDBF64E /* QuartzCore.framework */; };
+		5801EC50BA44400B5699B0F5 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 36F19AC00C52BE540D7A71DC /* it.lproj */; };
+		5F844B485331C6FDDFE1C414 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = C70FFBEA444AF0730FC76CF2 /* SVIndefiniteAnimatedView.h */; };
+		687938BC9BA09BD46DCC1F5F /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8DF60B8C07F224CC07C88569 /* es.lproj */; };
+		68BF207A239E03E91E662D7B /* Pods-sancha-PullToRefreshCoreText-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C195675DE325B592FA1735EE /* Pods-sancha-PullToRefreshCoreText-dummy.m */; };
+		6C571191EB97604D801E5A96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51D353776E819DC78FABF3 /* Foundation.framework */; };
+		797CDBEA28AB2FADDAC81FDF /* UIScrollView+PullToRefreshCoreText.h in Headers */ = {isa = PBXBuildFile; fileRef = 478FE41B2A2B66FFA7B76162 /* UIScrollView+PullToRefreshCoreText.h */; };
+		7F342664DDAD482F32447786 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D337FBBE5D206817DCC6828 /* CoreText.framework */; };
+		837620397EE3C10D79DB8FA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51D353776E819DC78FABF3 /* Foundation.framework */; };
+		890C4FD1162CD6A9FA29B871 /* safari~iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 130192667E9DDCEF0F52018F /* safari~iPad@2x.png */; };
+		8AC1F145ED20762AB886AA86 /* Pods-sancha-TUSafariActivity-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8BC9457A893120D9183F08C /* Pods-sancha-TUSafariActivity-dummy.m */; };
+		8E522DDBBE74BF79F1EF7A03 /* TUSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F919FC5F0592E1EC23CCB85 /* TUSafariActivity.m */; };
+		908DA7F934D98DBCADBD7F53 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6731FD9AB3EE95D0CAE5B8C3 /* SVIndefiniteAnimatedView.m */; };
+		91D2C809BC4C01E4C66D94A6 /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A0F365F620B686382486C26B /* nl.lproj */; };
+		9A1DA649F1B1F7535BE42CF1 /* safari~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 50228C3F2A70062181FEFB05 /* safari~iPad.png */; };
+		B0A26934659584AA9F368615 /* no.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6BBD21F2BB5D37F962D96367 /* no.lproj */; };
+		BABBC06546C7E4C1CF080A1C /* eu.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9ED21CD8674A4CA7DA8B1D5B /* eu.lproj */; };
+		BBAD3B19FD64BDD6D07340DF /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 403656D10E7FEAE943BBA3E0 /* sv.lproj */; };
+		BF7C70CC47B54D0FE01BEAFA /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CB602E9A978458B97EEA7015 /* pt.lproj */; };
+		C04A95C18574CDABC5A06256 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51D353776E819DC78FABF3 /* Foundation.framework */; };
+		C2925B3508BFAA771F3C1333 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3369737AC1CE3178A2ED67F6 /* CoreGraphics.framework */; };
+		CA1079BDA67B2725E02336AC /* ARChromeActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5573DD03FFE8DD8BEBC247 /* ARChromeActivity.h */; };
+		CE23B9646244A9E5172FA3ED /* TUSafariActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D805E0FFBC04B5460CD409 /* TUSafariActivity.h */; };
+		CF1CF93FD7943E36AA00964A /* fi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 522A190749F8F1400EB710F6 /* fi.lproj */; };
+		D7CCF77DA27222553C15D2A9 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AB0134A49BE1C48765070446 /* fr.lproj */; };
+		DEFA9ECC642133D2BAC8514A /* PullToRefreshCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6D847C9AE712A3568D50CE /* PullToRefreshCoreTextView.m */; };
+		EB40971593470DD2AFA1D54A /* safari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 496119075E1574100143506D /* safari@2x.png */; };
+		EBD5F46EB1A5A0D1427980A2 /* ARChromeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4018BE846C7CC0118C7A1DE4 /* ARChromeActivity.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EDAA4CCAB88468CB6A8C796A /* safari.png in Resources */ = {isa = PBXBuildFile; fileRef = 6988D51B664E92E99A4D4380 /* safari.png */; };
+		EECF525F05AAFDE530D1D60A /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B5414C15B2AE69638CD2CE7D /* ko.lproj */; };
+		EFC95EC1DBF1B18367F15774 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51D353776E819DC78FABF3 /* Foundation.framework */; };
+		F242D04F8D5AECFF6E64A0D6 /* safari@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D760CAADFFC42FD13973D76 /* safari@3x.png */; };
+		F3CED52852C612B5C5E4568A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C51D353776E819DC78FABF3 /* Foundation.framework */; };
+		F579CB802AAB8AD62D7008F9 /* UIScrollView+PullToRefreshCoreText.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D6D55BD946808E173A151E /* UIScrollView+PullToRefreshCoreText.m */; };
+		F73279102712ED4157810761 /* KINWebBrowserViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D24310ECFD834CA38518171B /* KINWebBrowserViewController.h */; };
+		FBB671282F3886855064F9E5 /* Pods-sancha-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 774BF3FAF7787A94CF917243 /* Pods-sancha-dummy.m */; };
+		FEBF47F02C0BA14E1168F0D6 /* zh_CN.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A54E8AA69CDC04C14F85BD42 /* zh_CN.lproj */; };
+		FEF9EDDAFD10C7BEB3F1DAF3 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 968C4F64FD2C8D5A181DE629 /* pl.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0D5C46733374B4F9DE63FBB7 /* PBXContainerItemProxy */ = {
+		3B6F4F363576B4147101114C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
+			containerPortal = E9F14F76451BD16B876A439E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AB5211ECF482703580269B1A;
+			remoteGlobalIDString = 40259871232FAEF44C50F585;
 			remoteInfo = "Pods-sancha-KINWebBrowser";
 		};
-		4C04D878EC1A1E5140381B34 /* PBXContainerItemProxy */ = {
+		494F1BF0223D95B4833EFA98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
+			containerPortal = E9F14F76451BD16B876A439E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BE20323DA7A44022E25755D3;
+			remoteGlobalIDString = 5F65635EC0687DDBC6E3BBA9;
 			remoteInfo = "Pods-sancha-ARChromeActivity";
 		};
-		4FA3AF3E6ADCC787C994BF6D /* PBXContainerItemProxy */ = {
+		8D5646C8CAC7DE9447924948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
+			containerPortal = E9F14F76451BD16B876A439E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0A393ADA0C1ED001CF668F2E;
+			remoteGlobalIDString = E4CAE4233E072387FA337B06;
 			remoteInfo = "Pods-sancha-TUSafariActivity";
 		};
-		537FFF6B02991170C0D061C1 /* PBXContainerItemProxy */ = {
+		A31D164D6090CB8307D84ED4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
+			containerPortal = E9F14F76451BD16B876A439E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3D7DE0C95A23A4FA69AEFC71;
+			remoteGlobalIDString = CCF7E2790FE5DCE81E329D02;
 			remoteInfo = "Pods-sancha-SVProgressHUD";
 		};
-		6D190B764F80C5B9C4762215 /* PBXContainerItemProxy */ = {
+		AFD7E0833D1A2677E9004E83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
+			containerPortal = E9F14F76451BD16B876A439E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FC0704C8B0956DB5FEB817D4;
-			remoteInfo = "Pods-sancha-RATreeView";
-		};
-		7DC5DB3F07138462801DAEF6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52134F673AACFAF700A9F642;
-			remoteInfo = "Pods-sancha-PullToRefreshCoreText";
-		};
-		7DFF773D7C86FE7D7E079BF3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 600F7CB1646574F52261C892;
-			remoteInfo = "Pods-sancha-AutoScrollLabel";
-		};
-		9A9892A44BF2F4D90C323E0C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0A393ADA0C1ED001CF668F2E;
-			remoteInfo = "Pods-sancha-TUSafariActivity";
-		};
-		ABC624E7AE32D85B81736920 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0669BEECA3275097ED553E03;
+			remoteGlobalIDString = F2F584234EE764F91AA36949;
 			remoteInfo = "Pods-sancha-TUSafariActivity-TUSafariActivity";
 		};
-		FD0CFB7C2984EE4CB2554B61 /* PBXContainerItemProxy */ = {
+		B8C700A60804C524E965D6DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
+			containerPortal = E9F14F76451BD16B876A439E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BE20323DA7A44022E25755D3;
+			remoteGlobalIDString = A096799317627E125EEB6CD8;
+			remoteInfo = "Pods-sancha-AutoScrollLabel";
+		};
+		CA7826ACF5239057CB46A4F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9F14F76451BD16B876A439E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4CAE4233E072387FA337B06;
+			remoteInfo = "Pods-sancha-TUSafariActivity";
+		};
+		DAA9C3AED13DBF120A3DDB1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9F14F76451BD16B876A439E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F65635EC0687DDBC6E3BBA9;
 			remoteInfo = "Pods-sancha-ARChromeActivity";
+		};
+		F34964B676FC7D01C8F8662C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9F14F76451BD16B876A439E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8A96F1CE5FEC72CC0EBB2BB;
+			remoteInfo = "Pods-sancha-PullToRefreshCoreText";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02B934673F968A6D157A5500 /* Pods-sancha-SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		073DAAB0613D3E0E1D92DA3E /* eu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = eu.lproj; path = Pod/Assets/eu.lproj; sourceTree = "<group>"; };
-		0BDDB9340E63BC91028C169B /* libPods-sancha-TUSafariActivity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-TUSafariActivity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D26AFD8E7458D909E04A1E6 /* Pods-sancha-KINWebBrowser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-KINWebBrowser-prefix.pch"; sourceTree = "<group>"; };
-		0E42A3A5FBAC2E683DE85DCA /* safari.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = safari.png; path = Pod/Assets/safari.png; sourceTree = "<group>"; };
-		12B51FD2C3EA1C8BA4324B61 /* libPods-sancha-SVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-SVProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		154A83519AEEA8D73B3D46ED /* UIScrollView+PullToRefreshCoreText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+PullToRefreshCoreText.h"; path = "PullToRefreshCoreText/PullToRefreshCoreText/UIScrollView+PullToRefreshCoreText.h"; sourceTree = "<group>"; };
-		1C5F6FBB40532C1D07E3CA6A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
-		1CE60A39D418D7F69DB4952C /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sk.lproj; path = Pod/Assets/sk.lproj; sourceTree = "<group>"; };
-		229CA84F45A42C4E21D31532 /* fi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fi.lproj; path = Pod/Assets/fi.lproj; sourceTree = "<group>"; };
-		22CA244BF92E9852225D475B /* RATreeView+UIScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RATreeView+UIScrollView.h"; path = "RATreeView/Private Files/RATreeView+UIScrollView.h"; sourceTree = "<group>"; };
-		29963CF9B5BA34CDDF81E082 /* RATreeView+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RATreeView+Private.h"; path = "RATreeView/Private Files/RATreeView+Private.h"; sourceTree = "<group>"; };
-		2A6B0FAC25A671DF9BF4F125 /* Pods-sancha-TUSafariActivity.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-TUSafariActivity.xcconfig"; sourceTree = "<group>"; };
-		2B041FAAC19CB00FE14007F3 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = Pod/Assets/it.lproj; sourceTree = "<group>"; };
-		341C476EA88799CFE8B72808 /* RATreeNodeItem+ClassExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RATreeNodeItem+ClassExtension.h"; path = "RATreeView/Private Files/RATreeNodeItem+ClassExtension.h"; sourceTree = "<group>"; };
-		3491F1763E57FDD473522B09 /* RATreeNodeCollectionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RATreeNodeCollectionController.m; path = "RATreeView/Private Files/RATreeNodeCollectionController.m"; sourceTree = "<group>"; };
-		353D2D1B862D8F3463254CD3 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = Pod/Assets/de.lproj; sourceTree = "<group>"; };
-		3FF358C007730D468EA3682D /* Pods-sancha-KINWebBrowser-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-KINWebBrowser-Private.xcconfig"; sourceTree = "<group>"; };
-		4097416901DFED97B7F5F87C /* Pods-sancha-SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-SVProgressHUD.xcconfig"; sourceTree = "<group>"; };
-		4389029BBBFBA68E7BBB9E2C /* Pods-sancha-PullToRefreshCoreText-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-PullToRefreshCoreText-dummy.m"; sourceTree = "<group>"; };
-		46AB570BC36C80605B3F64F4 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-PullToRefreshCoreText-Private.xcconfig"; sourceTree = "<group>"; };
-		485DB8AF889844CD5793AEB9 /* ARChromeActivity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ARChromeActivity.m; path = ARChromeActivity/ARChromeActivity.m; sourceTree = "<group>"; };
-		4A5D357B1029B53AD3FA4321 /* ARChromeActivity~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ARChromeActivity~ipad.png"; path = "ARChromeActivity/ARChromeActivity~ipad.png"; sourceTree = "<group>"; };
-		4B9DD05F5E510B5095B07AD5 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
-		4C40B3CB5359857760F8D1EE /* Pods-sancha-TUSafariActivity-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-TUSafariActivity-Private.xcconfig"; sourceTree = "<group>"; };
-		4E07217CD7FFD5A41F2A7340 /* forwardbutton@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "forwardbutton@2x.png"; path = "Assets/forwardbutton@2x.png"; sourceTree = "<group>"; };
-		4F8E6404EF0E1CD9CB7ECEED /* RATreeView+UIScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RATreeView+UIScrollView.m"; path = "RATreeView/Private Files/RATreeView+UIScrollView.m"; sourceTree = "<group>"; };
-		50541201A979E46704018A55 /* KINWebBrowserViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KINWebBrowserViewController.m; path = KINWebBrowser/KINWebBrowserViewController.m; sourceTree = "<group>"; };
-		5073705A7506555D6B050D90 /* forwardbutton.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = forwardbutton.png; path = Assets/forwardbutton.png; sourceTree = "<group>"; };
-		542B240191C4E76246DCF8B5 /* libPods-sancha-PullToRefreshCoreText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-PullToRefreshCoreText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A560A4B3F15721E4079DB08 /* RATreeNodeItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RATreeNodeItem.m; path = "RATreeView/Private Files/RATreeNodeItem.m"; sourceTree = "<group>"; };
-		5F67065CAF08B13393E72C68 /* Pods-sancha-AutoScrollLabel-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-AutoScrollLabel-Private.xcconfig"; sourceTree = "<group>"; };
-		5F980EAC07BCD5F20460FB88 /* TUSafariActivity.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUSafariActivity.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		63B080CD9D0CFC7ACD41BBD5 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = Pod/Assets/ja.lproj; sourceTree = "<group>"; };
-		6673B465DAB6EBF6D239F79F /* forwardbutton@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "forwardbutton@3x.png"; path = "Assets/forwardbutton@3x.png"; sourceTree = "<group>"; };
-		69F19E6A7CA50A61B6408281 /* Pods-sancha-RATreeView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-RATreeView-dummy.m"; sourceTree = "<group>"; };
-		6AFF1F8C193D64781C180B9F /* RATreeView+TableViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RATreeView+TableViewDelegate.h"; path = "RATreeView/Private Files/RATreeView+TableViewDelegate.h"; sourceTree = "<group>"; };
-		6DEE573DFD9D5FEE34085984 /* RATreeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RATreeView.h; path = RATreeView/RATreeView.h; sourceTree = "<group>"; };
-		6FD42D7D131E4D5FB154BE4D /* RATreeNodeItem+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RATreeNodeItem+Private.h"; path = "RATreeView/Private Files/RATreeNodeItem+Private.h"; sourceTree = "<group>"; };
-		703264BFD2E6E841CFE7DBE9 /* Pods-sancha-AutoScrollLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-AutoScrollLabel-dummy.m"; sourceTree = "<group>"; };
-		707E51455A4A0A5B55DDEA6F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		715C39C17C46C5CA6573E1BA /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pt.lproj; path = Pod/Assets/pt.lproj; sourceTree = "<group>"; };
-		72C753A57918CCF23478D6CB /* Pods-sancha-TUSafariActivity-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-TUSafariActivity-prefix.pch"; sourceTree = "<group>"; };
-		740E9E13EE752094BBAFB61C /* libPods-sancha-RATreeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-RATreeView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		768E51CF8B5BFC47EBA0F106 /* Pods-sancha-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sancha-acknowledgements.plist"; sourceTree = "<group>"; };
-		7840CD053066E656A85A67AC /* Pods-sancha-RATreeView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-RATreeView-Private.xcconfig"; sourceTree = "<group>"; };
-		7AC7DAABD6A283DE83DD922A /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ko.lproj; path = Pod/Assets/ko.lproj; sourceTree = "<group>"; };
-		7DE6AACA88771887366EEC6D /* libPods-sancha-ARChromeActivity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-ARChromeActivity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E5800EB0D80E9E05215BB7A /* PullToRefreshCoreTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PullToRefreshCoreTextView.h; path = PullToRefreshCoreText/PullToRefreshCoreText/PullToRefreshCoreTextView.h; sourceTree = "<group>"; };
-		8132B99D8A1EEDE5834F9E8E /* Pods-sancha-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-sancha-acknowledgements.markdown"; sourceTree = "<group>"; };
-		819221626A94A2340650E6F2 /* Pods-sancha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha.debug.xcconfig"; sourceTree = "<group>"; };
-		81E3AE6DF888F9E50CABAB5C /* Mask.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Mask.png; path = PullToRefreshCoreText/PullToRefreshCoreText/Mask.png; sourceTree = "<group>"; };
-		88044BF7B2FF702C9B18D205 /* RATreeView+Enums.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RATreeView+Enums.m"; path = "RATreeView/Private Files/RATreeView+Enums.m"; sourceTree = "<group>"; };
-		889155F72DD8C86DCB009335 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		88B43E80406AFDF557EB10EA /* RATreeNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RATreeNode.m; path = "RATreeView/Private Files/RATreeNode.m"; sourceTree = "<group>"; };
-		8F1BCAC355D8432545EBDF0C /* TUSafariActivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TUSafariActivity.h; path = Pod/Classes/TUSafariActivity.h; sourceTree = "<group>"; };
-		8FC79A15DB7A90582DE6B149 /* RATreeView+TableViewDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RATreeView+TableViewDataSource.m"; path = "RATreeView/Private Files/RATreeView+TableViewDataSource.m"; sourceTree = "<group>"; };
-		921D12CD1B3919DB4708C771 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = Pod/Assets/es.lproj; sourceTree = "<group>"; };
-		96ABDB987B3D33C72544C5B2 /* RATreeNodeController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RATreeNodeController.h; path = "RATreeView/Private Files/RATreeNodeController.h"; sourceTree = "<group>"; };
-		9BBF69DDE07612D98764558A /* RATreeView+RATreeNodeCollectionControllerDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RATreeView+RATreeNodeCollectionControllerDataSource.h"; path = "RATreeView/Private Files/RATreeView+RATreeNodeCollectionControllerDataSource.h"; sourceTree = "<group>"; };
-		9DC0F0855721709AB6C480AD /* RATreeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RATreeView.m; path = RATreeView/RATreeView.m; sourceTree = "<group>"; };
-		A2BFE4435D72EBE94790CABC /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
-		A319386A335A74AA47C0F1E8 /* Pods-sancha-PullToRefreshCoreText-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-PullToRefreshCoreText-prefix.pch"; sourceTree = "<group>"; };
-		A9F68E0829BA243A4EE92B3C /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CBAutoScrollLabel.m; path = CBAutoScrollLabel/CBAutoScrollLabel.m; sourceTree = "<group>"; };
-		AA5A7E73FB31CF7455A92A6D /* no.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = no.lproj; path = Pod/Assets/no.lproj; sourceTree = "<group>"; };
-		AABC4EBD5918807DD2B46390 /* Pods-sancha-PullToRefreshCoreText.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-PullToRefreshCoreText.xcconfig"; sourceTree = "<group>"; };
-		AB5914EABB6838E203676360 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = vi.lproj; path = Pod/Assets/vi.lproj; sourceTree = "<group>"; };
-		AB6B6DDF9A12F67E2904E6F2 /* ARChromeActivity.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ARChromeActivity.png; path = ARChromeActivity/ARChromeActivity.png; sourceTree = "<group>"; };
-		AC02F5AB17D8004BFFEB5F92 /* Pods-sancha-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-dummy.m"; sourceTree = "<group>"; };
-		B1F2FAC7715A4BEC071B4CAD /* RATreeView+Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RATreeView+Private.m"; path = "RATreeView/Private Files/RATreeView+Private.m"; sourceTree = "<group>"; };
-		B4C33FDEA84E061A0941570F /* RATreeNodeItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RATreeNodeItem.h; path = "RATreeView/Private Files/RATreeNodeItem.h"; sourceTree = "<group>"; };
-		B6661CE40CDCB48D6DA2E3BB /* zh_CN.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = zh_CN.lproj; path = Pod/Assets/zh_CN.lproj; sourceTree = "<group>"; };
-		B66E1F6D3D8489DC4AB5B9CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		B70DBCF5128F93E339149214 /* Pods-sancha-RATreeView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-RATreeView-prefix.pch"; sourceTree = "<group>"; };
-		B7330CDE4EC30C8E459005DB /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
-		B74AD2161F1612B2E10045F6 /* libPods-sancha-KINWebBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-KINWebBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7C187775545FBC5DE2F458B /* RATreeView+RATreeNodeCollectionControllerDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RATreeView+RATreeNodeCollectionControllerDataSource.m"; path = "RATreeView/Private Files/RATreeView+RATreeNodeCollectionControllerDataSource.m"; sourceTree = "<group>"; };
-		BC97EFC643005392A5EB28E7 /* safari~iPad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "safari~iPad.png"; path = "Pod/Assets/safari~iPad.png"; sourceTree = "<group>"; };
-		BF424F30D015917C1E7E7B55 /* RATreeView+Enums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RATreeView+Enums.h"; path = "RATreeView/Private Files/RATreeView+Enums.h"; sourceTree = "<group>"; };
-		BFBE34AA1D0B21D7B9CAFE97 /* Pods-sancha-SVProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-SVProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
-		C1693378EB551CA8148CEFAA /* libPods-sancha-AutoScrollLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-AutoScrollLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2AB15D0E86B551D58004A24 /* Pods-sancha-ARChromeActivity-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-ARChromeActivity-Private.xcconfig"; sourceTree = "<group>"; };
-		C2E3F0570788A933417F9BC2 /* RABatchChanges.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RABatchChanges.h; path = "RATreeView/Private Files/RABatchChanges.h"; sourceTree = "<group>"; };
-		C3DE015181E00F4C8238C9A9 /* KINWebBrowserViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KINWebBrowserViewController.h; path = KINWebBrowser/KINWebBrowserViewController.h; sourceTree = "<group>"; };
-		C4293E0CE25C8DE82EC872AD /* RATreeNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RATreeNode.h; path = "RATreeView/Private Files/RATreeNode.h"; sourceTree = "<group>"; };
-		C67D12FE6843710C15B9CFF2 /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sv.lproj; path = Pod/Assets/sv.lproj; sourceTree = "<group>"; };
-		C6EE4334D13B95281F3D8F13 /* Pods-sancha-ARChromeActivity-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-ARChromeActivity-prefix.pch"; sourceTree = "<group>"; };
-		C7A5F86FBADA60D2C9217B7B /* Pods-sancha-KINWebBrowser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-KINWebBrowser-dummy.m"; sourceTree = "<group>"; };
-		C913BBCA34177BCBB7799999 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Pod/Assets/en.lproj; sourceTree = "<group>"; };
-		CAD24001123EF9EC8B1F8F8D /* backbutton@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "backbutton@2x.png"; path = "Assets/backbutton@2x.png"; sourceTree = "<group>"; };
-		CDED71B1EBFF95FE2E4D5292 /* PullToRefreshCoreTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PullToRefreshCoreTextView.m; path = PullToRefreshCoreText/PullToRefreshCoreText/PullToRefreshCoreTextView.m; sourceTree = "<group>"; };
-		CEA631D64A965FCF58ADF24F /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = Pod/Assets/fr.lproj; sourceTree = "<group>"; };
-		D0B2F90F9260181BACA18C9E /* RATreeNodeItem+Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RATreeNodeItem+Private.m"; path = "RATreeView/Private Files/RATreeNodeItem+Private.m"; sourceTree = "<group>"; };
-		D48DCB66FE7687BD9CCA9D1B /* safari@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "safari@3x.png"; path = "Pod/Assets/safari@3x.png"; sourceTree = "<group>"; };
-		D4FCF16A6C6F04CBD88242C9 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = cs.lproj; path = Pod/Assets/cs.lproj; sourceTree = "<group>"; };
-		D51BF0FE47BABF3F159442FC /* UIScrollView+PullToRefreshCoreText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+PullToRefreshCoreText.m"; path = "PullToRefreshCoreText/PullToRefreshCoreText/UIScrollView+PullToRefreshCoreText.m"; sourceTree = "<group>"; };
-		D54591F5C7D7428DFE9FDE59 /* ARChromeActivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ARChromeActivity.h; path = ARChromeActivity/ARChromeActivity.h; sourceTree = "<group>"; };
-		D692F9A028E9A53E86FD57F3 /* Pods-sancha-SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		D772710CEFA4DC0FCA4F8537 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = Pod/Assets/ru.lproj; sourceTree = "<group>"; };
-		DC1ED38D3D5FA008606F0D1C /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = Pod/Assets/nl.lproj; sourceTree = "<group>"; };
-		DCD6765C06C417DADCE5AFF2 /* RATreeNodeController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RATreeNodeController.m; path = "RATreeView/Private Files/RATreeNodeController.m"; sourceTree = "<group>"; };
-		DD28067CB7F3A008C777CAF5 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		DD753A962FF3C01815517503 /* safari~iPad@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "safari~iPad@2x.png"; path = "Pod/Assets/safari~iPad@2x.png"; sourceTree = "<group>"; };
-		DDF435609ED817B675E372EE /* Pods-sancha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha.release.xcconfig"; sourceTree = "<group>"; };
-		DE491FF2A4EE538011335CF0 /* ARChromeActivity@2x~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ARChromeActivity@2x~ipad.png"; path = "ARChromeActivity/ARChromeActivity@2x~ipad.png"; sourceTree = "<group>"; };
-		DF786C571CCBD35AD1B4EB52 /* safari@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "safari@2x.png"; path = "Pod/Assets/safari@2x.png"; sourceTree = "<group>"; };
-		E161E0DB67BDD251EC2DB302 /* Pods-sancha-ARChromeActivity.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-ARChromeActivity.xcconfig"; sourceTree = "<group>"; };
-		E24901CAB10803B547A58A8A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E25B66A77E16700DAC93C4F9 /* Pods-sancha-TUSafariActivity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-TUSafariActivity-dummy.m"; sourceTree = "<group>"; };
-		E45101C824B9EC92B3EBD2AC /* RABatchChanges.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RABatchChanges.m; path = "RATreeView/Private Files/RABatchChanges.m"; sourceTree = "<group>"; };
-		E4F9A1588192AB67D9A28166 /* Pods-sancha-AutoScrollLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-AutoScrollLabel-prefix.pch"; sourceTree = "<group>"; };
-		E50A5BCC6F038052F66F3CDE /* RATreeView_ClassExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RATreeView_ClassExtension.h; path = "RATreeView/Private Files/RATreeView_ClassExtension.h"; sourceTree = "<group>"; };
-		E544288C41FFAEAEB4E911C9 /* ARChromeActivity@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ARChromeActivity@2x.png"; path = "ARChromeActivity/ARChromeActivity@2x.png"; sourceTree = "<group>"; };
-		E5BBE7E78AD79B29B1F33683 /* Pods-sancha-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-sancha-resources.sh"; sourceTree = "<group>"; };
-		E61EA42C8ACAFD8B2CFB36DE /* Pods-sancha-RATreeView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-RATreeView.xcconfig"; sourceTree = "<group>"; };
-		E73BD2FF042FBF1662234666 /* RATreeView+TableViewDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RATreeView+TableViewDataSource.h"; path = "RATreeView/Private Files/RATreeView+TableViewDataSource.h"; sourceTree = "<group>"; };
-		E7A3672852B7E5CE0F57146C /* TUSafariActivity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TUSafariActivity.m; path = Pod/Classes/TUSafariActivity.m; sourceTree = "<group>"; };
-		EBA30845571B2F556AFE4BCB /* Pods-sancha-ARChromeActivity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-ARChromeActivity-dummy.m"; sourceTree = "<group>"; };
-		EDE76BFE1F0CF7A0066D9C7F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		EE7440D679C3079FCCF1D767 /* RATreeNodeCollectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RATreeNodeCollectionController.h; path = "RATreeView/Private Files/RATreeNodeCollectionController.h"; sourceTree = "<group>"; };
-		EFE53EF50EE6D595D14E3A49 /* Pods-sancha-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-environment.h"; sourceTree = "<group>"; };
-		F01F36BBD20F834A7A404DEF /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CBAutoScrollLabel.h; path = CBAutoScrollLabel/CBAutoScrollLabel.h; sourceTree = "<group>"; };
-		F1B40441EFF1D0657EA09F00 /* Pods-sancha-AutoScrollLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-AutoScrollLabel.xcconfig"; sourceTree = "<group>"; };
-		F37C3FCE6862EE155BC33056 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pl.lproj; path = Pod/Assets/pl.lproj; sourceTree = "<group>"; };
-		F3813FDC831FC613DF78CD5F /* libPods-sancha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3F89A06AAEB620EF0AD2935 /* backbutton@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "backbutton@3x.png"; path = "Assets/backbutton@3x.png"; sourceTree = "<group>"; };
-		F4C3A1925DABD7EEAC427E5C /* RATreeNode_ClassExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RATreeNode_ClassExtension.h; path = "RATreeView/Private Files/RATreeNode_ClassExtension.h"; sourceTree = "<group>"; };
-		F9B5D0DF45F72E176009E726 /* RATreeView+TableViewDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RATreeView+TableViewDelegate.m"; path = "RATreeView/Private Files/RATreeView+TableViewDelegate.m"; sourceTree = "<group>"; };
-		FD4E82F28EA16C79F1ED45E5 /* Pods-sancha-KINWebBrowser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-KINWebBrowser.xcconfig"; sourceTree = "<group>"; };
-		FFE000B9663D7B65BA58FA79 /* backbutton.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = backbutton.png; path = Assets/backbutton.png; sourceTree = "<group>"; };
+		00757C9458F8D8E7B65846E7 /* ARChromeActivity~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ARChromeActivity~ipad.png"; path = "ARChromeActivity/ARChromeActivity~ipad.png"; sourceTree = "<group>"; };
+		00E72B300E37D0D146FDE187 /* Pods-sancha-KINWebBrowser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-KINWebBrowser-dummy.m"; sourceTree = "<group>"; };
+		0C389398F9913AD365B6FCA9 /* Mask.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Mask.png; path = PullToRefreshCoreText/PullToRefreshCoreText/Mask.png; sourceTree = "<group>"; };
+		0CE9264D0605D84870EA4283 /* Pods-sancha-ARChromeActivity.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-ARChromeActivity.xcconfig"; sourceTree = "<group>"; };
+		0E67B3B4018DEB61869F1EBA /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Pod/Assets/en.lproj; sourceTree = "<group>"; };
+		10DFD8E46368C83078894C56 /* Pods-sancha-TUSafariActivity-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-TUSafariActivity-prefix.pch"; sourceTree = "<group>"; };
+		130192667E9DDCEF0F52018F /* safari~iPad@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "safari~iPad@2x.png"; path = "Pod/Assets/safari~iPad@2x.png"; sourceTree = "<group>"; };
+		14F6C24AF94EF993B1E6A96B /* libPods-sancha-AutoScrollLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-AutoScrollLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		183FA438B60E2CA539233ED8 /* Pods-sancha-SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-SVProgressHUD.xcconfig"; sourceTree = "<group>"; };
+		18432135997910521D110036 /* Pods-sancha-SVProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-SVProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		1C0C684394BBF340FCA6C1B1 /* Pods-sancha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha.debug.xcconfig"; sourceTree = "<group>"; };
+		1D337FBBE5D206817DCC6828 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		206ECA2DADD6AC93C2325D11 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = Pod/Assets/ru.lproj; sourceTree = "<group>"; };
+		25604C6D4837FE931EE854EB /* TUSafariActivity.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUSafariActivity.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		2735EF1C8C72E10AB8DEBD2C /* Pods-sancha-SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		28380BDB00BF234325E40EDE /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		2955157BDA9E2463705470E8 /* Pods-sancha-AutoScrollLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-AutoScrollLabel.xcconfig"; sourceTree = "<group>"; };
+		2BF96C08CD8441BE50F75F6D /* forwardbutton.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = forwardbutton.png; path = Assets/forwardbutton.png; sourceTree = "<group>"; };
+		3369737AC1CE3178A2ED67F6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		33997F4DD44887F75473211E /* backbutton.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = backbutton.png; path = Assets/backbutton.png; sourceTree = "<group>"; };
+		33F0D1DB268E08EF53FE7A1D /* Pods-sancha-ARChromeActivity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-ARChromeActivity-dummy.m"; sourceTree = "<group>"; };
+		3471A39C3B30DF32E02DABCF /* Pods-sancha-TUSafariActivity.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-TUSafariActivity.xcconfig"; sourceTree = "<group>"; };
+		36F19AC00C52BE540D7A71DC /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = Pod/Assets/it.lproj; sourceTree = "<group>"; };
+		37934AB8162A18D8625C267C /* ARChromeActivity@2x~ipad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ARChromeActivity@2x~ipad.png"; path = "ARChromeActivity/ARChromeActivity@2x~ipad.png"; sourceTree = "<group>"; };
+		3C51D353776E819DC78FABF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4018BE846C7CC0118C7A1DE4 /* ARChromeActivity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ARChromeActivity.m; path = ARChromeActivity/ARChromeActivity.m; sourceTree = "<group>"; };
+		403656D10E7FEAE943BBA3E0 /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sv.lproj; path = Pod/Assets/sv.lproj; sourceTree = "<group>"; };
+		478FE41B2A2B66FFA7B76162 /* UIScrollView+PullToRefreshCoreText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+PullToRefreshCoreText.h"; path = "PullToRefreshCoreText/PullToRefreshCoreText/UIScrollView+PullToRefreshCoreText.h"; sourceTree = "<group>"; };
+		496119075E1574100143506D /* safari@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "safari@2x.png"; path = "Pod/Assets/safari@2x.png"; sourceTree = "<group>"; };
+		50228C3F2A70062181FEFB05 /* safari~iPad.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "safari~iPad.png"; path = "Pod/Assets/safari~iPad.png"; sourceTree = "<group>"; };
+		5024A0966B14DFEFA6039054 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = cs.lproj; path = Pod/Assets/cs.lproj; sourceTree = "<group>"; };
+		51F2F149FC60044CE55680D7 /* Pods-sancha-KINWebBrowser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-KINWebBrowser.xcconfig"; sourceTree = "<group>"; };
+		522A190749F8F1400EB710F6 /* fi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fi.lproj; path = Pod/Assets/fi.lproj; sourceTree = "<group>"; };
+		566B4B6C275CCB56ADE40741 /* backbutton@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "backbutton@2x.png"; path = "Assets/backbutton@2x.png"; sourceTree = "<group>"; };
+		5A6D847C9AE712A3568D50CE /* PullToRefreshCoreTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PullToRefreshCoreTextView.m; path = PullToRefreshCoreText/PullToRefreshCoreText/PullToRefreshCoreTextView.m; sourceTree = "<group>"; };
+		6169B691242EDC0259EA2837 /* Pods-sancha-AutoScrollLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-AutoScrollLabel-prefix.pch"; sourceTree = "<group>"; };
+		627508BE34BBED85188022FA /* forwardbutton@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "forwardbutton@2x.png"; path = "Assets/forwardbutton@2x.png"; sourceTree = "<group>"; };
+		62F3D350D9FB995EB46F19AB /* Pods-sancha-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sancha-acknowledgements.plist"; sourceTree = "<group>"; };
+		6731FD9AB3EE95D0CAE5B8C3 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		6988D51B664E92E99A4D4380 /* safari.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = safari.png; path = Pod/Assets/safari.png; sourceTree = "<group>"; };
+		6BBD21F2BB5D37F962D96367 /* no.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = no.lproj; path = Pod/Assets/no.lproj; sourceTree = "<group>"; };
+		6C5573DD03FFE8DD8BEBC247 /* ARChromeActivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ARChromeActivity.h; path = ARChromeActivity/ARChromeActivity.h; sourceTree = "<group>"; };
+		6CE10363793EFF9B363DD2B0 /* backbutton@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "backbutton@3x.png"; path = "Assets/backbutton@3x.png"; sourceTree = "<group>"; };
+		774BF3FAF7787A94CF917243 /* Pods-sancha-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-dummy.m"; sourceTree = "<group>"; };
+		7D760CAADFFC42FD13973D76 /* safari@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "safari@3x.png"; path = "Pod/Assets/safari@3x.png"; sourceTree = "<group>"; };
+		7F919FC5F0592E1EC23CCB85 /* TUSafariActivity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TUSafariActivity.m; path = Pod/Classes/TUSafariActivity.m; sourceTree = "<group>"; };
+		80906B88FE55A36F385695B0 /* Pods-sancha-PullToRefreshCoreText.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-PullToRefreshCoreText.xcconfig"; sourceTree = "<group>"; };
+		80A08999E22D1990B49E8B28 /* ARChromeActivity@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ARChromeActivity@2x.png"; path = "ARChromeActivity/ARChromeActivity@2x.png"; sourceTree = "<group>"; };
+		8138FDAC54AAABEBC2E0E6E4 /* Pods-sancha-ARChromeActivity-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-ARChromeActivity-Private.xcconfig"; sourceTree = "<group>"; };
+		83E063E5AAE10CC320A7EB83 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		88D6D55BD946808E173A151E /* UIScrollView+PullToRefreshCoreText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+PullToRefreshCoreText.m"; path = "PullToRefreshCoreText/PullToRefreshCoreText/UIScrollView+PullToRefreshCoreText.m"; sourceTree = "<group>"; };
+		891E303B8EE559079B74BC47 /* libPods-sancha-TUSafariActivity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-TUSafariActivity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CCC55E48CFDE72D21BB327E /* Pods-sancha-ARChromeActivity-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-ARChromeActivity-prefix.pch"; sourceTree = "<group>"; };
+		8DF60B8C07F224CC07C88569 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = Pod/Assets/es.lproj; sourceTree = "<group>"; };
+		8EA61177F70243AD4E8B18B1 /* Pods-sancha-KINWebBrowser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-KINWebBrowser-prefix.pch"; sourceTree = "<group>"; };
+		8F72793630FB4B11057F93D7 /* Pods-sancha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha.release.xcconfig"; sourceTree = "<group>"; };
+		968C4F64FD2C8D5A181DE629 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pl.lproj; path = Pod/Assets/pl.lproj; sourceTree = "<group>"; };
+		97F261111E19799820A5C396 /* Pods-sancha-PullToRefreshCoreText-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-PullToRefreshCoreText-prefix.pch"; sourceTree = "<group>"; };
+		98DC4CDC485B70EC75CCE3C2 /* KINWebBrowserViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KINWebBrowserViewController.m; path = KINWebBrowser/KINWebBrowserViewController.m; sourceTree = "<group>"; };
+		9C981B0376F570A52318F155 /* PullToRefreshCoreTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PullToRefreshCoreTextView.h; path = PullToRefreshCoreText/PullToRefreshCoreText/PullToRefreshCoreTextView.h; sourceTree = "<group>"; };
+		9E38C2A39F8BF664BDF37B07 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		9ED21CD8674A4CA7DA8B1D5B /* eu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = eu.lproj; path = Pod/Assets/eu.lproj; sourceTree = "<group>"; };
+		9EDD7D681157FA71063FD18A /* libPods-sancha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F365F620B686382486C26B /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = Pod/Assets/nl.lproj; sourceTree = "<group>"; };
+		A1286EF22206950E9568A92C /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = Pod/Assets/ja.lproj; sourceTree = "<group>"; };
+		A1E0173745FB9A9EF772065D /* Pods-sancha-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-environment.h"; sourceTree = "<group>"; };
+		A30DA0ACD986411651FC08A7 /* Pods-sancha-TUSafariActivity-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-TUSafariActivity-Private.xcconfig"; sourceTree = "<group>"; };
+		A54E8AA69CDC04C14F85BD42 /* zh_CN.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = zh_CN.lproj; path = Pod/Assets/zh_CN.lproj; sourceTree = "<group>"; };
+		AB0134A49BE1C48765070446 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = Pod/Assets/fr.lproj; sourceTree = "<group>"; };
+		AB051F91BE8A34D49622A7F8 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = vi.lproj; path = Pod/Assets/vi.lproj; sourceTree = "<group>"; };
+		B0157A9973560A2C1FDBF64E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		B275514616A8E9C5D771167F /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = Pod/Assets/de.lproj; sourceTree = "<group>"; };
+		B5414C15B2AE69638CD2CE7D /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ko.lproj; path = Pod/Assets/ko.lproj; sourceTree = "<group>"; };
+		B71502DF766A5648892ACA5A /* forwardbutton@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "forwardbutton@3x.png"; path = "Assets/forwardbutton@3x.png"; sourceTree = "<group>"; };
+		BAEE49ACF120B7615E73F7B3 /* libPods-sancha-KINWebBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-KINWebBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB4DEBC624ADEDF16C916295 /* libPods-sancha-PullToRefreshCoreText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-PullToRefreshCoreText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCC5D273662851654DCA940A /* Pods-sancha-KINWebBrowser-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-KINWebBrowser-Private.xcconfig"; sourceTree = "<group>"; };
+		BDCC72CF03AAC98275DBE107 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-PullToRefreshCoreText-Private.xcconfig"; sourceTree = "<group>"; };
+		C195675DE325B592FA1735EE /* Pods-sancha-PullToRefreshCoreText-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-PullToRefreshCoreText-dummy.m"; sourceTree = "<group>"; };
+		C70FFBEA444AF0730FC76CF2 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		C8BC9457A893120D9183F08C /* Pods-sancha-TUSafariActivity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-TUSafariActivity-dummy.m"; sourceTree = "<group>"; };
+		CB5AC87B8DEFF0C64591B6AE /* Pods-sancha-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-sancha-resources.sh"; sourceTree = "<group>"; };
+		CB602E9A978458B97EEA7015 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pt.lproj; path = Pod/Assets/pt.lproj; sourceTree = "<group>"; };
+		D24310ECFD834CA38518171B /* KINWebBrowserViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KINWebBrowserViewController.h; path = KINWebBrowser/KINWebBrowserViewController.h; sourceTree = "<group>"; };
+		D4A90A3223F68FDE375E0C25 /* Pods-sancha-AutoScrollLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-AutoScrollLabel-dummy.m"; sourceTree = "<group>"; };
+		D97A1D1B07FDA8C90B7B8F11 /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sk.lproj; path = Pod/Assets/sk.lproj; sourceTree = "<group>"; };
+		DC019691123531BCBC423116 /* libPods-sancha-ARChromeActivity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-ARChromeActivity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD5459C628D5CE41EA1D9CB4 /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CBAutoScrollLabel.h; path = CBAutoScrollLabel/CBAutoScrollLabel.h; sourceTree = "<group>"; };
+		E6F6C030097BF94BBB5C3C2C /* Pods-sancha-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-sancha-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F1D805E0FFBC04B5460CD409 /* TUSafariActivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TUSafariActivity.h; path = Pod/Classes/TUSafariActivity.h; sourceTree = "<group>"; };
+		F2204C39D26359DEE6C363BC /* libPods-sancha-SVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-SVProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E3A2DF27362C28FE637EF5 /* ARChromeActivity.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ARChromeActivity.png; path = ARChromeActivity/ARChromeActivity.png; sourceTree = "<group>"; };
+		F7EBB1B7983F9C79DEF7758D /* Pods-sancha-AutoScrollLabel-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-AutoScrollLabel-Private.xcconfig"; sourceTree = "<group>"; };
+		F850EC5A0765C8BCA2656DAF /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F867617B0C6EE39D03D14CEA /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CBAutoScrollLabel.m; path = CBAutoScrollLabel/CBAutoScrollLabel.m; sourceTree = "<group>"; };
+		FA7AB426CD4C35FC37FE5B78 /* Pods-sancha-SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2937292A45C79F2FFDF69CC6 /* Frameworks */ = {
+		44D3CEC294E975320620F4A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				881B60D3910A5741F1D090CE /* Foundation.framework in Frameworks */,
+				C04A95C18574CDABC5A06256 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3DAA7DA60704E100B47778E1 /* Frameworks */ = {
+		57A94CB0AA1F9536C77A73D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B0433C1C261C3F84EB0C1F1 /* Foundation.framework in Frameworks */,
+				7F342664DDAD482F32447786 /* CoreText.framework in Frameworks */,
+				837620397EE3C10D79DB8FA0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E04576BADCF4B6F989525CD /* Frameworks */ = {
+		5DEC89AC1C7A43578FF9EFD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				587DC7068BD11950F0E85AA3 /* Foundation.framework in Frameworks */,
+				EFC95EC1DBF1B18367F15774 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		661420E784F9C3D3C01275F4 /* Frameworks */ = {
+		6D79672A02AE5FEF374B0AB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C324C8DE675EBD6166F6595 /* Foundation.framework in Frameworks */,
-				FB4C439B050621F006CFFBF6 /* QuartzCore.framework in Frameworks */,
+				C2925B3508BFAA771F3C1333 /* CoreGraphics.framework in Frameworks */,
+				0B25BF583049F15D33E036E1 /* Foundation.framework in Frameworks */,
+				5792D76D1C810A1AE016697B /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A58D673A64A32A3577AD84C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00DE0DB36DA1D6324A2B7990 /* CoreGraphics.framework in Frameworks */,
-				3F4AF387A6B3BE441E828515 /* Foundation.framework in Frameworks */,
-				036291A9F146FDB538361063 /* QuartzCore.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AD19C2B0CFA0C1FE55BD167B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0870FB368CCFBA008FAE72FE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B77C996818B2B7F4AD6CD8AF /* Frameworks */ = {
+		7A775D3135D6D182E97AF0C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D72EDCE7F345CB91F23BE392 /* Frameworks */ = {
+		B86D6EFCBD614A0FD01FE85A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BCCDEBF9D8BD7AFA8F4CD3A /* CoreText.framework in Frameworks */,
-				783B2AFD301AB881877563DA /* Foundation.framework in Frameworks */,
+				F3CED52852C612B5C5E4568A /* Foundation.framework in Frameworks */,
+				358F0FB9781428D3E8429B3F /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F410FF8C211A40F241EC81FE /* Frameworks */ = {
+		D08392F26DC9478E23A8436A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A38B0362FB74C392E9B4B2 /* Foundation.framework in Frameworks */,
+				6C571191EB97604D801E5A96 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCBE795D7D65CE6E746AAC1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31EF9150A82551908F0749D5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		004914548A9618CEAFC32C96 /* Pods-sancha */ = {
+		11BB66BDC2555B1E0F2D45E7 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8132B99D8A1EEDE5834F9E8E /* Pods-sancha-acknowledgements.markdown */,
-				768E51CF8B5BFC47EBA0F106 /* Pods-sancha-acknowledgements.plist */,
-				AC02F5AB17D8004BFFEB5F92 /* Pods-sancha-dummy.m */,
-				EFE53EF50EE6D595D14E3A49 /* Pods-sancha-environment.h */,
-				E5BBE7E78AD79B29B1F33683 /* Pods-sancha-resources.sh */,
-				819221626A94A2340650E6F2 /* Pods-sancha.debug.xcconfig */,
-				DDF435609ED817B675E372EE /* Pods-sancha.release.xcconfig */,
+				3369737AC1CE3178A2ED67F6 /* CoreGraphics.framework */,
+				1D337FBBE5D206817DCC6828 /* CoreText.framework */,
+				3C51D353776E819DC78FABF3 /* Foundation.framework */,
+				B0157A9973560A2C1FDBF64E /* QuartzCore.framework */,
 			);
-			name = "Pods-sancha";
-			path = "Target Support Files/Pods-sancha";
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		0BAEAB6FA8E92A23A766557B /* Resources */ = {
+		18D67E7517113480F1414F60 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D4FCF16A6C6F04CBD88242C9 /* cs.lproj */,
-				353D2D1B862D8F3463254CD3 /* de.lproj */,
-				C913BBCA34177BCBB7799999 /* en.lproj */,
-				921D12CD1B3919DB4708C771 /* es.lproj */,
-				073DAAB0613D3E0E1D92DA3E /* eu.lproj */,
-				229CA84F45A42C4E21D31532 /* fi.lproj */,
-				CEA631D64A965FCF58ADF24F /* fr.lproj */,
-				2B041FAAC19CB00FE14007F3 /* it.lproj */,
-				63B080CD9D0CFC7ACD41BBD5 /* ja.lproj */,
-				7AC7DAABD6A283DE83DD922A /* ko.lproj */,
-				DC1ED38D3D5FA008606F0D1C /* nl.lproj */,
-				AA5A7E73FB31CF7455A92A6D /* no.lproj */,
-				F37C3FCE6862EE155BC33056 /* pl.lproj */,
-				715C39C17C46C5CA6573E1BA /* pt.lproj */,
-				D772710CEFA4DC0FCA4F8537 /* ru.lproj */,
-				0E42A3A5FBAC2E683DE85DCA /* safari.png */,
-				DF786C571CCBD35AD1B4EB52 /* safari@2x.png */,
-				D48DCB66FE7687BD9CCA9D1B /* safari@3x.png */,
-				BC97EFC643005392A5EB28E7 /* safari~iPad.png */,
-				DD753A962FF3C01815517503 /* safari~iPad@2x.png */,
-				1CE60A39D418D7F69DB4952C /* sk.lproj */,
-				C67D12FE6843710C15B9CFF2 /* sv.lproj */,
-				AB5914EABB6838E203676360 /* vi.lproj */,
-				B6661CE40CDCB48D6DA2E3BB /* zh_CN.lproj */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		0D85AC6B86DCE35A7FD88468 /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				889155F72DD8C86DCB009335 /* SVIndefiniteAnimatedView.h */,
-				DD28067CB7F3A008C777CAF5 /* SVIndefiniteAnimatedView.m */,
-				A2BFE4435D72EBE94790CABC /* SVProgressHUD.h */,
-				4B9DD05F5E510B5095B07AD5 /* SVProgressHUD.m */,
-				A1E799D86585825D83056F9D /* Resources */,
-				8B5709B7D791E110F8556F75 /* Support Files */,
-			);
-			path = SVProgressHUD;
-			sourceTree = "<group>";
-		};
-		1C7CF2B68A1CD40D5C9C7857 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E161E0DB67BDD251EC2DB302 /* Pods-sancha-ARChromeActivity.xcconfig */,
-				C2AB15D0E86B551D58004A24 /* Pods-sancha-ARChromeActivity-Private.xcconfig */,
-				EBA30845571B2F556AFE4BCB /* Pods-sancha-ARChromeActivity-dummy.m */,
-				C6EE4334D13B95281F3D8F13 /* Pods-sancha-ARChromeActivity-prefix.pch */,
+				0CE9264D0605D84870EA4283 /* Pods-sancha-ARChromeActivity.xcconfig */,
+				8138FDAC54AAABEBC2E0E6E4 /* Pods-sancha-ARChromeActivity-Private.xcconfig */,
+				33F0D1DB268E08EF53FE7A1D /* Pods-sancha-ARChromeActivity-dummy.m */,
+				8CCC55E48CFDE72D21BB327E /* Pods-sancha-ARChromeActivity-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-sancha-ARChromeActivity";
 			sourceTree = "<group>";
 		};
-		1C9B124802C4DC5946A62045 /* Targets Support Files */ = {
+		1D521C96C6806C59C1761061 /* TUSafariActivity */ = {
 			isa = PBXGroup;
 			children = (
-				004914548A9618CEAFC32C96 /* Pods-sancha */,
+				F1D805E0FFBC04B5460CD409 /* TUSafariActivity.h */,
+				7F919FC5F0592E1EC23CCB85 /* TUSafariActivity.m */,
+				7A6FE609805B240501DC4183 /* Resources */,
+				FBEA73DF921C31198065E380 /* Support Files */,
+			);
+			path = TUSafariActivity;
+			sourceTree = "<group>";
+		};
+		28D6CDAF7FD1CC9453FA0D82 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B46F031A8E4E30C898F970E /* Pods-sancha */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		218D9168D1E1F76DE60F77BB /* RATreeView */ = {
+		34870972DCB4E1E732BFF344 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C2E3F0570788A933417F9BC2 /* RABatchChanges.h */,
-				E45101C824B9EC92B3EBD2AC /* RABatchChanges.m */,
-				C4293E0CE25C8DE82EC872AD /* RATreeNode.h */,
-				88B43E80406AFDF557EB10EA /* RATreeNode.m */,
-				EE7440D679C3079FCCF1D767 /* RATreeNodeCollectionController.h */,
-				3491F1763E57FDD473522B09 /* RATreeNodeCollectionController.m */,
-				96ABDB987B3D33C72544C5B2 /* RATreeNodeController.h */,
-				DCD6765C06C417DADCE5AFF2 /* RATreeNodeController.m */,
-				B4C33FDEA84E061A0941570F /* RATreeNodeItem.h */,
-				5A560A4B3F15721E4079DB08 /* RATreeNodeItem.m */,
-				341C476EA88799CFE8B72808 /* RATreeNodeItem+ClassExtension.h */,
-				6FD42D7D131E4D5FB154BE4D /* RATreeNodeItem+Private.h */,
-				D0B2F90F9260181BACA18C9E /* RATreeNodeItem+Private.m */,
-				F4C3A1925DABD7EEAC427E5C /* RATreeNode_ClassExtension.h */,
-				6DEE573DFD9D5FEE34085984 /* RATreeView.h */,
-				9DC0F0855721709AB6C480AD /* RATreeView.m */,
-				BF424F30D015917C1E7E7B55 /* RATreeView+Enums.h */,
-				88044BF7B2FF702C9B18D205 /* RATreeView+Enums.m */,
-				29963CF9B5BA34CDDF81E082 /* RATreeView+Private.h */,
-				B1F2FAC7715A4BEC071B4CAD /* RATreeView+Private.m */,
-				9BBF69DDE07612D98764558A /* RATreeView+RATreeNodeCollectionControllerDataSource.h */,
-				B7C187775545FBC5DE2F458B /* RATreeView+RATreeNodeCollectionControllerDataSource.m */,
-				E73BD2FF042FBF1662234666 /* RATreeView+TableViewDataSource.h */,
-				8FC79A15DB7A90582DE6B149 /* RATreeView+TableViewDataSource.m */,
-				6AFF1F8C193D64781C180B9F /* RATreeView+TableViewDelegate.h */,
-				F9B5D0DF45F72E176009E726 /* RATreeView+TableViewDelegate.m */,
-				22CA244BF92E9852225D475B /* RATreeView+UIScrollView.h */,
-				4F8E6404EF0E1CD9CB7ECEED /* RATreeView+UIScrollView.m */,
-				E50A5BCC6F038052F66F3CDE /* RATreeView_ClassExtension.h */,
-				8B3F32486133C755B7F2EEAB /* Support Files */,
-			);
-			path = RATreeView;
-			sourceTree = "<group>";
-		};
-		2C2C25937F9E5C4C6950117B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				81E3AE6DF888F9E50CABAB5C /* Mask.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		7C475D6B8BFFDE4901BE216B = {
-			isa = PBXGroup;
-			children = (
-				E24901CAB10803B547A58A8A /* Podfile */,
-				E54057B7EDA441FC83DCF9E9 /* Frameworks */,
-				D546CE411B2E305FC53847DD /* Pods */,
-				C94655918CD865FDF5B334EC /* Products */,
-				1C9B124802C4DC5946A62045 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		7C88E6C83066728A36B979EB /* KINWebBrowser */ = {
-			isa = PBXGroup;
-			children = (
-				C3DE015181E00F4C8238C9A9 /* KINWebBrowserViewController.h */,
-				50541201A979E46704018A55 /* KINWebBrowserViewController.m */,
-				8876CD68AF962B060BAE21C3 /* Resources */,
-				90BEEC8305A3567DDEE87880 /* Support Files */,
-			);
-			path = KINWebBrowser;
-			sourceTree = "<group>";
-		};
-		86EE3D43C67537BE21D5D0E6 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				B66E1F6D3D8489DC4AB5B9CE /* CoreGraphics.framework */,
-				1C5F6FBB40532C1D07E3CA6A /* CoreText.framework */,
-				707E51455A4A0A5B55DDEA6F /* Foundation.framework */,
-				EDE76BFE1F0CF7A0066D9C7F /* QuartzCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		87B6F5A812201CE90D911E2B /* PullToRefreshCoreText */ = {
-			isa = PBXGroup;
-			children = (
-				7E5800EB0D80E9E05215BB7A /* PullToRefreshCoreTextView.h */,
-				CDED71B1EBFF95FE2E4D5292 /* PullToRefreshCoreTextView.m */,
-				154A83519AEEA8D73B3D46ED /* UIScrollView+PullToRefreshCoreText.h */,
-				D51BF0FE47BABF3F159442FC /* UIScrollView+PullToRefreshCoreText.m */,
-				2C2C25937F9E5C4C6950117B /* Resources */,
-				CC377248EE3D00F8DC29653F /* Support Files */,
-			);
-			path = PullToRefreshCoreText;
-			sourceTree = "<group>";
-		};
-		8876CD68AF962B060BAE21C3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				FFE000B9663D7B65BA58FA79 /* backbutton.png */,
-				CAD24001123EF9EC8B1F8F8D /* backbutton@2x.png */,
-				F3F89A06AAEB620EF0AD2935 /* backbutton@3x.png */,
-				5073705A7506555D6B050D90 /* forwardbutton.png */,
-				4E07217CD7FFD5A41F2A7340 /* forwardbutton@2x.png */,
-				6673B465DAB6EBF6D239F79F /* forwardbutton@3x.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		8B3F32486133C755B7F2EEAB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E61EA42C8ACAFD8B2CFB36DE /* Pods-sancha-RATreeView.xcconfig */,
-				7840CD053066E656A85A67AC /* Pods-sancha-RATreeView-Private.xcconfig */,
-				69F19E6A7CA50A61B6408281 /* Pods-sancha-RATreeView-dummy.m */,
-				B70DBCF5128F93E339149214 /* Pods-sancha-RATreeView-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-sancha-RATreeView";
-			sourceTree = "<group>";
-		};
-		8B5709B7D791E110F8556F75 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4097416901DFED97B7F5F87C /* Pods-sancha-SVProgressHUD.xcconfig */,
-				BFBE34AA1D0B21D7B9CAFE97 /* Pods-sancha-SVProgressHUD-Private.xcconfig */,
-				D692F9A028E9A53E86FD57F3 /* Pods-sancha-SVProgressHUD-dummy.m */,
-				02B934673F968A6D157A5500 /* Pods-sancha-SVProgressHUD-prefix.pch */,
+				183FA438B60E2CA539233ED8 /* Pods-sancha-SVProgressHUD.xcconfig */,
+				18432135997910521D110036 /* Pods-sancha-SVProgressHUD-Private.xcconfig */,
+				FA7AB426CD4C35FC37FE5B78 /* Pods-sancha-SVProgressHUD-dummy.m */,
+				2735EF1C8C72E10AB8DEBD2C /* Pods-sancha-SVProgressHUD-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-sancha-SVProgressHUD";
 			sourceTree = "<group>";
 		};
-		90BEEC8305A3567DDEE87880 /* Support Files */ = {
+		352F98FD37003A32E4D15AA8 /* AutoScrollLabel */ = {
 			isa = PBXGroup;
 			children = (
-				FD4E82F28EA16C79F1ED45E5 /* Pods-sancha-KINWebBrowser.xcconfig */,
-				3FF358C007730D468EA3682D /* Pods-sancha-KINWebBrowser-Private.xcconfig */,
-				C7A5F86FBADA60D2C9217B7B /* Pods-sancha-KINWebBrowser-dummy.m */,
-				0D26AFD8E7458D909E04A1E6 /* Pods-sancha-KINWebBrowser-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-sancha-KINWebBrowser";
-			sourceTree = "<group>";
-		};
-		9E31886256EB355A0156D323 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AB6B6DDF9A12F67E2904E6F2 /* ARChromeActivity.png */,
-				E544288C41FFAEAEB4E911C9 /* ARChromeActivity@2x.png */,
-				DE491FF2A4EE538011335CF0 /* ARChromeActivity@2x~ipad.png */,
-				4A5D357B1029B53AD3FA4321 /* ARChromeActivity~ipad.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		A1E799D86585825D83056F9D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B7330CDE4EC30C8E459005DB /* SVProgressHUD.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		A206AD938A7145192F2F5ADD /* ARChromeActivity */ = {
-			isa = PBXGroup;
-			children = (
-				D54591F5C7D7428DFE9FDE59 /* ARChromeActivity.h */,
-				485DB8AF889844CD5793AEB9 /* ARChromeActivity.m */,
-				9E31886256EB355A0156D323 /* Resources */,
-				1C7CF2B68A1CD40D5C9C7857 /* Support Files */,
-			);
-			path = ARChromeActivity;
-			sourceTree = "<group>";
-		};
-		B7D1287B27040010E9F712AE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F1B40441EFF1D0657EA09F00 /* Pods-sancha-AutoScrollLabel.xcconfig */,
-				5F67065CAF08B13393E72C68 /* Pods-sancha-AutoScrollLabel-Private.xcconfig */,
-				703264BFD2E6E841CFE7DBE9 /* Pods-sancha-AutoScrollLabel-dummy.m */,
-				E4F9A1588192AB67D9A28166 /* Pods-sancha-AutoScrollLabel-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-sancha-AutoScrollLabel";
-			sourceTree = "<group>";
-		};
-		BD1C557F2C66D5470BCFCA30 /* AutoScrollLabel */ = {
-			isa = PBXGroup;
-			children = (
-				F01F36BBD20F834A7A404DEF /* CBAutoScrollLabel.h */,
-				A9F68E0829BA243A4EE92B3C /* CBAutoScrollLabel.m */,
-				B7D1287B27040010E9F712AE /* Support Files */,
+				DD5459C628D5CE41EA1D9CB4 /* CBAutoScrollLabel.h */,
+				F867617B0C6EE39D03D14CEA /* CBAutoScrollLabel.m */,
+				A467C7ACE5AAA9E3C4334711 /* Support Files */,
 			);
 			path = AutoScrollLabel;
 			sourceTree = "<group>";
 		};
-		C94655918CD865FDF5B334EC /* Products */ = {
+		35A67724CD8D85B5A8AF261E /* PullToRefreshCoreText */ = {
 			isa = PBXGroup;
 			children = (
-				5F980EAC07BCD5F20460FB88 /* TUSafariActivity.bundle */,
-				F3813FDC831FC613DF78CD5F /* libPods-sancha.a */,
-				7DE6AACA88771887366EEC6D /* libPods-sancha-ARChromeActivity.a */,
-				C1693378EB551CA8148CEFAA /* libPods-sancha-AutoScrollLabel.a */,
-				B74AD2161F1612B2E10045F6 /* libPods-sancha-KINWebBrowser.a */,
-				542B240191C4E76246DCF8B5 /* libPods-sancha-PullToRefreshCoreText.a */,
-				740E9E13EE752094BBAFB61C /* libPods-sancha-RATreeView.a */,
-				12B51FD2C3EA1C8BA4324B61 /* libPods-sancha-SVProgressHUD.a */,
-				0BDDB9340E63BC91028C169B /* libPods-sancha-TUSafariActivity.a */,
+				9C981B0376F570A52318F155 /* PullToRefreshCoreTextView.h */,
+				5A6D847C9AE712A3568D50CE /* PullToRefreshCoreTextView.m */,
+				478FE41B2A2B66FFA7B76162 /* UIScrollView+PullToRefreshCoreText.h */,
+				88D6D55BD946808E173A151E /* UIScrollView+PullToRefreshCoreText.m */,
+				D754EC32637E6DE41FA7BFC1 /* Resources */,
+				38FA63E5F88095042FDB83AD /* Support Files */,
 			);
-			name = Products;
+			path = PullToRefreshCoreText;
 			sourceTree = "<group>";
 		};
-		CC377248EE3D00F8DC29653F /* Support Files */ = {
+		38FA63E5F88095042FDB83AD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AABC4EBD5918807DD2B46390 /* Pods-sancha-PullToRefreshCoreText.xcconfig */,
-				46AB570BC36C80605B3F64F4 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */,
-				4389029BBBFBA68E7BBB9E2C /* Pods-sancha-PullToRefreshCoreText-dummy.m */,
-				A319386A335A74AA47C0F1E8 /* Pods-sancha-PullToRefreshCoreText-prefix.pch */,
+				80906B88FE55A36F385695B0 /* Pods-sancha-PullToRefreshCoreText.xcconfig */,
+				BDCC72CF03AAC98275DBE107 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */,
+				C195675DE325B592FA1735EE /* Pods-sancha-PullToRefreshCoreText-dummy.m */,
+				97F261111E19799820A5C396 /* Pods-sancha-PullToRefreshCoreText-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-sancha-PullToRefreshCoreText";
 			sourceTree = "<group>";
 		};
-		CD43232F7956FB070BBF5850 /* TUSafariActivity */ = {
+		5E91B181CC0905638EE40A89 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				8F1BCAC355D8432545EBDF0C /* TUSafariActivity.h */,
-				E7A3672852B7E5CE0F57146C /* TUSafariActivity.m */,
-				0BAEAB6FA8E92A23A766557B /* Resources */,
-				FC58E0396658716C0CF4F8DF /* Support Files */,
+				C70FFBEA444AF0730FC76CF2 /* SVIndefiniteAnimatedView.h */,
+				6731FD9AB3EE95D0CAE5B8C3 /* SVIndefiniteAnimatedView.m */,
+				9E38C2A39F8BF664BDF37B07 /* SVProgressHUD.h */,
+				83E063E5AAE10CC320A7EB83 /* SVProgressHUD.m */,
+				65D436030FCED25B87FF226C /* Resources */,
+				34870972DCB4E1E732BFF344 /* Support Files */,
 			);
-			path = TUSafariActivity;
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
-		D546CE411B2E305FC53847DD /* Pods */ = {
+		65D436030FCED25B87FF226C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A206AD938A7145192F2F5ADD /* ARChromeActivity */,
-				BD1C557F2C66D5470BCFCA30 /* AutoScrollLabel */,
-				7C88E6C83066728A36B979EB /* KINWebBrowser */,
-				87B6F5A812201CE90D911E2B /* PullToRefreshCoreText */,
-				218D9168D1E1F76DE60F77BB /* RATreeView */,
-				0D85AC6B86DCE35A7FD88468 /* SVProgressHUD */,
-				CD43232F7956FB070BBF5850 /* TUSafariActivity */,
+				28380BDB00BF234325E40EDE /* SVProgressHUD.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6B46F031A8E4E30C898F970E /* Pods-sancha */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6C030097BF94BBB5C3C2C /* Pods-sancha-acknowledgements.markdown */,
+				62F3D350D9FB995EB46F19AB /* Pods-sancha-acknowledgements.plist */,
+				774BF3FAF7787A94CF917243 /* Pods-sancha-dummy.m */,
+				A1E0173745FB9A9EF772065D /* Pods-sancha-environment.h */,
+				CB5AC87B8DEFF0C64591B6AE /* Pods-sancha-resources.sh */,
+				1C0C684394BBF340FCA6C1B1 /* Pods-sancha.debug.xcconfig */,
+				8F72793630FB4B11057F93D7 /* Pods-sancha.release.xcconfig */,
+			);
+			name = "Pods-sancha";
+			path = "Target Support Files/Pods-sancha";
+			sourceTree = "<group>";
+		};
+		747DF8491806130F4DFAB2F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33997F4DD44887F75473211E /* backbutton.png */,
+				566B4B6C275CCB56ADE40741 /* backbutton@2x.png */,
+				6CE10363793EFF9B363DD2B0 /* backbutton@3x.png */,
+				2BF96C08CD8441BE50F75F6D /* forwardbutton.png */,
+				627508BE34BBED85188022FA /* forwardbutton@2x.png */,
+				B71502DF766A5648892ACA5A /* forwardbutton@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		761A44540AFF63ADE5A22C23 = {
+			isa = PBXGroup;
+			children = (
+				F850EC5A0765C8BCA2656DAF /* Podfile */,
+				FE1A51373265511A363F6E2A /* Frameworks */,
+				A865ADE465313CFAE8FB45DA /* Pods */,
+				E88CBE66E22A8F304C662C9B /* Products */,
+				28D6CDAF7FD1CC9453FA0D82 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7A6FE609805B240501DC4183 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5024A0966B14DFEFA6039054 /* cs.lproj */,
+				B275514616A8E9C5D771167F /* de.lproj */,
+				0E67B3B4018DEB61869F1EBA /* en.lproj */,
+				8DF60B8C07F224CC07C88569 /* es.lproj */,
+				9ED21CD8674A4CA7DA8B1D5B /* eu.lproj */,
+				522A190749F8F1400EB710F6 /* fi.lproj */,
+				AB0134A49BE1C48765070446 /* fr.lproj */,
+				36F19AC00C52BE540D7A71DC /* it.lproj */,
+				A1286EF22206950E9568A92C /* ja.lproj */,
+				B5414C15B2AE69638CD2CE7D /* ko.lproj */,
+				A0F365F620B686382486C26B /* nl.lproj */,
+				6BBD21F2BB5D37F962D96367 /* no.lproj */,
+				968C4F64FD2C8D5A181DE629 /* pl.lproj */,
+				CB602E9A978458B97EEA7015 /* pt.lproj */,
+				206ECA2DADD6AC93C2325D11 /* ru.lproj */,
+				6988D51B664E92E99A4D4380 /* safari.png */,
+				496119075E1574100143506D /* safari@2x.png */,
+				7D760CAADFFC42FD13973D76 /* safari@3x.png */,
+				50228C3F2A70062181FEFB05 /* safari~iPad.png */,
+				130192667E9DDCEF0F52018F /* safari~iPad@2x.png */,
+				D97A1D1B07FDA8C90B7B8F11 /* sk.lproj */,
+				403656D10E7FEAE943BBA3E0 /* sv.lproj */,
+				AB051F91BE8A34D49622A7F8 /* vi.lproj */,
+				A54E8AA69CDC04C14F85BD42 /* zh_CN.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7F17AFBA2193161132698F46 /* KINWebBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				D24310ECFD834CA38518171B /* KINWebBrowserViewController.h */,
+				98DC4CDC485B70EC75CCE3C2 /* KINWebBrowserViewController.m */,
+				747DF8491806130F4DFAB2F7 /* Resources */,
+				E9CF7020EC8078BB68CFEC6F /* Support Files */,
+			);
+			path = KINWebBrowser;
+			sourceTree = "<group>";
+		};
+		87FEF3B730A2B8674C538C2B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6E3A2DF27362C28FE637EF5 /* ARChromeActivity.png */,
+				80A08999E22D1990B49E8B28 /* ARChromeActivity@2x.png */,
+				37934AB8162A18D8625C267C /* ARChromeActivity@2x~ipad.png */,
+				00757C9458F8D8E7B65846E7 /* ARChromeActivity~ipad.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9483D36DB7167DD2739BAA5C /* ARChromeActivity */ = {
+			isa = PBXGroup;
+			children = (
+				6C5573DD03FFE8DD8BEBC247 /* ARChromeActivity.h */,
+				4018BE846C7CC0118C7A1DE4 /* ARChromeActivity.m */,
+				87FEF3B730A2B8674C538C2B /* Resources */,
+				18D67E7517113480F1414F60 /* Support Files */,
+			);
+			path = ARChromeActivity;
+			sourceTree = "<group>";
+		};
+		A467C7ACE5AAA9E3C4334711 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2955157BDA9E2463705470E8 /* Pods-sancha-AutoScrollLabel.xcconfig */,
+				F7EBB1B7983F9C79DEF7758D /* Pods-sancha-AutoScrollLabel-Private.xcconfig */,
+				D4A90A3223F68FDE375E0C25 /* Pods-sancha-AutoScrollLabel-dummy.m */,
+				6169B691242EDC0259EA2837 /* Pods-sancha-AutoScrollLabel-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-sancha-AutoScrollLabel";
+			sourceTree = "<group>";
+		};
+		A865ADE465313CFAE8FB45DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9483D36DB7167DD2739BAA5C /* ARChromeActivity */,
+				352F98FD37003A32E4D15AA8 /* AutoScrollLabel */,
+				7F17AFBA2193161132698F46 /* KINWebBrowser */,
+				35A67724CD8D85B5A8AF261E /* PullToRefreshCoreText */,
+				5E91B181CC0905638EE40A89 /* SVProgressHUD */,
+				1D521C96C6806C59C1761061 /* TUSafariActivity */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E54057B7EDA441FC83DCF9E9 /* Frameworks */ = {
+		D754EC32637E6DE41FA7BFC1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				86EE3D43C67537BE21D5D0E6 /* iOS */,
+				0C389398F9913AD365B6FCA9 /* Mask.png */,
 			);
-			name = Frameworks;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		FC58E0396658716C0CF4F8DF /* Support Files */ = {
+		E88CBE66E22A8F304C662C9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A6B0FAC25A671DF9BF4F125 /* Pods-sancha-TUSafariActivity.xcconfig */,
-				4C40B3CB5359857760F8D1EE /* Pods-sancha-TUSafariActivity-Private.xcconfig */,
-				E25B66A77E16700DAC93C4F9 /* Pods-sancha-TUSafariActivity-dummy.m */,
-				72C753A57918CCF23478D6CB /* Pods-sancha-TUSafariActivity-prefix.pch */,
+				25604C6D4837FE931EE854EB /* TUSafariActivity.bundle */,
+				9EDD7D681157FA71063FD18A /* libPods-sancha.a */,
+				DC019691123531BCBC423116 /* libPods-sancha-ARChromeActivity.a */,
+				14F6C24AF94EF993B1E6A96B /* libPods-sancha-AutoScrollLabel.a */,
+				BAEE49ACF120B7615E73F7B3 /* libPods-sancha-KINWebBrowser.a */,
+				BB4DEBC624ADEDF16C916295 /* libPods-sancha-PullToRefreshCoreText.a */,
+				F2204C39D26359DEE6C363BC /* libPods-sancha-SVProgressHUD.a */,
+				891E303B8EE559079B74BC47 /* libPods-sancha-TUSafariActivity.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9CF7020EC8078BB68CFEC6F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51F2F149FC60044CE55680D7 /* Pods-sancha-KINWebBrowser.xcconfig */,
+				BCC5D273662851654DCA940A /* Pods-sancha-KINWebBrowser-Private.xcconfig */,
+				00E72B300E37D0D146FDE187 /* Pods-sancha-KINWebBrowser-dummy.m */,
+				8EA61177F70243AD4E8B18B1 /* Pods-sancha-KINWebBrowser-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-sancha-KINWebBrowser";
+			sourceTree = "<group>";
+		};
+		FBEA73DF921C31198065E380 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3471A39C3B30DF32E02DABCF /* Pods-sancha-TUSafariActivity.xcconfig */,
+				A30DA0ACD986411651FC08A7 /* Pods-sancha-TUSafariActivity-Private.xcconfig */,
+				C8BC9457A893120D9183F08C /* Pods-sancha-TUSafariActivity-dummy.m */,
+				10DFD8E46368C83078894C56 /* Pods-sancha-TUSafariActivity-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-sancha-TUSafariActivity";
 			sourceTree = "<group>";
 		};
+		FE1A51373265511A363F6E2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11BB66BDC2555B1E0F2D45E7 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0006CC591F4759FB72803F6E /* Headers */ = {
+		1E553F049CA4C0883758470C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22A156D7967A074DF6E8F14 /* CBAutoScrollLabel.h in Headers */,
+				CA1079BDA67B2725E02336AC /* ARChromeActivity.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0262FF537330EEE6070E08FD /* Headers */ = {
+		37A7623891CE49546E6114D8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				186A3ED0B8BCE25480AE550D /* RABatchChanges.h in Headers */,
-				141CC3DC4C9963CDFE8C9820 /* RATreeNode.h in Headers */,
-				6667F340D9E2C34E329CA781 /* RATreeNodeCollectionController.h in Headers */,
-				EFFF8201A0CE293DDFD51872 /* RATreeNodeController.h in Headers */,
-				FED3612862B7021AEB8E032B /* RATreeNodeItem+ClassExtension.h in Headers */,
-				CF8FCB334D9820E95976C56C /* RATreeNodeItem+Private.h in Headers */,
-				20E7E99E63AE99A7A3A8ECD1 /* RATreeNodeItem.h in Headers */,
-				46CCE230746701BCD0954CF1 /* RATreeNode_ClassExtension.h in Headers */,
-				67F5DAA7A982C7566AE198FD /* RATreeView+Enums.h in Headers */,
-				77EB6A18ECF94C37FAD98150 /* RATreeView+Private.h in Headers */,
-				5BA11081D259E45EDB98CAD2 /* RATreeView+RATreeNodeCollectionControllerDataSource.h in Headers */,
-				F52EC422F0CE79754D05FCC1 /* RATreeView+TableViewDataSource.h in Headers */,
-				B46CEB0A4A0FC77AFE594DDE /* RATreeView+TableViewDelegate.h in Headers */,
-				CFC9FCB2AA602A47D7B22D69 /* RATreeView+UIScrollView.h in Headers */,
-				365DAA04ADC40C17F68B2576 /* RATreeView.h in Headers */,
-				0FDBC782C2C8AC9BF9B7A8E1 /* RATreeView_ClassExtension.h in Headers */,
+				5F844B485331C6FDDFE1C414 /* SVIndefiniteAnimatedView.h in Headers */,
+				25C58D4D8797647CA1AD3883 /* SVProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14E34B3DC10A2DDB51F57104 /* Headers */ = {
+		66829264F731277ADBDB3B25 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E0151D3370155C0711BBA4 /* PullToRefreshCoreTextView.h in Headers */,
-				C1F7C4B976D09F1236B8D5B9 /* UIScrollView+PullToRefreshCoreText.h in Headers */,
+				F73279102712ED4157810761 /* KINWebBrowserViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23CB54B3DC9810193DE8FA44 /* Headers */ = {
+		79FF8DF6B19268B1F5720664 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D2244EB3A54E733060F6625 /* SVIndefiniteAnimatedView.h in Headers */,
-				A82465D18A922909672D6861 /* SVProgressHUD.h in Headers */,
+				3800FEFC6CB82B11068CC49B /* CBAutoScrollLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33903AE7F197ADEC7DA333B2 /* Headers */ = {
+		AFD182B319889373D8366324 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5858B7C46E0DF254E4228BAB /* KINWebBrowserViewController.h in Headers */,
+				5497FA29A7613BA0A12326DD /* PullToRefreshCoreTextView.h in Headers */,
+				797CDBEA28AB2FADDAC81FDF /* UIScrollView+PullToRefreshCoreText.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F29946FA9D8B092CE8F705B /* Headers */ = {
+		B15F5483116BC0181C9DE06F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1BEBFF439BB07F01AA28DB1 /* TUSafariActivity.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B15C6C687EF0E2B68EFD5E5C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B32063D33113CC38389C2ECC /* ARChromeActivity.h in Headers */,
+				CE23B9646244A9E5172FA3ED /* TUSafariActivity.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0669BEECA3275097ED553E03 /* Pods-sancha-TUSafariActivity-TUSafariActivity */ = {
+		240AE02B692AC8A39BB8289D /* Pods-sancha */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30C1A73A1039244B25B20890 /* Build configuration list for PBXNativeTarget "Pods-sancha-TUSafariActivity-TUSafariActivity" */;
+			buildConfigurationList = A71827086CCDB2A75F1AE090 /* Build configuration list for PBXNativeTarget "Pods-sancha" */;
 			buildPhases = (
-				689C3DB4951AE53EFCB886F5 /* Sources */,
-				B77C996818B2B7F4AD6CD8AF /* Frameworks */,
-				89F965E09DB10FEDF2F6F0E8 /* Resources */,
+				52180E0B36B50564AFF47E6D /* Sources */,
+				44D3CEC294E975320620F4A5 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7256493A880F4432AC47DA14 /* PBXTargetDependency */,
+				03B00F2A6F8F4456BC9AA3B7 /* PBXTargetDependency */,
+				C62D962090CD4432021B5C03 /* PBXTargetDependency */,
+				122DF2F26DEF80A4ADEEA9CF /* PBXTargetDependency */,
+				3EE0D15A30F80E85B67794A3 /* PBXTargetDependency */,
+				5E6D0419AA38C16723E28677 /* PBXTargetDependency */,
 			);
-			name = "Pods-sancha-TUSafariActivity-TUSafariActivity";
-			productName = "Pods-sancha-TUSafariActivity-TUSafariActivity";
-			productReference = 5F980EAC07BCD5F20460FB88 /* TUSafariActivity.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		0A393ADA0C1ED001CF668F2E /* Pods-sancha-TUSafariActivity */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C8A35B1DE14217F494491D28 /* Build configuration list for PBXNativeTarget "Pods-sancha-TUSafariActivity" */;
-			buildPhases = (
-				A7A482D18E89B65A3475C06B /* Sources */,
-				3DAA7DA60704E100B47778E1 /* Frameworks */,
-				9F29946FA9D8B092CE8F705B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				15DE9E66DAAD4B9EC5AC708A /* PBXTargetDependency */,
-			);
-			name = "Pods-sancha-TUSafariActivity";
-			productName = "Pods-sancha-TUSafariActivity";
-			productReference = 0BDDB9340E63BC91028C169B /* libPods-sancha-TUSafariActivity.a */;
+			name = "Pods-sancha";
+			productName = "Pods-sancha";
+			productReference = 9EDD7D681157FA71063FD18A /* libPods-sancha.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		3D7DE0C95A23A4FA69AEFC71 /* Pods-sancha-SVProgressHUD */ = {
+		40259871232FAEF44C50F585 /* Pods-sancha-KINWebBrowser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2DE8927B28742084872B0373 /* Build configuration list for PBXNativeTarget "Pods-sancha-SVProgressHUD" */;
+			buildConfigurationList = 21E532E8BE1B3F05B28A270B /* Build configuration list for PBXNativeTarget "Pods-sancha-KINWebBrowser" */;
 			buildPhases = (
-				C9519D1528D0FD50CB03D316 /* Sources */,
-				661420E784F9C3D3C01275F4 /* Frameworks */,
-				23CB54B3DC9810193DE8FA44 /* Headers */,
+				177A1F889110E332C5C9FFC9 /* Sources */,
+				D08392F26DC9478E23A8436A /* Frameworks */,
+				66829264F731277ADBDB3B25 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = "Pods-sancha-SVProgressHUD";
-			productName = "Pods-sancha-SVProgressHUD";
-			productReference = 12B51FD2C3EA1C8BA4324B61 /* libPods-sancha-SVProgressHUD.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		52134F673AACFAF700A9F642 /* Pods-sancha-PullToRefreshCoreText */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3BB9F12FDDE3BD8083788B88 /* Build configuration list for PBXNativeTarget "Pods-sancha-PullToRefreshCoreText" */;
-			buildPhases = (
-				72292A141928442BC9EBA97E /* Sources */,
-				D72EDCE7F345CB91F23BE392 /* Frameworks */,
-				14E34B3DC10A2DDB51F57104 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-sancha-PullToRefreshCoreText";
-			productName = "Pods-sancha-PullToRefreshCoreText";
-			productReference = 542B240191C4E76246DCF8B5 /* libPods-sancha-PullToRefreshCoreText.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		600F7CB1646574F52261C892 /* Pods-sancha-AutoScrollLabel */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5680EB43B1D9D0A549C835B9 /* Build configuration list for PBXNativeTarget "Pods-sancha-AutoScrollLabel" */;
-			buildPhases = (
-				FBCF58D19EDF34E52EFE5EA1 /* Sources */,
-				7A58D673A64A32A3577AD84C /* Frameworks */,
-				0006CC591F4759FB72803F6E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-sancha-AutoScrollLabel";
-			productName = "Pods-sancha-AutoScrollLabel";
-			productReference = C1693378EB551CA8148CEFAA /* libPods-sancha-AutoScrollLabel.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		AB5211ECF482703580269B1A /* Pods-sancha-KINWebBrowser */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 60B2C4C7E1E85C736F749808 /* Build configuration list for PBXNativeTarget "Pods-sancha-KINWebBrowser" */;
-			buildPhases = (
-				405CC566986ACC46CCD683C7 /* Sources */,
-				F410FF8C211A40F241EC81FE /* Frameworks */,
-				33903AE7F197ADEC7DA333B2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				177225F729046CE595736173 /* PBXTargetDependency */,
-				F428E3172AB5CEDB7C7262EA /* PBXTargetDependency */,
+				AC2A502A72C6F778CE14D971 /* PBXTargetDependency */,
+				59AD994CA9787CFA406FDAB6 /* PBXTargetDependency */,
 			);
 			name = "Pods-sancha-KINWebBrowser";
 			productName = "Pods-sancha-KINWebBrowser";
-			productReference = B74AD2161F1612B2E10045F6 /* libPods-sancha-KINWebBrowser.a */;
+			productReference = BAEE49ACF120B7615E73F7B3 /* libPods-sancha-KINWebBrowser.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		BE20323DA7A44022E25755D3 /* Pods-sancha-ARChromeActivity */ = {
+		5F65635EC0687DDBC6E3BBA9 /* Pods-sancha-ARChromeActivity */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 471F50A8C48FC84207F0B341 /* Build configuration list for PBXNativeTarget "Pods-sancha-ARChromeActivity" */;
+			buildConfigurationList = 29E1B753B83696B5DC9F6DF5 /* Build configuration list for PBXNativeTarget "Pods-sancha-ARChromeActivity" */;
 			buildPhases = (
-				FF302B1838AB942D59F86DD7 /* Sources */,
-				4E04576BADCF4B6F989525CD /* Frameworks */,
-				B15C6C687EF0E2B68EFD5E5C /* Headers */,
+				536B83074380732B0522B629 /* Sources */,
+				DCBE795D7D65CE6E746AAC1C /* Frameworks */,
+				1E553F049CA4C0883758470C /* Headers */,
 			);
 			buildRules = (
 			);
@@ -925,366 +707,296 @@
 			);
 			name = "Pods-sancha-ARChromeActivity";
 			productName = "Pods-sancha-ARChromeActivity";
-			productReference = 7DE6AACA88771887366EEC6D /* libPods-sancha-ARChromeActivity.a */;
+			productReference = DC019691123531BCBC423116 /* libPods-sancha-ARChromeActivity.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		D656A1CDE08585544FEEEFA8 /* Pods-sancha */ = {
+		A096799317627E125EEB6CD8 /* Pods-sancha-AutoScrollLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B2FE993132F35E848FCA644F /* Build configuration list for PBXNativeTarget "Pods-sancha" */;
+			buildConfigurationList = 37865CE6D4A1EDEF6B67F95D /* Build configuration list for PBXNativeTarget "Pods-sancha-AutoScrollLabel" */;
 			buildPhases = (
-				B9F29559754FD0298BA94828 /* Sources */,
-				2937292A45C79F2FFDF69CC6 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E703DB9DB7340D7BA535E958 /* PBXTargetDependency */,
-				97D66A96C0588D63DAF295F9 /* PBXTargetDependency */,
-				3EB2B3CA4E4E0153055B40A2 /* PBXTargetDependency */,
-				7E71AEF0445232EA27DC4519 /* PBXTargetDependency */,
-				B7441695458303111E814D1F /* PBXTargetDependency */,
-				CF8628A0ED112A475A6B5A33 /* PBXTargetDependency */,
-				1C3DB2F9D068E5BDA60643B3 /* PBXTargetDependency */,
-			);
-			name = "Pods-sancha";
-			productName = "Pods-sancha";
-			productReference = F3813FDC831FC613DF78CD5F /* libPods-sancha.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		FC0704C8B0956DB5FEB817D4 /* Pods-sancha-RATreeView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 674CE1D627EE56A51250A89F /* Build configuration list for PBXNativeTarget "Pods-sancha-RATreeView" */;
-			buildPhases = (
-				2B00204B35459D6E4E53FBA4 /* Sources */,
-				AD19C2B0CFA0C1FE55BD167B /* Frameworks */,
-				0262FF537330EEE6070E08FD /* Headers */,
+				E48919E26EE394853B0374DD /* Sources */,
+				6D79672A02AE5FEF374B0AB4 /* Frameworks */,
+				79FF8DF6B19268B1F5720664 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-sancha-RATreeView";
-			productName = "Pods-sancha-RATreeView";
-			productReference = 740E9E13EE752094BBAFB61C /* libPods-sancha-RATreeView.a */;
+			name = "Pods-sancha-AutoScrollLabel";
+			productName = "Pods-sancha-AutoScrollLabel";
+			productReference = 14F6C24AF94EF993B1E6A96B /* libPods-sancha-AutoScrollLabel.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		CCF7E2790FE5DCE81E329D02 /* Pods-sancha-SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6D06BE9B269C49BC254F5A4 /* Build configuration list for PBXNativeTarget "Pods-sancha-SVProgressHUD" */;
+			buildPhases = (
+				0B2CCFF2216EFF72D63E53C4 /* Sources */,
+				B86D6EFCBD614A0FD01FE85A /* Frameworks */,
+				37A7623891CE49546E6114D8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-sancha-SVProgressHUD";
+			productName = "Pods-sancha-SVProgressHUD";
+			productReference = F2204C39D26359DEE6C363BC /* libPods-sancha-SVProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D8A96F1CE5FEC72CC0EBB2BB /* Pods-sancha-PullToRefreshCoreText */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91EE4CAD5DCF665436975E25 /* Build configuration list for PBXNativeTarget "Pods-sancha-PullToRefreshCoreText" */;
+			buildPhases = (
+				ACE4DC2D3DA7FF0642CAB715 /* Sources */,
+				57A94CB0AA1F9536C77A73D2 /* Frameworks */,
+				AFD182B319889373D8366324 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-sancha-PullToRefreshCoreText";
+			productName = "Pods-sancha-PullToRefreshCoreText";
+			productReference = BB4DEBC624ADEDF16C916295 /* libPods-sancha-PullToRefreshCoreText.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E4CAE4233E072387FA337B06 /* Pods-sancha-TUSafariActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D408589490FE129DD37989D /* Build configuration list for PBXNativeTarget "Pods-sancha-TUSafariActivity" */;
+			buildPhases = (
+				7AA8948501C97E227AAFF73B /* Sources */,
+				5DEC89AC1C7A43578FF9EFD4 /* Frameworks */,
+				B15F5483116BC0181C9DE06F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				250C0DCF86F894719604F264 /* PBXTargetDependency */,
+			);
+			name = "Pods-sancha-TUSafariActivity";
+			productName = "Pods-sancha-TUSafariActivity";
+			productReference = 891E303B8EE559079B74BC47 /* libPods-sancha-TUSafariActivity.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F2F584234EE764F91AA36949 /* Pods-sancha-TUSafariActivity-TUSafariActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9974E031B487C51C31864AF /* Build configuration list for PBXNativeTarget "Pods-sancha-TUSafariActivity-TUSafariActivity" */;
+			buildPhases = (
+				4AE1D666D69E4A144DBA6A3A /* Sources */,
+				7A775D3135D6D182E97AF0C2 /* Frameworks */,
+				FBEF2CAB844EF66FC0DFDE95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-sancha-TUSafariActivity-TUSafariActivity";
+			productName = "Pods-sancha-TUSafariActivity-TUSafariActivity";
+			productReference = 25604C6D4837FE931EE854EB /* TUSafariActivity.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		84A6EA025CE82B5B4E71AAF4 /* Project object */ = {
+		E9F14F76451BD16B876A439E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = FCC00409F62495C94F1B4532 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = A510948CF2E86620D3AF085D /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7C475D6B8BFFDE4901BE216B;
-			productRefGroup = C94655918CD865FDF5B334EC /* Products */;
+			mainGroup = 761A44540AFF63ADE5A22C23;
+			productRefGroup = E88CBE66E22A8F304C662C9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D656A1CDE08585544FEEEFA8 /* Pods-sancha */,
-				BE20323DA7A44022E25755D3 /* Pods-sancha-ARChromeActivity */,
-				600F7CB1646574F52261C892 /* Pods-sancha-AutoScrollLabel */,
-				AB5211ECF482703580269B1A /* Pods-sancha-KINWebBrowser */,
-				52134F673AACFAF700A9F642 /* Pods-sancha-PullToRefreshCoreText */,
-				FC0704C8B0956DB5FEB817D4 /* Pods-sancha-RATreeView */,
-				3D7DE0C95A23A4FA69AEFC71 /* Pods-sancha-SVProgressHUD */,
-				0A393ADA0C1ED001CF668F2E /* Pods-sancha-TUSafariActivity */,
-				0669BEECA3275097ED553E03 /* Pods-sancha-TUSafariActivity-TUSafariActivity */,
+				240AE02B692AC8A39BB8289D /* Pods-sancha */,
+				5F65635EC0687DDBC6E3BBA9 /* Pods-sancha-ARChromeActivity */,
+				A096799317627E125EEB6CD8 /* Pods-sancha-AutoScrollLabel */,
+				40259871232FAEF44C50F585 /* Pods-sancha-KINWebBrowser */,
+				D8A96F1CE5FEC72CC0EBB2BB /* Pods-sancha-PullToRefreshCoreText */,
+				CCF7E2790FE5DCE81E329D02 /* Pods-sancha-SVProgressHUD */,
+				E4CAE4233E072387FA337B06 /* Pods-sancha-TUSafariActivity */,
+				F2F584234EE764F91AA36949 /* Pods-sancha-TUSafariActivity-TUSafariActivity */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		89F965E09DB10FEDF2F6F0E8 /* Resources */ = {
+		FBEF2CAB844EF66FC0DFDE95 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8C99BC5FBB94DAE8BF9337D /* cs.lproj in Resources */,
-				27667A6A9CCC96A254D6C2E2 /* de.lproj in Resources */,
-				4FF33DE41F8166FECE09583A /* en.lproj in Resources */,
-				8F2427F45CCC0F1066E0F718 /* es.lproj in Resources */,
-				849D88DB430B1D7CBDAA58D1 /* eu.lproj in Resources */,
-				88AB8619FA2F1A87F2118020 /* fi.lproj in Resources */,
-				81CDE579F2F045A0D10FE0E5 /* fr.lproj in Resources */,
-				1ED59EA37638B8A33ABD9AC3 /* it.lproj in Resources */,
-				C335D2515D36985139C7936C /* ja.lproj in Resources */,
-				477625C7C255AFCF6BF03F46 /* ko.lproj in Resources */,
-				3D827FFFBA3CDF7210C6F6F9 /* nl.lproj in Resources */,
-				04ADBF24993D5B65E4DDC872 /* no.lproj in Resources */,
-				C12F0780F8B6CC843B99350A /* pl.lproj in Resources */,
-				87CC5F86C95655FF2C078D40 /* pt.lproj in Resources */,
-				E55746B43791C8304ECCF893 /* ru.lproj in Resources */,
-				6C5C6CB83751985527E72E3E /* safari.png in Resources */,
-				92F7C65F02C5AE9BC075AEE3 /* safari@2x.png in Resources */,
-				A46C7E98D6548043892243C6 /* safari@3x.png in Resources */,
-				339574E6001E368B0FC6684F /* safari~iPad.png in Resources */,
-				1A4BCC3CEDBD53A8B400A218 /* safari~iPad@2x.png in Resources */,
-				D8894E900E61DC723B0D4C1C /* sk.lproj in Resources */,
-				557EF5660B0CD124841CB9AF /* sv.lproj in Resources */,
-				4407174204EC975404568FA4 /* vi.lproj in Resources */,
-				E59306B67BBB7DC27391E523 /* zh_CN.lproj in Resources */,
+				0DB9F9F37387952556CBBBA5 /* cs.lproj in Resources */,
+				2136F0F916F96DA97595D9B1 /* de.lproj in Resources */,
+				52985FD2CC8FFF4D45D873F9 /* en.lproj in Resources */,
+				687938BC9BA09BD46DCC1F5F /* es.lproj in Resources */,
+				BABBC06546C7E4C1CF080A1C /* eu.lproj in Resources */,
+				CF1CF93FD7943E36AA00964A /* fi.lproj in Resources */,
+				D7CCF77DA27222553C15D2A9 /* fr.lproj in Resources */,
+				5801EC50BA44400B5699B0F5 /* it.lproj in Resources */,
+				30FB4ADFDFFF41E10E3E4D44 /* ja.lproj in Resources */,
+				EECF525F05AAFDE530D1D60A /* ko.lproj in Resources */,
+				91D2C809BC4C01E4C66D94A6 /* nl.lproj in Resources */,
+				B0A26934659584AA9F368615 /* no.lproj in Resources */,
+				FEF9EDDAFD10C7BEB3F1DAF3 /* pl.lproj in Resources */,
+				BF7C70CC47B54D0FE01BEAFA /* pt.lproj in Resources */,
+				4419359B0A18AC95F087F3FE /* ru.lproj in Resources */,
+				EDAA4CCAB88468CB6A8C796A /* safari.png in Resources */,
+				EB40971593470DD2AFA1D54A /* safari@2x.png in Resources */,
+				F242D04F8D5AECFF6E64A0D6 /* safari@3x.png in Resources */,
+				9A1DA649F1B1F7535BE42CF1 /* safari~iPad.png in Resources */,
+				890C4FD1162CD6A9FA29B871 /* safari~iPad@2x.png in Resources */,
+				1A97B8171F52C5CF51B18C90 /* sk.lproj in Resources */,
+				BBAD3B19FD64BDD6D07340DF /* sv.lproj in Resources */,
+				35B513301A679DF2860AD541 /* vi.lproj in Resources */,
+				FEBF47F02C0BA14E1168F0D6 /* zh_CN.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2B00204B35459D6E4E53FBA4 /* Sources */ = {
+		0B2CCFF2216EFF72D63E53C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D028DE91E385647E9E60F022 /* Pods-sancha-RATreeView-dummy.m in Sources */,
-				A51415D0DD87C8ED019557F8 /* RABatchChanges.m in Sources */,
-				CFA091FF4C5B39D9B9D19889 /* RATreeNode.m in Sources */,
-				2DD6B6EBBB02C301B02655E3 /* RATreeNodeCollectionController.m in Sources */,
-				6343987D02F8A312AAB11489 /* RATreeNodeController.m in Sources */,
-				BB68731AA6A58FDA332904AB /* RATreeNodeItem+Private.m in Sources */,
-				B89EA5C02E22803ADEE06994 /* RATreeNodeItem.m in Sources */,
-				B825BFF71CB3E45431EBAA82 /* RATreeView+Enums.m in Sources */,
-				BAEACFCA3840EB560442A9DB /* RATreeView+Private.m in Sources */,
-				6751668FCB326BFAA1DE5B9D /* RATreeView+RATreeNodeCollectionControllerDataSource.m in Sources */,
-				0BEE76BD110412AB3EC98F6A /* RATreeView+TableViewDataSource.m in Sources */,
-				6358595A0D2E11A6B3F0ECD8 /* RATreeView+TableViewDelegate.m in Sources */,
-				536E95183220451C8A88AB35 /* RATreeView+UIScrollView.m in Sources */,
-				DB6112176B87689472C54313 /* RATreeView.m in Sources */,
+				0308C6E881D91A49A5C17002 /* Pods-sancha-SVProgressHUD-dummy.m in Sources */,
+				908DA7F934D98DBCADBD7F53 /* SVIndefiniteAnimatedView.m in Sources */,
+				48FEA806DDC3A889F3B07323 /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		405CC566986ACC46CCD683C7 /* Sources */ = {
+		177A1F889110E332C5C9FFC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F13830477B9F696A5D63768F /* KINWebBrowserViewController.m in Sources */,
-				D71F3A9EF4896611055663E3 /* Pods-sancha-KINWebBrowser-dummy.m in Sources */,
+				4232702AF49A309459B104A5 /* KINWebBrowserViewController.m in Sources */,
+				2DCA756A3661397A2E427B6D /* Pods-sancha-KINWebBrowser-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		689C3DB4951AE53EFCB886F5 /* Sources */ = {
+		4AE1D666D69E4A144DBA6A3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72292A141928442BC9EBA97E /* Sources */ = {
+		52180E0B36B50564AFF47E6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C83D34736A24FB04D8B187D1 /* Pods-sancha-PullToRefreshCoreText-dummy.m in Sources */,
-				4EFA0759CA1A2C28FB11E58F /* PullToRefreshCoreTextView.m in Sources */,
-				983B53CB963E7DA10A42CC50 /* UIScrollView+PullToRefreshCoreText.m in Sources */,
+				FBB671282F3886855064F9E5 /* Pods-sancha-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7A482D18E89B65A3475C06B /* Sources */ = {
+		536B83074380732B0522B629 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9923E0896094AE2EC4307F5 /* Pods-sancha-TUSafariActivity-dummy.m in Sources */,
-				5F62AFF6E677EC68BBF0C886 /* TUSafariActivity.m in Sources */,
+				EBD5F46EB1A5A0D1427980A2 /* ARChromeActivity.m in Sources */,
+				458B165DC0EA340C8C3F9FC9 /* Pods-sancha-ARChromeActivity-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9F29559754FD0298BA94828 /* Sources */ = {
+		7AA8948501C97E227AAFF73B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				412D98AD5842D4BEFCFE8492 /* Pods-sancha-dummy.m in Sources */,
+				8AC1F145ED20762AB886AA86 /* Pods-sancha-TUSafariActivity-dummy.m in Sources */,
+				8E522DDBBE74BF79F1EF7A03 /* TUSafariActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9519D1528D0FD50CB03D316 /* Sources */ = {
+		ACE4DC2D3DA7FF0642CAB715 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F816312E3A37AE36F6CA726A /* Pods-sancha-SVProgressHUD-dummy.m in Sources */,
-				2E3EE280BDC6F47572738F84 /* SVIndefiniteAnimatedView.m in Sources */,
-				2DA30264E3881FCC4D726D9A /* SVProgressHUD.m in Sources */,
+				68BF207A239E03E91E662D7B /* Pods-sancha-PullToRefreshCoreText-dummy.m in Sources */,
+				DEFA9ECC642133D2BAC8514A /* PullToRefreshCoreTextView.m in Sources */,
+				F579CB802AAB8AD62D7008F9 /* UIScrollView+PullToRefreshCoreText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBCF58D19EDF34E52EFE5EA1 /* Sources */ = {
+		E48919E26EE394853B0374DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F98065351DD5A6377B0253E7 /* CBAutoScrollLabel.m in Sources */,
-				6DE73563E4DA5512B1765652 /* Pods-sancha-AutoScrollLabel-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF302B1838AB942D59F86DD7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3F160BBC2FC930DABD4A75C /* ARChromeActivity.m in Sources */,
-				4FC1BA1918022B6C9C37F2FA /* Pods-sancha-ARChromeActivity-dummy.m in Sources */,
+				51D9EF70CAC202E64620D05C /* CBAutoScrollLabel.m in Sources */,
+				1024964C453148129839787D /* Pods-sancha-AutoScrollLabel-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		15DE9E66DAAD4B9EC5AC708A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-sancha-TUSafariActivity-TUSafariActivity";
-			target = 0669BEECA3275097ED553E03 /* Pods-sancha-TUSafariActivity-TUSafariActivity */;
-			targetProxy = ABC624E7AE32D85B81736920 /* PBXContainerItemProxy */;
-		};
-		177225F729046CE595736173 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-sancha-ARChromeActivity";
-			target = BE20323DA7A44022E25755D3 /* Pods-sancha-ARChromeActivity */;
-			targetProxy = 4C04D878EC1A1E5140381B34 /* PBXContainerItemProxy */;
-		};
-		1C3DB2F9D068E5BDA60643B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-sancha-TUSafariActivity";
-			target = 0A393ADA0C1ED001CF668F2E /* Pods-sancha-TUSafariActivity */;
-			targetProxy = 4FA3AF3E6ADCC787C994BF6D /* PBXContainerItemProxy */;
-		};
-		3EB2B3CA4E4E0153055B40A2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-sancha-KINWebBrowser";
-			target = AB5211ECF482703580269B1A /* Pods-sancha-KINWebBrowser */;
-			targetProxy = 0D5C46733374B4F9DE63FBB7 /* PBXContainerItemProxy */;
-		};
-		7E71AEF0445232EA27DC4519 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-sancha-PullToRefreshCoreText";
-			target = 52134F673AACFAF700A9F642 /* Pods-sancha-PullToRefreshCoreText */;
-			targetProxy = 7DC5DB3F07138462801DAEF6 /* PBXContainerItemProxy */;
-		};
-		97D66A96C0588D63DAF295F9 /* PBXTargetDependency */ = {
+		03B00F2A6F8F4456BC9AA3B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-sancha-AutoScrollLabel";
-			target = 600F7CB1646574F52261C892 /* Pods-sancha-AutoScrollLabel */;
-			targetProxy = 7DFF773D7C86FE7D7E079BF3 /* PBXContainerItemProxy */;
+			target = A096799317627E125EEB6CD8 /* Pods-sancha-AutoScrollLabel */;
+			targetProxy = B8C700A60804C524E965D6DC /* PBXContainerItemProxy */;
 		};
-		B7441695458303111E814D1F /* PBXTargetDependency */ = {
+		122DF2F26DEF80A4ADEEA9CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-sancha-RATreeView";
-			target = FC0704C8B0956DB5FEB817D4 /* Pods-sancha-RATreeView */;
-			targetProxy = 6D190B764F80C5B9C4762215 /* PBXContainerItemProxy */;
+			name = "Pods-sancha-PullToRefreshCoreText";
+			target = D8A96F1CE5FEC72CC0EBB2BB /* Pods-sancha-PullToRefreshCoreText */;
+			targetProxy = F34964B676FC7D01C8F8662C /* PBXContainerItemProxy */;
 		};
-		CF8628A0ED112A475A6B5A33 /* PBXTargetDependency */ = {
+		250C0DCF86F894719604F264 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-sancha-TUSafariActivity-TUSafariActivity";
+			target = F2F584234EE764F91AA36949 /* Pods-sancha-TUSafariActivity-TUSafariActivity */;
+			targetProxy = AFD7E0833D1A2677E9004E83 /* PBXContainerItemProxy */;
+		};
+		3EE0D15A30F80E85B67794A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-sancha-SVProgressHUD";
-			target = 3D7DE0C95A23A4FA69AEFC71 /* Pods-sancha-SVProgressHUD */;
-			targetProxy = 537FFF6B02991170C0D061C1 /* PBXContainerItemProxy */;
+			target = CCF7E2790FE5DCE81E329D02 /* Pods-sancha-SVProgressHUD */;
+			targetProxy = A31D164D6090CB8307D84ED4 /* PBXContainerItemProxy */;
 		};
-		E703DB9DB7340D7BA535E958 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-sancha-ARChromeActivity";
-			target = BE20323DA7A44022E25755D3 /* Pods-sancha-ARChromeActivity */;
-			targetProxy = FD0CFB7C2984EE4CB2554B61 /* PBXContainerItemProxy */;
-		};
-		F428E3172AB5CEDB7C7262EA /* PBXTargetDependency */ = {
+		59AD994CA9787CFA406FDAB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-sancha-TUSafariActivity";
-			target = 0A393ADA0C1ED001CF668F2E /* Pods-sancha-TUSafariActivity */;
-			targetProxy = 9A9892A44BF2F4D90C323E0C /* PBXContainerItemProxy */;
+			target = E4CAE4233E072387FA337B06 /* Pods-sancha-TUSafariActivity */;
+			targetProxy = 8D5646C8CAC7DE9447924948 /* PBXContainerItemProxy */;
+		};
+		5E6D0419AA38C16723E28677 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-sancha-TUSafariActivity";
+			target = E4CAE4233E072387FA337B06 /* Pods-sancha-TUSafariActivity */;
+			targetProxy = CA7826ACF5239057CB46A4F0 /* PBXContainerItemProxy */;
+		};
+		7256493A880F4432AC47DA14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-sancha-ARChromeActivity";
+			target = 5F65635EC0687DDBC6E3BBA9 /* Pods-sancha-ARChromeActivity */;
+			targetProxy = DAA9C3AED13DBF120A3DDB1F /* PBXContainerItemProxy */;
+		};
+		AC2A502A72C6F778CE14D971 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-sancha-ARChromeActivity";
+			target = 5F65635EC0687DDBC6E3BBA9 /* Pods-sancha-ARChromeActivity */;
+			targetProxy = 494F1BF0223D95B4833EFA98 /* PBXContainerItemProxy */;
+		};
+		C62D962090CD4432021B5C03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-sancha-KINWebBrowser";
+			target = 40259871232FAEF44C50F585 /* Pods-sancha-KINWebBrowser */;
+			targetProxy = 3B6F4F363576B4147101114C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05FF21FB8F3DF50264E0EE4E /* Debug */ = {
+		02898BA41ABFF25B82136A70 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C40B3CB5359857760F8D1EE /* Pods-sancha-TUSafariActivity-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = TUSafariActivity;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		0C333A5CF0E3D500E5810D8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46AB570BC36C80605B3F64F4 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-PullToRefreshCoreText/Pods-sancha-PullToRefreshCoreText-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		1B9753C070EE5C9333B7144E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDF435609ED817B675E372EE /* Pods-sancha.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		1E9445136F957A366B74EBB7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C40B3CB5359857760F8D1EE /* Pods-sancha-TUSafariActivity-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = TUSafariActivity;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		1F6B3F448448AFD2566751F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7840CD053066E656A85A67AC /* Pods-sancha-RATreeView-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-RATreeView/Pods-sancha-RATreeView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		3A742E0295E249E2DD0A3610 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 819221626A94A2340650E6F2 /* Pods-sancha.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		43079CD5023974996F9BED57 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FF358C007730D468EA3682D /* Pods-sancha-KINWebBrowser-Private.xcconfig */;
+			baseConfigurationReference = BCC5D273662851654DCA940A /* Pods-sancha-KINWebBrowser-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-KINWebBrowser/Pods-sancha-KINWebBrowser-prefix.pch";
@@ -1298,9 +1010,105 @@
 			};
 			name = Debug;
 		};
-		725AD114A0619BF8755BE00F /* Debug */ = {
+		0AFA82D48B3F0C9BB93971EC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2AB15D0E86B551D58004A24 /* Pods-sancha-ARChromeActivity-Private.xcconfig */;
+			baseConfigurationReference = 18432135997910521D110036 /* Pods-sancha-SVProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-SVProgressHUD/Pods-sancha-SVProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		298D9E97D61063399DEABEE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F72793630FB4B11057F93D7 /* Pods-sancha.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2A586A7187AA80CA4629B985 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A30DA0ACD986411651FC08A7 /* Pods-sancha-TUSafariActivity-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-TUSafariActivity/Pods-sancha-TUSafariActivity-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		38839721E4E96DF2AEC2F42E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDCC72CF03AAC98275DBE107 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-PullToRefreshCoreText/Pods-sancha-PullToRefreshCoreText-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		54A56F53BF4BC614B1D84D5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7EBB1B7983F9C79DEF7758D /* Pods-sancha-AutoScrollLabel-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-AutoScrollLabel/Pods-sancha-AutoScrollLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7BFC9BDE381DE14DC2C5C811 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18432135997910521D110036 /* Pods-sancha-SVProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-SVProgressHUD/Pods-sancha-SVProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7DDA49EDD4E3C50F77BC7109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8138FDAC54AAABEBC2E0E6E4 /* Pods-sancha-ARChromeActivity-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-ARChromeActivity/Pods-sancha-ARChromeActivity-prefix.pch";
@@ -1314,12 +1122,40 @@
 			};
 			name = Debug;
 		};
-		7742726E75B42701B28F6087 /* Release */ = {
+		96ED87292AA4FD9BAB9FBE50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7840CD053066E656A85A67AC /* Pods-sancha-RATreeView-Private.xcconfig */;
+			baseConfigurationReference = F7EBB1B7983F9C79DEF7758D /* Pods-sancha-AutoScrollLabel-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-RATreeView/Pods-sancha-RATreeView-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-AutoScrollLabel/Pods-sancha-AutoScrollLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A6EC20094DC34C2C71CD774E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A30DA0ACD986411651FC08A7 /* Pods-sancha-TUSafariActivity-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = TUSafariActivity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		A9C4AFB099D79E5C2B20A7BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCC5D273662851654DCA940A /* Pods-sancha-KINWebBrowser-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-KINWebBrowser/Pods-sancha-KINWebBrowser-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -1330,39 +1166,7 @@
 			};
 			name = Release;
 		};
-		96D5595E6F4324FA1BF87693 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46AB570BC36C80605B3F64F4 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-PullToRefreshCoreText/Pods-sancha-PullToRefreshCoreText-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		9BAACD112D4633E83812ED96 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C40B3CB5359857760F8D1EE /* Pods-sancha-TUSafariActivity-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-TUSafariActivity/Pods-sancha-TUSafariActivity-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		A1990F56F2F5F95B5FBB7B24 /* Release */ = {
+		B984BDAF78BA64AB41B0B553 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1396,7 +1200,7 @@
 			};
 			name = Release;
 		};
-		B2BF7EDA9C4A3F5207B46DDF /* Debug */ = {
+		C4861BC9D3B4A9A19A3818B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1435,105 +1239,57 @@
 			};
 			name = Debug;
 		};
-		B435DF639D661817FF42AD42 /* Release */ = {
+		CBD597EB50E9E3AB82C6B677 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FF358C007730D468EA3682D /* Pods-sancha-KINWebBrowser-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-KINWebBrowser/Pods-sancha-KINWebBrowser-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		BEB5A373F7ED7933C7766BE8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFBE34AA1D0B21D7B9CAFE97 /* Pods-sancha-SVProgressHUD-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-SVProgressHUD/Pods-sancha-SVProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D42C0395946DEF22C569D3D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFBE34AA1D0B21D7B9CAFE97 /* Pods-sancha-SVProgressHUD-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-SVProgressHUD/Pods-sancha-SVProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		DF8D27BA1D5B1DDF01E1E4D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F67065CAF08B13393E72C68 /* Pods-sancha-AutoScrollLabel-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-AutoScrollLabel/Pods-sancha-AutoScrollLabel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		EB6EFC52862BB2C07735D631 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F67065CAF08B13393E72C68 /* Pods-sancha-AutoScrollLabel-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-AutoScrollLabel/Pods-sancha-AutoScrollLabel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		F3CC13B409BD8E159BD36C16 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C40B3CB5359857760F8D1EE /* Pods-sancha-TUSafariActivity-Private.xcconfig */;
+			baseConfigurationReference = A30DA0ACD986411651FC08A7 /* Pods-sancha-TUSafariActivity-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-TUSafariActivity/Pods-sancha-TUSafariActivity-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
+			name = Release;
+		};
+		DA4E6B0916CA2E0CAF79C76F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDCC72CF03AAC98275DBE107 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-PullToRefreshCoreText/Pods-sancha-PullToRefreshCoreText-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E122CB3F07795D808B6222FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C0C684394BBF340FCA6C1B1 /* Pods-sancha.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
 			name = Debug;
 		};
-		F6B2A8E729B21207840C2F96 /* Release */ = {
+		E8E6779849EDCBC36901A785 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2AB15D0E86B551D58004A24 /* Pods-sancha-ARChromeActivity-Private.xcconfig */;
+			baseConfigurationReference = 8138FDAC54AAABEBC2E0E6E4 /* Pods-sancha-ARChromeActivity-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-ARChromeActivity/Pods-sancha-ARChromeActivity-prefix.pch";
@@ -1547,100 +1303,103 @@
 			};
 			name = Release;
 		};
+		F57FEB7F2F4FC5D179FC7ECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A30DA0ACD986411651FC08A7 /* Pods-sancha-TUSafariActivity-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = TUSafariActivity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2DE8927B28742084872B0373 /* Build configuration list for PBXNativeTarget "Pods-sancha-SVProgressHUD" */ = {
+		21E532E8BE1B3F05B28A270B /* Build configuration list for PBXNativeTarget "Pods-sancha-KINWebBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D42C0395946DEF22C569D3D1 /* Debug */,
-				BEB5A373F7ED7933C7766BE8 /* Release */,
+				02898BA41ABFF25B82136A70 /* Debug */,
+				A9C4AFB099D79E5C2B20A7BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30C1A73A1039244B25B20890 /* Build configuration list for PBXNativeTarget "Pods-sancha-TUSafariActivity-TUSafariActivity" */ = {
+		29E1B753B83696B5DC9F6DF5 /* Build configuration list for PBXNativeTarget "Pods-sancha-ARChromeActivity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05FF21FB8F3DF50264E0EE4E /* Debug */,
-				1E9445136F957A366B74EBB7 /* Release */,
+				7DDA49EDD4E3C50F77BC7109 /* Debug */,
+				E8E6779849EDCBC36901A785 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BB9F12FDDE3BD8083788B88 /* Build configuration list for PBXNativeTarget "Pods-sancha-PullToRefreshCoreText" */ = {
+		37865CE6D4A1EDEF6B67F95D /* Build configuration list for PBXNativeTarget "Pods-sancha-AutoScrollLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C333A5CF0E3D500E5810D8F /* Debug */,
-				96D5595E6F4324FA1BF87693 /* Release */,
+				96ED87292AA4FD9BAB9FBE50 /* Debug */,
+				54A56F53BF4BC614B1D84D5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		471F50A8C48FC84207F0B341 /* Build configuration list for PBXNativeTarget "Pods-sancha-ARChromeActivity" */ = {
+		5D408589490FE129DD37989D /* Build configuration list for PBXNativeTarget "Pods-sancha-TUSafariActivity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				725AD114A0619BF8755BE00F /* Debug */,
-				F6B2A8E729B21207840C2F96 /* Release */,
+				2A586A7187AA80CA4629B985 /* Debug */,
+				CBD597EB50E9E3AB82C6B677 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5680EB43B1D9D0A549C835B9 /* Build configuration list for PBXNativeTarget "Pods-sancha-AutoScrollLabel" */ = {
+		91EE4CAD5DCF665436975E25 /* Build configuration list for PBXNativeTarget "Pods-sancha-PullToRefreshCoreText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB6EFC52862BB2C07735D631 /* Debug */,
-				DF8D27BA1D5B1DDF01E1E4D4 /* Release */,
+				38839721E4E96DF2AEC2F42E /* Debug */,
+				DA4E6B0916CA2E0CAF79C76F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60B2C4C7E1E85C736F749808 /* Build configuration list for PBXNativeTarget "Pods-sancha-KINWebBrowser" */ = {
+		A510948CF2E86620D3AF085D /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				43079CD5023974996F9BED57 /* Debug */,
-				B435DF639D661817FF42AD42 /* Release */,
+				C4861BC9D3B4A9A19A3818B3 /* Debug */,
+				B984BDAF78BA64AB41B0B553 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		674CE1D627EE56A51250A89F /* Build configuration list for PBXNativeTarget "Pods-sancha-RATreeView" */ = {
+		A71827086CCDB2A75F1AE090 /* Build configuration list for PBXNativeTarget "Pods-sancha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F6B3F448448AFD2566751F3 /* Debug */,
-				7742726E75B42701B28F6087 /* Release */,
+				E122CB3F07795D808B6222FF /* Debug */,
+				298D9E97D61063399DEABEE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2FE993132F35E848FCA644F /* Build configuration list for PBXNativeTarget "Pods-sancha" */ = {
+		B6D06BE9B269C49BC254F5A4 /* Build configuration list for PBXNativeTarget "Pods-sancha-SVProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A742E0295E249E2DD0A3610 /* Debug */,
-				1B9753C070EE5C9333B7144E /* Release */,
+				7BFC9BDE381DE14DC2C5C811 /* Debug */,
+				0AFA82D48B3F0C9BB93971EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8A35B1DE14217F494491D28 /* Build configuration list for PBXNativeTarget "Pods-sancha-TUSafariActivity" */ = {
+		D9974E031B487C51C31864AF /* Build configuration list for PBXNativeTarget "Pods-sancha-TUSafariActivity-TUSafariActivity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3CC13B409BD8E159BD36C16 /* Debug */,
-				9BAACD112D4633E83812ED96 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FCC00409F62495C94F1B4532 /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B2BF7EDA9C4A3F5207B46DDF /* Debug */,
-				A1990F56F2F5F95B5FBB7B24 /* Release */,
+				F57FEB7F2F4FC5D179FC7ECB /* Debug */,
+				A6EC20094DC34C2C71CD774E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 84A6EA025CE82B5B4E71AAF4 /* Project object */;
+	rootObject = E9F14F76451BD16B876A439E /* Project object */;
 }
