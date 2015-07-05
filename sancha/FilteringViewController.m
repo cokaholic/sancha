@@ -8,8 +8,12 @@
 
 #import "FilteringViewController.h"
 #import "Common.h"
+#import "FilteringTableViewCell.h"
+#import "FilteringManager.h"
+#import "PerformerViewController.h"
+#import "PrefectureViewController.h"
 
-@interface FilteringViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface FilteringViewController () <UITableViewDelegate, UITableViewDataSource, FilteringTableViewCellDelegate>
 {
     UITableView *_filteringTableView;
     UIButton *_filteringButton;
@@ -17,8 +21,7 @@
     NSArray *_sectionIconList;
     NSArray *_sectionTitleList;
     
-    NSArray *_testPerformerList;
-    NSArray *_testLocationList;
+    FilteringManager *_manager;
 }
 @end
 
@@ -33,16 +36,14 @@ static NSString * const kCellIdentifier = @"FilteringCell";
     
     [self initData];
     [self initUI];
-    [self setUI];
 }
 
 - (void)initData
 {
+    _manager = [FilteringManager sharedManager];
+    
     _sectionIconList = @[@"icon_actor", @"icon_pin"];
     _sectionTitleList = @[@"出演者", @"会場"];
-    
-    _testPerformerList = @[@"小倉唯", @"竹達彩奈", @"茅原実里", @"水樹奈々"];
-    _testLocationList = @[@"東京",];
 }
 
 - (void)initUI
@@ -72,7 +73,13 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 
 - (void)setUI
 {
-    
+    [_filteringTableView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self setUI];
 }
 
 #pragma mark - UITableView DataSource
@@ -84,7 +91,8 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (section==0) return [_manager getFilteredPerformers].count + 1;
+    else            return [_manager getFilteredPrefectures].count + 1;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -121,9 +129,9 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
+    FilteringTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
+        cell = [[FilteringTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
     }
     
     if (indexPath.row==0) {
@@ -131,6 +139,22 @@ static NSString * const kCellIdentifier = @"FilteringCell";
         cell.textLabel.textColor = PALE_TEXT_COLOR;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
+    else {
+        if (indexPath.section==0) {
+            cell.textLabel.text = [_manager getFilteredPerformers][indexPath.row-1];
+        }
+        else {
+            cell.textLabel.text = [_manager getFilteredPrefectures][indexPath.row-1];
+        }
+        
+        cell.textLabel.textColor = DEFAULT_TEXT_COLOR;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.delegate = self;
+    }
+    
+    cell.textLabel.font = DEFAULT_FONT(16);
+    
+    [cell addDeleteButtonWithIndexPath:indexPath];
     
     return cell;
 }
@@ -140,19 +164,27 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section==0 && indexPath.row==0) {
+        [self.navigationController pushViewController:[[PerformerViewController alloc]init] animated:YES];
+    }
+    else if (indexPath.section==1 && indexPath.row==0) {
+        [self.navigationController pushViewController:[[PrefectureViewController alloc]init] animated:YES];
+    }
+}
+
+#pragma mark - FilteringTableViewCell Delegate
+
+- (void)didSelectDeleteButton
+{
+    [_filteringTableView reloadData];
 }
 
 #pragma mark - Button Action
 
-- (void)dismissPresentViewController
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (void)doFiltering
 {
-    //TODO: フィルタリング内容決定時の処理
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

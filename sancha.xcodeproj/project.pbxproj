@@ -21,6 +21,7 @@
 		9F85226B1B47B793007B7A23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD61B477E9B003A7464 /* AppDelegate.m */; };
 		9F8522711B47CCD0007B7A23 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */; };
 		9F8522771B48C321007B7A23 /* FilteringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8522761B48C321007B7A23 /* FilteringViewController.m */; };
+		9FE5E4D41B48E93900FAC355 /* FilteringTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE5E4D31B48E93900FAC355 /* FilteringTableViewCell.m */; };
 		9FF3EAD41B477E9B003A7464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD31B477E9B003A7464 /* main.m */; };
 		9FF3EADF1B477E9B003A7464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF3EADE1B477E9B003A7464 /* Images.xcassets */; };
 		9FF3EAEE1B477E9B003A7464 /* sanchaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAED1B477E9B003A7464 /* sanchaTests.m */; };
@@ -67,6 +68,8 @@
 		9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		9F8522751B48C321007B7A23 /* FilteringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteringViewController.h; sourceTree = "<group>"; };
 		9F8522761B48C321007B7A23 /* FilteringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilteringViewController.m; sourceTree = "<group>"; };
+		9FE5E4D21B48E93900FAC355 /* FilteringTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteringTableViewCell.h; sourceTree = "<group>"; };
+		9FE5E4D31B48E93900FAC355 /* FilteringTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilteringTableViewCell.m; sourceTree = "<group>"; };
 		9FF3EACE1B477E9B003A7464 /* sancha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sancha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF3EAD21B477E9B003A7464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FF3EAD31B477E9B003A7464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 			children = (
 				9FF3EAFA1B478552003A7464 /* EventTableViewCell.h */,
 				9FF3EAFB1B478552003A7464 /* EventTableViewCell.m */,
+				9FE5E4D21B48E93900FAC355 /* FilteringTableViewCell.h */,
+				9FE5E4D31B48E93900FAC355 /* FilteringTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FE5E4D41B48E93900FAC355 /* FilteringTableViewCell.m in Sources */,
 				38D2CE9A1B480D7000110146 /* PerformerViewController.m in Sources */,
 				38D2CE911B48034000110146 /* PrefectureViewController.m in Sources */,
 				9F85226B1B47B793007B7A23 /* AppDelegate.m in Sources */,
