@@ -6,7 +6,6 @@ target 'sancha' do
   pod 'SVProgressHUD'
   source 'https://github.com/CocoaPods/Specs.git'
   pod 'PullToRefreshCoreText', '~> 0.2'
-  pod 'KINWebBrowser'
   pod 'AutoScrollLabel'
 end
 

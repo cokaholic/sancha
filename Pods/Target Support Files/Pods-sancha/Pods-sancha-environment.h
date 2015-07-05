@@ -6,23 +6,11 @@
 // project.
 
 
-// ARChromeActivity
-#define COCOAPODS_POD_AVAILABLE_ARChromeActivity
-#define COCOAPODS_VERSION_MAJOR_ARChromeActivity 1
-#define COCOAPODS_VERSION_MINOR_ARChromeActivity 0
-#define COCOAPODS_VERSION_PATCH_ARChromeActivity 2
-
 // AutoScrollLabel
 #define COCOAPODS_POD_AVAILABLE_AutoScrollLabel
 #define COCOAPODS_VERSION_MAJOR_AutoScrollLabel 0
 #define COCOAPODS_VERSION_MINOR_AutoScrollLabel 4
 #define COCOAPODS_VERSION_PATCH_AutoScrollLabel 1
-
-// KINWebBrowser
-#define COCOAPODS_POD_AVAILABLE_KINWebBrowser
-#define COCOAPODS_VERSION_MAJOR_KINWebBrowser 1
-#define COCOAPODS_VERSION_MINOR_KINWebBrowser 2
-#define COCOAPODS_VERSION_PATCH_KINWebBrowser 5
 
 // PullToRefreshCoreText
 #define COCOAPODS_POD_AVAILABLE_PullToRefreshCoreText
@@ -35,10 +23,4 @@
 #define COCOAPODS_VERSION_MAJOR_SVProgressHUD 1
 #define COCOAPODS_VERSION_MINOR_SVProgressHUD 1
 #define COCOAPODS_VERSION_PATCH_SVProgressHUD 3
-
-// TUSafariActivity
-#define COCOAPODS_POD_AVAILABLE_TUSafariActivity
-#define COCOAPODS_VERSION_MAJOR_TUSafariActivity 1
-#define COCOAPODS_VERSION_MINOR_TUSafariActivity 0
-#define COCOAPODS_VERSION_PATCH_TUSafariActivity 2
 

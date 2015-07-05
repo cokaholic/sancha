@@ -9,7 +9,7 @@
 #import "EventDetailViewController.h"
 #import "EventDetailData.h"
 #import "Common.h"
-#import <KINWebBrowserViewController.h>
+#import "KINWebBrowserViewController.h"
 #import <AutoScrollLabel/CBAutoScrollLabel.h>
 
 @interface EventDetailViewController ()
@@ -255,8 +255,6 @@
     }
     _howToTextView.text = _eventDetailData.howTo;
     
-    NSLog(@"%@",_eventDetailData.howTo);
-    
     _officialHPIconImageView.center = CGPointMake(_officialHPIconImageView.center.x, _officialHPIconImageView.center.y + CGRectGetMaxY(_howToTextView.frame));
     _officialHPTitleLabel.center = CGPointMake(_officialHPTitleLabel.center.x, _officialHPTitleLabel.center.y  + CGRectGetMaxY(_howToTextView.frame));
     
@@ -269,17 +267,13 @@
     _backScrollView.contentSize = CGSizeMake(0, CGRectGetHeight(_backWhiteView.frame) - 53);
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
 - (void)openWebView
 {
     KINWebBrowserViewController *webBrowser = [KINWebBrowserViewController webBrowser];
     webBrowser.showsPageTitleInNavigationBar = YES;
     webBrowser.showsURLInNavigationBar = YES;
     webBrowser.tintColor = MAIN_COLOR;
+    webBrowser.barTintColor = ACCENT_COLOR;
     webBrowser.progressView.tintColor = MAIN_COLOR;
     [self.navigationController pushViewController:webBrowser animated:YES];
     [webBrowser loadURL:_eventDetailData.officialPageURL];

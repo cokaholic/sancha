@@ -34,6 +34,8 @@
 
 #import "TUSafariActivity.h"
 #import "ARChromeActivity.h"
+#import <AutoScrollLabel/CBAutoScrollLabel.h>
+#import "Common.h"
 
 static void *KINWebBrowserContext = &KINWebBrowserContext;
 
@@ -47,6 +49,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 @property (nonatomic, strong) NSURL *uiWebViewCurrentURL;
 @property (nonatomic, strong) NSURL *URLToLaunchWithPermission;
 @property (nonatomic, strong) UIAlertView *externalAppPermissionAlertView;
+@property (nonatomic, strong) CBAutoScrollLabel *navBarTitleLabel;
 
 @end
 
@@ -107,8 +110,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         self.showsURLInNavigationBar = NO;
         self.showsPageTitleInNavigationBar = YES;
         
-        self.externalAppPermissionAlertView = [[UIAlertView alloc] initWithTitle:@"Leave this app?" message:@"This web page is trying to open an outside app. Are you sure you want to open it?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Open App", nil];
-        
+        self.externalAppPermissionAlertView = [[UIAlertView alloc] initWithTitle:@"他のアプリで開く" message:@"このページは他のアプリで開きます。それでもよろしいですか？" delegate:self cancelButtonTitle:@"キャンセル" otherButtonTitles:@"アプリで開く", nil];
     }
     return self;
 }
@@ -351,7 +353,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
             URLString = [URLString stringByReplacingOccurrencesOfString:@"http://" withString:@""];
             URLString = [URLString stringByReplacingOccurrencesOfString:@"https://" withString:@""];
             URLString = [URLString substringToIndex:[URLString length]-1];
-            self.navigationItem.title = URLString;
+            _navBarTitleLabel.text = URLString;
         }
     }
     else {
@@ -359,10 +361,12 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
         
         if(self.showsPageTitleInNavigationBar) {
             if(self.wkWebView) {
-                self.navigationItem.title = self.wkWebView.title;
+//                self.navigationItem.title = self.wkWebView.title;
+                _navBarTitleLabel.text = self.wkWebView.title;
             }
             else if(self.uiWebView) {
-                self.navigationItem.title = [self.uiWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
+//                self.navigationItem.title = [self.uiWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
+                _navBarTitleLabel.text = [self.uiWebView stringByEvaluatingJavaScriptFromString:@"document.title"];
             }
         }
     }
@@ -382,6 +386,16 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 - (void)setupToolbarItems {
+    
+    _navBarTitleLabel = [[CBAutoScrollLabel alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width-80, 44)];
+    _navBarTitleLabel.textColor = DEFAULT_TEXT_COLOR;
+    _navBarTitleLabel.font = DEFAULT_FONT(16);
+    _navBarTitleLabel.scrollSpeed = 35;
+    _navBarTitleLabel.labelSpacing = 30;
+    _navBarTitleLabel.pauseInterval = 2.0;
+    _navBarTitleLabel.scrollDirection = CBAutoScrollDirectionLeft;
+    self.navigationItem.titleView = _navBarTitleLabel;
+    
     self.refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshButtonPressed:)];
     self.stopButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(stopButtonPressed:)];
     self.backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backbutton"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed:)];
