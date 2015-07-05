@@ -7,338 +7,338 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		176ED424080A81DEBC6B67D9 /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1680442831DD75C372F708 /* CBAutoScrollLabel.m */; };
-		19D973366B09A686725E84C3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D436AB3817FB2BD7B703ECD8 /* SVProgressHUD.m */; };
-		20CF35DA0200B0FB89CE2EA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095D0551A61E4AF2C1FC2841 /* Foundation.framework */; };
-		2C10558372D49DD4EC70C321 /* Pods-sancha-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAD2978719337E91B08F217 /* Pods-sancha-dummy.m */; };
-		3CC5EF26CFA15F8CBA938EFB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2543A2D83B88FD5D9E50B52 /* QuartzCore.framework */; };
-		482B010F4D3055EFBD6A3B88 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B2519D4310F7DC0EAAC7856 /* SVIndefiniteAnimatedView.h */; };
-		4C5A6B3A474842873C88809B /* PullToRefreshCoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = DDE402F349D1C40C9E5BF2A1 /* PullToRefreshCoreTextView.h */; };
-		559FC1D9297C57CF3D5BCCAF /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11233792D48128CBDDB6E906 /* SVIndefiniteAnimatedView.m */; };
-		5B464652DFA6EB24CACFD790 /* Pods-sancha-SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D77CF8F13BEDE4224A08B8 /* Pods-sancha-SVProgressHUD-dummy.m */; };
-		5DA79FBD513F1C614B5B950F /* UIScrollView+PullToRefreshCoreText.h in Headers */ = {isa = PBXBuildFile; fileRef = 4966460033B36680E14239D0 /* UIScrollView+PullToRefreshCoreText.h */; };
-		5DB299D1678DB559661D078C /* CBAutoScrollLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F547303BE72637B4797538 /* CBAutoScrollLabel.h */; };
-		61354B6FFF7837F8D36720FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EA7F682057750FBEEA8835 /* CoreGraphics.framework */; };
-		61DA9F77EFA53739929F4370 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2543A2D83B88FD5D9E50B52 /* QuartzCore.framework */; };
-		8D6F27342C26621F5477346A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095D0551A61E4AF2C1FC2841 /* Foundation.framework */; };
-		99D564EDF9ABF064CBC54F75 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = A6181067A3CDF191F5700E61 /* SVProgressHUD.h */; };
-		A5A9F449C11ECDAD6BA776EA /* Pods-sancha-AutoScrollLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2E6F2FF1A4F7EAEFF2A11C /* Pods-sancha-AutoScrollLabel-dummy.m */; };
-		A5FF78253BE39F03F9A5FBB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095D0551A61E4AF2C1FC2841 /* Foundation.framework */; };
-		A91D6DEB485B2E23D8EC1C59 /* Pods-sancha-PullToRefreshCoreText-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D852A8BCFC94F78A6D26827 /* Pods-sancha-PullToRefreshCoreText-dummy.m */; };
-		BC47BD303AAE7F59C62D97DC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00B2B89A715AA172A661CC5 /* CoreText.framework */; };
-		E7F217E7470654B992CA9ADD /* UIScrollView+PullToRefreshCoreText.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDAD99A493D86AAEDD411C2 /* UIScrollView+PullToRefreshCoreText.m */; };
-		EF57A12FF6AE2886403EA72C /* PullToRefreshCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B012C907C32A90901F9F71C0 /* PullToRefreshCoreTextView.m */; };
-		F733F1348D8A23CBC8BB49F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095D0551A61E4AF2C1FC2841 /* Foundation.framework */; };
+		018971DF6069D9B29EF5D69A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12E7F8C7E5984E6A0FE07D6 /* QuartzCore.framework */; };
+		1330A62D3350A6B48B9A8D2B /* UIScrollView+PullToRefreshCoreText.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E963F9AAD84E62C7615FAAA /* UIScrollView+PullToRefreshCoreText.m */; };
+		16FABC50F6CDCF7162DE3F21 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C5C3472893DA4C8D5D5951 /* SVProgressHUD.h */; };
+		2B547508FC16F5E8D895A9D4 /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F75D7182C3FB6CF4102AFA30 /* CBAutoScrollLabel.m */; };
+		4077281AF673050F9BED2A51 /* Pods-sancha-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A79F9ACCDDB944474BDF5128 /* Pods-sancha-dummy.m */; };
+		40B16E00C56ECD5E20E9C7CE /* Pods-sancha-SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E37C0243461678EABB9789CE /* Pods-sancha-SVProgressHUD-dummy.m */; };
+		56251D1419D91CEFD1FC8B7D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4D183D6A925935DF9B7FE7 /* CoreText.framework */; };
+		62715A2F4ED17AB2E4F4D23E /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0D7172C95ACB4A557F38E /* SVIndefiniteAnimatedView.m */; };
+		7127B7FA8095081D907DE9FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BD316E2F2081FD2EA3F66A /* Foundation.framework */; };
+		74862C91F2DA26F1EE87876B /* PullToRefreshCoreTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC269A52B551F6B29785450 /* PullToRefreshCoreTextView.h */; };
+		897BB13D9F0AAD450DCBAE29 /* CBAutoScrollLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = C4B993C7C0F387CE4C766EA8 /* CBAutoScrollLabel.h */; };
+		A813A2DBCAE7479E799DDB3F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F271B8B6B00FC3560B093B2 /* SVProgressHUD.m */; };
+		A8441CF85F2B26661196917A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BD316E2F2081FD2EA3F66A /* Foundation.framework */; };
+		B265CE522FB4A26A38EB211B /* Pods-sancha-AutoScrollLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D2587A43B1F46020600E7 /* Pods-sancha-AutoScrollLabel-dummy.m */; };
+		BBF9390225B53C36A7E7E03E /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5E7E7927D0A1D623F92F41 /* SVIndefiniteAnimatedView.h */; };
+		D28F0C3CB24A3C61873246E0 /* UIScrollView+PullToRefreshCoreText.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DA65490E3ADDD78656404CA /* UIScrollView+PullToRefreshCoreText.h */; };
+		D6A33378DF27245AA4786177 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B9BE377D840D58805B57D /* CoreGraphics.framework */; };
+		E53FDBE58F1562AB2F3093AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BD316E2F2081FD2EA3F66A /* Foundation.framework */; };
+		EDA37A42126CC07B5459AB44 /* PullToRefreshCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53299C36A0F27362D4D996B1 /* PullToRefreshCoreTextView.m */; };
+		EEAC8E61DC14C5EB641A7F06 /* Pods-sancha-PullToRefreshCoreText-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD68E1F75C72847D3CEC27C9 /* Pods-sancha-PullToRefreshCoreText-dummy.m */; };
+		F05BECC12F1472A9D9A69A8C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12E7F8C7E5984E6A0FE07D6 /* QuartzCore.framework */; };
+		F394A0D8B1125011D684D468 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BD316E2F2081FD2EA3F66A /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		303839C6BD7503801C2D471A /* PBXContainerItemProxy */ = {
+		23FA33DACDAD9378FF07ADDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9C76FE3066B0DA831FB6D569 /* Project object */;
+			containerPortal = 61A3F39CC80EDCC11630427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 26A1011160B5DA478508119B;
+			remoteGlobalIDString = 1FAE51080656684EF44B119C;
 			remoteInfo = "Pods-sancha-PullToRefreshCoreText";
 		};
-		9B162D4E76A46546C956BFE0 /* PBXContainerItemProxy */ = {
+		A5D7252248A58F4A5FB7BD85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9C76FE3066B0DA831FB6D569 /* Project object */;
+			containerPortal = 61A3F39CC80EDCC11630427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5BD56F4ADDE5C36CD3CEA568;
+			remoteGlobalIDString = 573949CB7286EAE485C83092;
 			remoteInfo = "Pods-sancha-AutoScrollLabel";
 		};
-		E5E7CE32D981700324A97DEC /* PBXContainerItemProxy */ = {
+		AF6CA85565604E9FB86C41EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9C76FE3066B0DA831FB6D569 /* Project object */;
+			containerPortal = 61A3F39CC80EDCC11630427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 437A9B3F31B0273A05BF4FFB;
+			remoteGlobalIDString = 563799D91947A85B69D225EB;
 			remoteInfo = "Pods-sancha-SVProgressHUD";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		095D0551A61E4AF2C1FC2841 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		11233792D48128CBDDB6E906 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		1A2E6F2FF1A4F7EAEFF2A11C /* Pods-sancha-AutoScrollLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-AutoScrollLabel-dummy.m"; sourceTree = "<group>"; };
-		2C4DF6082EE4EB47A671A9C8 /* libPods-sancha-PullToRefreshCoreText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-PullToRefreshCoreText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		343F80226A763AB8CFC3E79C /* Mask.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Mask.png; path = PullToRefreshCoreText/PullToRefreshCoreText/Mask.png; sourceTree = "<group>"; };
-		347AF2029B33398696A358A7 /* Pods-sancha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha.debug.xcconfig"; sourceTree = "<group>"; };
-		3CDAD99A493D86AAEDD411C2 /* UIScrollView+PullToRefreshCoreText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+PullToRefreshCoreText.m"; path = "PullToRefreshCoreText/PullToRefreshCoreText/UIScrollView+PullToRefreshCoreText.m"; sourceTree = "<group>"; };
-		480F07DD8BF27686173D3E59 /* libPods-sancha-AutoScrollLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-AutoScrollLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4966460033B36680E14239D0 /* UIScrollView+PullToRefreshCoreText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+PullToRefreshCoreText.h"; path = "PullToRefreshCoreText/PullToRefreshCoreText/UIScrollView+PullToRefreshCoreText.h"; sourceTree = "<group>"; };
-		4B2519D4310F7DC0EAAC7856 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		5D7C1F4559607BBA1A7D9578 /* Pods-sancha-SVProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-SVProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
-		5E6F42DB2FE00729FCB7D556 /* Pods-sancha-AutoScrollLabel-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-AutoScrollLabel-Private.xcconfig"; sourceTree = "<group>"; };
-		60378879B1187CD7C29B38B8 /* Pods-sancha-AutoScrollLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-AutoScrollLabel.xcconfig"; sourceTree = "<group>"; };
-		60EF3E85126F1B9EE9F42227 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6306C3E993CD7C4C895AA1FC /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
-		6953F8E241F9A379086E3707 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-PullToRefreshCoreText-Private.xcconfig"; sourceTree = "<group>"; };
-		6B1680442831DD75C372F708 /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CBAutoScrollLabel.m; path = CBAutoScrollLabel/CBAutoScrollLabel.m; sourceTree = "<group>"; };
-		777F2A760904E2413F02F7E1 /* Pods-sancha-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-environment.h"; sourceTree = "<group>"; };
-		8504D5D7C6D6FE28AFC21707 /* Pods-sancha-SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-SVProgressHUD.xcconfig"; sourceTree = "<group>"; };
-		87F547303BE72637B4797538 /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CBAutoScrollLabel.h; path = CBAutoScrollLabel/CBAutoScrollLabel.h; sourceTree = "<group>"; };
-		8B586A2D6E21C3B16266219F /* Pods-sancha-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-sancha-resources.sh"; sourceTree = "<group>"; };
-		8BC307D3D8CB2ACE73252313 /* Pods-sancha-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sancha-acknowledgements.plist"; sourceTree = "<group>"; };
-		92D6B37ECCAB5F01626BD629 /* Pods-sancha-SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		9745D78A38476908B9D85A7C /* libPods-sancha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D852A8BCFC94F78A6D26827 /* Pods-sancha-PullToRefreshCoreText-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-PullToRefreshCoreText-dummy.m"; sourceTree = "<group>"; };
-		A00B2B89A715AA172A661CC5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
-		A6181067A3CDF191F5700E61 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
-		B012C907C32A90901F9F71C0 /* PullToRefreshCoreTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PullToRefreshCoreTextView.m; path = PullToRefreshCoreText/PullToRefreshCoreText/PullToRefreshCoreTextView.m; sourceTree = "<group>"; };
-		B0D77CF8F13BEDE4224A08B8 /* Pods-sancha-SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		B5EA7F682057750FBEEA8835 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		BD55D46E4648A8D5919618FA /* libPods-sancha-SVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-SVProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2543A2D83B88FD5D9E50B52 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		C3CC69553144791F1F4EFCA7 /* Pods-sancha-AutoScrollLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-AutoScrollLabel-prefix.pch"; sourceTree = "<group>"; };
-		CADB0BBBBFE00CFF70A5670D /* Pods-sancha-PullToRefreshCoreText-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-PullToRefreshCoreText-prefix.pch"; sourceTree = "<group>"; };
-		CEAD2978719337E91B08F217 /* Pods-sancha-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-dummy.m"; sourceTree = "<group>"; };
-		D436AB3817FB2BD7B703ECD8 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
-		DDE402F349D1C40C9E5BF2A1 /* PullToRefreshCoreTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PullToRefreshCoreTextView.h; path = PullToRefreshCoreText/PullToRefreshCoreText/PullToRefreshCoreTextView.h; sourceTree = "<group>"; };
-		EF1F97F80AEB9886572F0857 /* Pods-sancha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha.release.xcconfig"; sourceTree = "<group>"; };
-		F44B7D79CE2F8E3430F1A0AF /* Pods-sancha-PullToRefreshCoreText.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-PullToRefreshCoreText.xcconfig"; sourceTree = "<group>"; };
-		FB4EC95DC5BD01C418AF8D6C /* Pods-sancha-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-sancha-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0427D861D21ADDCE7A8140A3 /* Pods-sancha-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-sancha-acknowledgements.plist"; sourceTree = "<group>"; };
+		045EF712911A1C375A2B789F /* Pods-sancha-AutoScrollLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-AutoScrollLabel.xcconfig"; sourceTree = "<group>"; };
+		0BB0D7172C95ACB4A557F38E /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		0F271B8B6B00FC3560B093B2 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		18318BCC881D9EF35E510628 /* Pods-sancha-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-sancha-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1A9076E88B3425D68687717D /* Pods-sancha-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-environment.h"; sourceTree = "<group>"; };
+		1C304C434041AF43BA71FD63 /* libPods-sancha-PullToRefreshCoreText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-PullToRefreshCoreText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2537ED3BF47A48E486772510 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2C8D2587A43B1F46020600E7 /* Pods-sancha-AutoScrollLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-AutoScrollLabel-dummy.m"; sourceTree = "<group>"; };
+		3D1F0E89833DA88EDC9BB51C /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-PullToRefreshCoreText-Private.xcconfig"; sourceTree = "<group>"; };
+		3E963F9AAD84E62C7615FAAA /* UIScrollView+PullToRefreshCoreText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+PullToRefreshCoreText.m"; path = "PullToRefreshCoreText/PullToRefreshCoreText/UIScrollView+PullToRefreshCoreText.m"; sourceTree = "<group>"; };
+		3FC269A52B551F6B29785450 /* PullToRefreshCoreTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PullToRefreshCoreTextView.h; path = PullToRefreshCoreText/PullToRefreshCoreText/PullToRefreshCoreTextView.h; sourceTree = "<group>"; };
+		45A407A6EE70BD98FCC2B225 /* Pods-sancha-SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		4DA65490E3ADDD78656404CA /* UIScrollView+PullToRefreshCoreText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+PullToRefreshCoreText.h"; path = "PullToRefreshCoreText/PullToRefreshCoreText/UIScrollView+PullToRefreshCoreText.h"; sourceTree = "<group>"; };
+		53299C36A0F27362D4D996B1 /* PullToRefreshCoreTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PullToRefreshCoreTextView.m; path = PullToRefreshCoreText/PullToRefreshCoreText/PullToRefreshCoreTextView.m; sourceTree = "<group>"; };
+		546B476F7BA9174D7F8C9F6B /* Pods-sancha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha.release.xcconfig"; sourceTree = "<group>"; };
+		56867E38A2ADE944097BFAC4 /* libPods-sancha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DBB0ED0C2BC889C95BBB998 /* Pods-sancha-SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-SVProgressHUD.xcconfig"; sourceTree = "<group>"; };
+		600D3616D0F0B6896EB2419C /* Pods-sancha-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-sancha-resources.sh"; sourceTree = "<group>"; };
+		8238C16FEBD77600A1CB3DFA /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		839C1C35E029D7CD6B44486B /* Mask.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Mask.png; path = PullToRefreshCoreText/PullToRefreshCoreText/Mask.png; sourceTree = "<group>"; };
+		83DA9BDCAECA1990F4008501 /* Pods-sancha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha.debug.xcconfig"; sourceTree = "<group>"; };
+		8D4D183D6A925935DF9B7FE7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		96AD9C707E849642616C1AAD /* Pods-sancha-AutoScrollLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-AutoScrollLabel-prefix.pch"; sourceTree = "<group>"; };
+		9F5B9BE377D840D58805B57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		A0BD316E2F2081FD2EA3F66A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A79F9ACCDDB944474BDF5128 /* Pods-sancha-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-dummy.m"; sourceTree = "<group>"; };
+		A82362F9E0CBEF3B02736D26 /* libPods-sancha-SVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-SVProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8DC202E7719764F6CCF6352 /* Pods-sancha-SVProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-SVProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		AA5E7E7927D0A1D623F92F41 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		C12E7F8C7E5984E6A0FE07D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		C4B993C7C0F387CE4C766EA8 /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CBAutoScrollLabel.h; path = CBAutoScrollLabel/CBAutoScrollLabel.h; sourceTree = "<group>"; };
+		CD68E1F75C72847D3CEC27C9 /* Pods-sancha-PullToRefreshCoreText-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-PullToRefreshCoreText-dummy.m"; sourceTree = "<group>"; };
+		DEFBC3C56CFA0BB3788547FA /* Pods-sancha-AutoScrollLabel-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-AutoScrollLabel-Private.xcconfig"; sourceTree = "<group>"; };
+		E37C0243461678EABB9789CE /* Pods-sancha-SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-sancha-SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		E392C1DC27618134C0E6E662 /* Pods-sancha-PullToRefreshCoreText-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-sancha-PullToRefreshCoreText-prefix.pch"; sourceTree = "<group>"; };
+		E95319AB7F09A9B64A02F55E /* libPods-sancha-AutoScrollLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha-AutoScrollLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC3FA9F59F222CF0D70A101F /* Pods-sancha-PullToRefreshCoreText.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-sancha-PullToRefreshCoreText.xcconfig"; sourceTree = "<group>"; };
+		F75D7182C3FB6CF4102AFA30 /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CBAutoScrollLabel.m; path = CBAutoScrollLabel/CBAutoScrollLabel.m; sourceTree = "<group>"; };
+		F9C5C3472893DA4C8D5D5951 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		47360659C1B5A8B0F5AF3137 /* Frameworks */ = {
+		214EA1F6B5FA8550A6EAE589 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61354B6FFF7837F8D36720FE /* CoreGraphics.framework in Frameworks */,
-				8D6F27342C26621F5477346A /* Foundation.framework in Frameworks */,
-				3CC5EF26CFA15F8CBA938EFB /* QuartzCore.framework in Frameworks */,
+				A8441CF85F2B26661196917A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91899D9C8DA73E48CE1DB075 /* Frameworks */ = {
+		67CDD72220EFA30089EEEED2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC47BD303AAE7F59C62D97DC /* CoreText.framework in Frameworks */,
-				A5FF78253BE39F03F9A5FBB0 /* Foundation.framework in Frameworks */,
+				F394A0D8B1125011D684D468 /* Foundation.framework in Frameworks */,
+				F05BECC12F1472A9D9A69A8C /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC6D0359239ADE3BA2DE908C /* Frameworks */ = {
+		BC6D278C61367C946B67711B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F733F1348D8A23CBC8BB49F2 /* Foundation.framework in Frameworks */,
-				61DA9F77EFA53739929F4370 /* QuartzCore.framework in Frameworks */,
+				D6A33378DF27245AA4786177 /* CoreGraphics.framework in Frameworks */,
+				7127B7FA8095081D907DE9FA /* Foundation.framework in Frameworks */,
+				018971DF6069D9B29EF5D69A /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC7055389BE7DB5820A5B00C /* Frameworks */ = {
+		ED8C2F0CF49BC7F68B61E8E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20CF35DA0200B0FB89CE2EA3 /* Foundation.framework in Frameworks */,
+				56251D1419D91CEFD1FC8B7D /* CoreText.framework in Frameworks */,
+				E53FDBE58F1562AB2F3093AB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		188CED1B860B5EF621985972 /* Resources */ = {
+		0C22223AC13612DC0898238F /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				343F80226A763AB8CFC3E79C /* Mask.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		2B5610CBC15986308186EA29 = {
-			isa = PBXGroup;
-			children = (
-				60EF3E85126F1B9EE9F42227 /* Podfile */,
-				4182301D1C3B92CE43FFC016 /* Frameworks */,
-				EEC2EE5FC21C46BCC4A6855A /* Pods */,
-				D738BF4E961F29B32E7FA135 /* Products */,
-				B6606569D8716359737E438D /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		3052ECB27A888943BF4D792F /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				4B2519D4310F7DC0EAAC7856 /* SVIndefiniteAnimatedView.h */,
-				11233792D48128CBDDB6E906 /* SVIndefiniteAnimatedView.m */,
-				A6181067A3CDF191F5700E61 /* SVProgressHUD.h */,
-				D436AB3817FB2BD7B703ECD8 /* SVProgressHUD.m */,
-				7C0AF68B8A732EB90BBCE69F /* Resources */,
-				88AD8F5135E3629373A8C1DB /* Support Files */,
+				AA5E7E7927D0A1D623F92F41 /* SVIndefiniteAnimatedView.h */,
+				0BB0D7172C95ACB4A557F38E /* SVIndefiniteAnimatedView.m */,
+				F9C5C3472893DA4C8D5D5951 /* SVProgressHUD.h */,
+				0F271B8B6B00FC3560B093B2 /* SVProgressHUD.m */,
+				D50A61DA0F16558FDB7CF043 /* Resources */,
+				DA265BA405FB99FDA3441175 /* Support Files */,
 			);
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
-		39F0056EB263400021501EFA /* AutoScrollLabel */ = {
+		3428FA6494C7B5115950B139 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				87F547303BE72637B4797538 /* CBAutoScrollLabel.h */,
-				6B1680442831DD75C372F708 /* CBAutoScrollLabel.m */,
-				DF05FD6ADD5212FF89E21D49 /* Support Files */,
-			);
-			path = AutoScrollLabel;
-			sourceTree = "<group>";
-		};
-		4182301D1C3B92CE43FFC016 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7E178E4FAFA9D70D80174D83 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		61A729C9FC51BD504A66EBC4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F44B7D79CE2F8E3430F1A0AF /* Pods-sancha-PullToRefreshCoreText.xcconfig */,
-				6953F8E241F9A379086E3707 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */,
-				9D852A8BCFC94F78A6D26827 /* Pods-sancha-PullToRefreshCoreText-dummy.m */,
-				CADB0BBBBFE00CFF70A5670D /* Pods-sancha-PullToRefreshCoreText-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-sancha-PullToRefreshCoreText";
-			sourceTree = "<group>";
-		};
-		7C0AF68B8A732EB90BBCE69F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6306C3E993CD7C4C895AA1FC /* SVProgressHUD.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		7E178E4FAFA9D70D80174D83 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				B5EA7F682057750FBEEA8835 /* CoreGraphics.framework */,
-				A00B2B89A715AA172A661CC5 /* CoreText.framework */,
-				095D0551A61E4AF2C1FC2841 /* Foundation.framework */,
-				C2543A2D83B88FD5D9E50B52 /* QuartzCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		88AD8F5135E3629373A8C1DB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8504D5D7C6D6FE28AFC21707 /* Pods-sancha-SVProgressHUD.xcconfig */,
-				5D7C1F4559607BBA1A7D9578 /* Pods-sancha-SVProgressHUD-Private.xcconfig */,
-				B0D77CF8F13BEDE4224A08B8 /* Pods-sancha-SVProgressHUD-dummy.m */,
-				92D6B37ECCAB5F01626BD629 /* Pods-sancha-SVProgressHUD-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-sancha-SVProgressHUD";
-			sourceTree = "<group>";
-		};
-		992A61A01D460E51E3EE5A29 /* Pods-sancha */ = {
-			isa = PBXGroup;
-			children = (
-				FB4EC95DC5BD01C418AF8D6C /* Pods-sancha-acknowledgements.markdown */,
-				8BC307D3D8CB2ACE73252313 /* Pods-sancha-acknowledgements.plist */,
-				CEAD2978719337E91B08F217 /* Pods-sancha-dummy.m */,
-				777F2A760904E2413F02F7E1 /* Pods-sancha-environment.h */,
-				8B586A2D6E21C3B16266219F /* Pods-sancha-resources.sh */,
-				347AF2029B33398696A358A7 /* Pods-sancha.debug.xcconfig */,
-				EF1F97F80AEB9886572F0857 /* Pods-sancha.release.xcconfig */,
-			);
-			name = "Pods-sancha";
-			path = "Target Support Files/Pods-sancha";
-			sourceTree = "<group>";
-		};
-		B6606569D8716359737E438D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				992A61A01D460E51E3EE5A29 /* Pods-sancha */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		D738BF4E961F29B32E7FA135 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9745D78A38476908B9D85A7C /* libPods-sancha.a */,
-				480F07DD8BF27686173D3E59 /* libPods-sancha-AutoScrollLabel.a */,
-				2C4DF6082EE4EB47A671A9C8 /* libPods-sancha-PullToRefreshCoreText.a */,
-				BD55D46E4648A8D5919618FA /* libPods-sancha-SVProgressHUD.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DF05FD6ADD5212FF89E21D49 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				60378879B1187CD7C29B38B8 /* Pods-sancha-AutoScrollLabel.xcconfig */,
-				5E6F42DB2FE00729FCB7D556 /* Pods-sancha-AutoScrollLabel-Private.xcconfig */,
-				1A2E6F2FF1A4F7EAEFF2A11C /* Pods-sancha-AutoScrollLabel-dummy.m */,
-				C3CC69553144791F1F4EFCA7 /* Pods-sancha-AutoScrollLabel-prefix.pch */,
+				045EF712911A1C375A2B789F /* Pods-sancha-AutoScrollLabel.xcconfig */,
+				DEFBC3C56CFA0BB3788547FA /* Pods-sancha-AutoScrollLabel-Private.xcconfig */,
+				2C8D2587A43B1F46020600E7 /* Pods-sancha-AutoScrollLabel-dummy.m */,
+				96AD9C707E849642616C1AAD /* Pods-sancha-AutoScrollLabel-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-sancha-AutoScrollLabel";
 			sourceTree = "<group>";
 		};
-		EEC2EE5FC21C46BCC4A6855A /* Pods */ = {
+		4F2FF5058105609968109E5E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				39F0056EB263400021501EFA /* AutoScrollLabel */,
-				FB2B78C129964EC60D4C81AB /* PullToRefreshCoreText */,
-				3052ECB27A888943BF4D792F /* SVProgressHUD */,
+				BABE6902C83867F466C044B5 /* Pods-sancha */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		511A6ED06A7B8BC5D3F8D238 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F61E24D73CF3E682E7DF7018 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53B19587280229EDA013A40E = {
+			isa = PBXGroup;
+			children = (
+				2537ED3BF47A48E486772510 /* Podfile */,
+				511A6ED06A7B8BC5D3F8D238 /* Frameworks */,
+				DF0632E3DB86FC09556D6FDC /* Pods */,
+				7942FA80F8A4136989A1BAF3 /* Products */,
+				4F2FF5058105609968109E5E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7942FA80F8A4136989A1BAF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56867E38A2ADE944097BFAC4 /* libPods-sancha.a */,
+				E95319AB7F09A9B64A02F55E /* libPods-sancha-AutoScrollLabel.a */,
+				1C304C434041AF43BA71FD63 /* libPods-sancha-PullToRefreshCoreText.a */,
+				A82362F9E0CBEF3B02736D26 /* libPods-sancha-SVProgressHUD.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E53B3CF076EAFFD318F991B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC3FA9F59F222CF0D70A101F /* Pods-sancha-PullToRefreshCoreText.xcconfig */,
+				3D1F0E89833DA88EDC9BB51C /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */,
+				CD68E1F75C72847D3CEC27C9 /* Pods-sancha-PullToRefreshCoreText-dummy.m */,
+				E392C1DC27618134C0E6E662 /* Pods-sancha-PullToRefreshCoreText-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-sancha-PullToRefreshCoreText";
+			sourceTree = "<group>";
+		};
+		BA5354CABAEA2496610306C8 /* PullToRefreshCoreText */ = {
+			isa = PBXGroup;
+			children = (
+				3FC269A52B551F6B29785450 /* PullToRefreshCoreTextView.h */,
+				53299C36A0F27362D4D996B1 /* PullToRefreshCoreTextView.m */,
+				4DA65490E3ADDD78656404CA /* UIScrollView+PullToRefreshCoreText.h */,
+				3E963F9AAD84E62C7615FAAA /* UIScrollView+PullToRefreshCoreText.m */,
+				C58249323876647E968C82EF /* Resources */,
+				7E53B3CF076EAFFD318F991B /* Support Files */,
+			);
+			path = PullToRefreshCoreText;
+			sourceTree = "<group>";
+		};
+		BABE6902C83867F466C044B5 /* Pods-sancha */ = {
+			isa = PBXGroup;
+			children = (
+				18318BCC881D9EF35E510628 /* Pods-sancha-acknowledgements.markdown */,
+				0427D861D21ADDCE7A8140A3 /* Pods-sancha-acknowledgements.plist */,
+				A79F9ACCDDB944474BDF5128 /* Pods-sancha-dummy.m */,
+				1A9076E88B3425D68687717D /* Pods-sancha-environment.h */,
+				600D3616D0F0B6896EB2419C /* Pods-sancha-resources.sh */,
+				83DA9BDCAECA1990F4008501 /* Pods-sancha.debug.xcconfig */,
+				546B476F7BA9174D7F8C9F6B /* Pods-sancha.release.xcconfig */,
+			);
+			name = "Pods-sancha";
+			path = "Target Support Files/Pods-sancha";
+			sourceTree = "<group>";
+		};
+		C58249323876647E968C82EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				839C1C35E029D7CD6B44486B /* Mask.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D50A61DA0F16558FDB7CF043 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8238C16FEBD77600A1CB3DFA /* SVProgressHUD.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DA265BA405FB99FDA3441175 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DBB0ED0C2BC889C95BBB998 /* Pods-sancha-SVProgressHUD.xcconfig */,
+				A8DC202E7719764F6CCF6352 /* Pods-sancha-SVProgressHUD-Private.xcconfig */,
+				E37C0243461678EABB9789CE /* Pods-sancha-SVProgressHUD-dummy.m */,
+				45A407A6EE70BD98FCC2B225 /* Pods-sancha-SVProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-sancha-SVProgressHUD";
+			sourceTree = "<group>";
+		};
+		DF0632E3DB86FC09556D6FDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBE941EF3C75FA70B4A734B5 /* AutoScrollLabel */,
+				BA5354CABAEA2496610306C8 /* PullToRefreshCoreText */,
+				0C22223AC13612DC0898238F /* SVProgressHUD */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FB2B78C129964EC60D4C81AB /* PullToRefreshCoreText */ = {
+		EBE941EF3C75FA70B4A734B5 /* AutoScrollLabel */ = {
 			isa = PBXGroup;
 			children = (
-				DDE402F349D1C40C9E5BF2A1 /* PullToRefreshCoreTextView.h */,
-				B012C907C32A90901F9F71C0 /* PullToRefreshCoreTextView.m */,
-				4966460033B36680E14239D0 /* UIScrollView+PullToRefreshCoreText.h */,
-				3CDAD99A493D86AAEDD411C2 /* UIScrollView+PullToRefreshCoreText.m */,
-				188CED1B860B5EF621985972 /* Resources */,
-				61A729C9FC51BD504A66EBC4 /* Support Files */,
+				C4B993C7C0F387CE4C766EA8 /* CBAutoScrollLabel.h */,
+				F75D7182C3FB6CF4102AFA30 /* CBAutoScrollLabel.m */,
+				3428FA6494C7B5115950B139 /* Support Files */,
 			);
-			path = PullToRefreshCoreText;
+			path = AutoScrollLabel;
+			sourceTree = "<group>";
+		};
+		F61E24D73CF3E682E7DF7018 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9F5B9BE377D840D58805B57D /* CoreGraphics.framework */,
+				8D4D183D6A925935DF9B7FE7 /* CoreText.framework */,
+				A0BD316E2F2081FD2EA3F66A /* Foundation.framework */,
+				C12E7F8C7E5984E6A0FE07D6 /* QuartzCore.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0E046BC5A1B28DDE74E88791 /* Headers */ = {
+		390B77D452746C0B411952D8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				482B010F4D3055EFBD6A3B88 /* SVIndefiniteAnimatedView.h in Headers */,
-				99D564EDF9ABF064CBC54F75 /* SVProgressHUD.h in Headers */,
+				BBF9390225B53C36A7E7E03E /* SVIndefiniteAnimatedView.h in Headers */,
+				16FABC50F6CDCF7162DE3F21 /* SVProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14F2300E78CC83B61F527800 /* Headers */ = {
+		E0B0FC2347E1AD03B8BA5A20 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB299D1678DB559661D078C /* CBAutoScrollLabel.h in Headers */,
+				897BB13D9F0AAD450DCBAE29 /* CBAutoScrollLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB6C370ABBD3BF062F522C5A /* Headers */ = {
+		E13FE263E2E0DD8133FB59D3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C5A6B3A474842873C88809B /* PullToRefreshCoreTextView.h in Headers */,
-				5DA79FBD513F1C614B5B950F /* UIScrollView+PullToRefreshCoreText.h in Headers */,
+				74862C91F2DA26F1EE87876B /* PullToRefreshCoreTextView.h in Headers */,
+				D28F0C3CB24A3C61873246E0 /* UIScrollView+PullToRefreshCoreText.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		26A1011160B5DA478508119B /* Pods-sancha-PullToRefreshCoreText */ = {
+		1FAE51080656684EF44B119C /* Pods-sancha-PullToRefreshCoreText */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C8FFC2D6B23586CC6F642C8 /* Build configuration list for PBXNativeTarget "Pods-sancha-PullToRefreshCoreText" */;
+			buildConfigurationList = 61FA249FE26C9241B333A9DF /* Build configuration list for PBXNativeTarget "Pods-sancha-PullToRefreshCoreText" */;
 			buildPhases = (
-				2BB5735DD6022962B2B42EDA /* Sources */,
-				91899D9C8DA73E48CE1DB075 /* Frameworks */,
-				FB6C370ABBD3BF062F522C5A /* Headers */,
+				ACEE08A3821E4D5CE0CDFD85 /* Sources */,
+				ED8C2F0CF49BC7F68B61E8E8 /* Frameworks */,
+				E13FE263E2E0DD8133FB59D3 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -346,16 +346,16 @@
 			);
 			name = "Pods-sancha-PullToRefreshCoreText";
 			productName = "Pods-sancha-PullToRefreshCoreText";
-			productReference = 2C4DF6082EE4EB47A671A9C8 /* libPods-sancha-PullToRefreshCoreText.a */;
+			productReference = 1C304C434041AF43BA71FD63 /* libPods-sancha-PullToRefreshCoreText.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		437A9B3F31B0273A05BF4FFB /* Pods-sancha-SVProgressHUD */ = {
+		563799D91947A85B69D225EB /* Pods-sancha-SVProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 08AC30A7E287B0231204323F /* Build configuration list for PBXNativeTarget "Pods-sancha-SVProgressHUD" */;
+			buildConfigurationList = 2F3595720CDA5DE9CCB2AE1A /* Build configuration list for PBXNativeTarget "Pods-sancha-SVProgressHUD" */;
 			buildPhases = (
-				1E50A20C9038EBA671548084 /* Sources */,
-				AC6D0359239ADE3BA2DE908C /* Frameworks */,
-				0E046BC5A1B28DDE74E88791 /* Headers */,
+				EC13698830057DE7C5417489 /* Sources */,
+				67CDD72220EFA30089EEEED2 /* Frameworks */,
+				390B77D452746C0B411952D8 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -363,16 +363,16 @@
 			);
 			name = "Pods-sancha-SVProgressHUD";
 			productName = "Pods-sancha-SVProgressHUD";
-			productReference = BD55D46E4648A8D5919618FA /* libPods-sancha-SVProgressHUD.a */;
+			productReference = A82362F9E0CBEF3B02736D26 /* libPods-sancha-SVProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		5BD56F4ADDE5C36CD3CEA568 /* Pods-sancha-AutoScrollLabel */ = {
+		573949CB7286EAE485C83092 /* Pods-sancha-AutoScrollLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC132612F66E2C2846C322D7 /* Build configuration list for PBXNativeTarget "Pods-sancha-AutoScrollLabel" */;
+			buildConfigurationList = D28AD3C794A5098947484CB2 /* Build configuration list for PBXNativeTarget "Pods-sancha-AutoScrollLabel" */;
 			buildPhases = (
-				56539A89A94E5A0B3CCA1547 /* Sources */,
-				47360659C1B5A8B0F5AF3137 /* Frameworks */,
-				14F2300E78CC83B61F527800 /* Headers */,
+				7974A2775F81CAF46BCA9160 /* Sources */,
+				BC6D278C61367C946B67711B /* Frameworks */,
+				E0B0FC2347E1AD03B8BA5A20 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -380,119 +380,119 @@
 			);
 			name = "Pods-sancha-AutoScrollLabel";
 			productName = "Pods-sancha-AutoScrollLabel";
-			productReference = 480F07DD8BF27686173D3E59 /* libPods-sancha-AutoScrollLabel.a */;
+			productReference = E95319AB7F09A9B64A02F55E /* libPods-sancha-AutoScrollLabel.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		6E100FF62727007251F0022E /* Pods-sancha */ = {
+		BE58D8779C10B9C4B7F72E69 /* Pods-sancha */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BCE964BAE6B5D37C55107DE /* Build configuration list for PBXNativeTarget "Pods-sancha" */;
+			buildConfigurationList = B7008AE6B5935995353DA320 /* Build configuration list for PBXNativeTarget "Pods-sancha" */;
 			buildPhases = (
-				95E59EDB434E5D29E0E243F0 /* Sources */,
-				AC7055389BE7DB5820A5B00C /* Frameworks */,
+				33A4AF83BEA5081D6A30DD46 /* Sources */,
+				214EA1F6B5FA8550A6EAE589 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FAC24E8E3D02B5542F0C317E /* PBXTargetDependency */,
-				AB5615D79FDD571CFC77BD4B /* PBXTargetDependency */,
-				46122F5614A1CAF5DC5C8112 /* PBXTargetDependency */,
+				A78EFFEB887DBA08B5AD1C41 /* PBXTargetDependency */,
+				FC38D83C0513A740F5B357F7 /* PBXTargetDependency */,
+				F263A275571202C60142B168 /* PBXTargetDependency */,
 			);
 			name = "Pods-sancha";
 			productName = "Pods-sancha";
-			productReference = 9745D78A38476908B9D85A7C /* libPods-sancha.a */;
+			productReference = 56867E38A2ADE944097BFAC4 /* libPods-sancha.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9C76FE3066B0DA831FB6D569 /* Project object */ = {
+		61A3F39CC80EDCC11630427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = A8BB0522E3799025F1B5B2E1 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = B0F65F7F26787C2C982FC201 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2B5610CBC15986308186EA29;
-			productRefGroup = D738BF4E961F29B32E7FA135 /* Products */;
+			mainGroup = 53B19587280229EDA013A40E;
+			productRefGroup = 7942FA80F8A4136989A1BAF3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E100FF62727007251F0022E /* Pods-sancha */,
-				5BD56F4ADDE5C36CD3CEA568 /* Pods-sancha-AutoScrollLabel */,
-				26A1011160B5DA478508119B /* Pods-sancha-PullToRefreshCoreText */,
-				437A9B3F31B0273A05BF4FFB /* Pods-sancha-SVProgressHUD */,
+				BE58D8779C10B9C4B7F72E69 /* Pods-sancha */,
+				573949CB7286EAE485C83092 /* Pods-sancha-AutoScrollLabel */,
+				1FAE51080656684EF44B119C /* Pods-sancha-PullToRefreshCoreText */,
+				563799D91947A85B69D225EB /* Pods-sancha-SVProgressHUD */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1E50A20C9038EBA671548084 /* Sources */ = {
+		33A4AF83BEA5081D6A30DD46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B464652DFA6EB24CACFD790 /* Pods-sancha-SVProgressHUD-dummy.m in Sources */,
-				559FC1D9297C57CF3D5BCCAF /* SVIndefiniteAnimatedView.m in Sources */,
-				19D973366B09A686725E84C3 /* SVProgressHUD.m in Sources */,
+				4077281AF673050F9BED2A51 /* Pods-sancha-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2BB5735DD6022962B2B42EDA /* Sources */ = {
+		7974A2775F81CAF46BCA9160 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91D6DEB485B2E23D8EC1C59 /* Pods-sancha-PullToRefreshCoreText-dummy.m in Sources */,
-				EF57A12FF6AE2886403EA72C /* PullToRefreshCoreTextView.m in Sources */,
-				E7F217E7470654B992CA9ADD /* UIScrollView+PullToRefreshCoreText.m in Sources */,
+				2B547508FC16F5E8D895A9D4 /* CBAutoScrollLabel.m in Sources */,
+				B265CE522FB4A26A38EB211B /* Pods-sancha-AutoScrollLabel-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56539A89A94E5A0B3CCA1547 /* Sources */ = {
+		ACEE08A3821E4D5CE0CDFD85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				176ED424080A81DEBC6B67D9 /* CBAutoScrollLabel.m in Sources */,
-				A5A9F449C11ECDAD6BA776EA /* Pods-sancha-AutoScrollLabel-dummy.m in Sources */,
+				EEAC8E61DC14C5EB641A7F06 /* Pods-sancha-PullToRefreshCoreText-dummy.m in Sources */,
+				EDA37A42126CC07B5459AB44 /* PullToRefreshCoreTextView.m in Sources */,
+				1330A62D3350A6B48B9A8D2B /* UIScrollView+PullToRefreshCoreText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95E59EDB434E5D29E0E243F0 /* Sources */ = {
+		EC13698830057DE7C5417489 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C10558372D49DD4EC70C321 /* Pods-sancha-dummy.m in Sources */,
+				40B16E00C56ECD5E20E9C7CE /* Pods-sancha-SVProgressHUD-dummy.m in Sources */,
+				62715A2F4ED17AB2E4F4D23E /* SVIndefiniteAnimatedView.m in Sources */,
+				A813A2DBCAE7479E799DDB3F /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		46122F5614A1CAF5DC5C8112 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-sancha-SVProgressHUD";
-			target = 437A9B3F31B0273A05BF4FFB /* Pods-sancha-SVProgressHUD */;
-			targetProxy = E5E7CE32D981700324A97DEC /* PBXContainerItemProxy */;
-		};
-		AB5615D79FDD571CFC77BD4B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-sancha-PullToRefreshCoreText";
-			target = 26A1011160B5DA478508119B /* Pods-sancha-PullToRefreshCoreText */;
-			targetProxy = 303839C6BD7503801C2D471A /* PBXContainerItemProxy */;
-		};
-		FAC24E8E3D02B5542F0C317E /* PBXTargetDependency */ = {
+		A78EFFEB887DBA08B5AD1C41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-sancha-AutoScrollLabel";
-			target = 5BD56F4ADDE5C36CD3CEA568 /* Pods-sancha-AutoScrollLabel */;
-			targetProxy = 9B162D4E76A46546C956BFE0 /* PBXContainerItemProxy */;
+			target = 573949CB7286EAE485C83092 /* Pods-sancha-AutoScrollLabel */;
+			targetProxy = A5D7252248A58F4A5FB7BD85 /* PBXContainerItemProxy */;
+		};
+		F263A275571202C60142B168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-sancha-SVProgressHUD";
+			target = 563799D91947A85B69D225EB /* Pods-sancha-SVProgressHUD */;
+			targetProxy = AF6CA85565604E9FB86C41EB /* PBXContainerItemProxy */;
+		};
+		FC38D83C0513A740F5B357F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-sancha-PullToRefreshCoreText";
+			target = 1FAE51080656684EF44B119C /* Pods-sancha-PullToRefreshCoreText */;
+			targetProxy = 23FA33DACDAD9378FF07ADDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4FB98DC76CD79C866082F80A /* Debug */ = {
+		190285E49750D6ED20913BD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -531,89 +531,9 @@
 			};
 			name = Debug;
 		};
-		8F56AFF18E6FC042263AAA14 /* Release */ = {
+		345840D07E4686801DB40068 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6953F8E241F9A379086E3707 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-PullToRefreshCoreText/Pods-sancha-PullToRefreshCoreText-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		A1CA6599AD2014C8DA8C4AF0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF1F97F80AEB9886572F0857 /* Pods-sancha.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		B625CBCFD72BC0FD1FC49B4B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E6F42DB2FE00729FCB7D556 /* Pods-sancha-AutoScrollLabel-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-AutoScrollLabel/Pods-sancha-AutoScrollLabel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		BCA3F7F723008C2149C6C06F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D7C1F4559607BBA1A7D9578 /* Pods-sancha-SVProgressHUD-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-SVProgressHUD/Pods-sancha-SVProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D8DCEAA3418BCCD2D6577B9A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6953F8E241F9A379086E3707 /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-PullToRefreshCoreText/Pods-sancha-PullToRefreshCoreText-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		DEF230C278BF1448AA7AE9C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D7C1F4559607BBA1A7D9578 /* Pods-sancha-SVProgressHUD-Private.xcconfig */;
+			baseConfigurationReference = A8DC202E7719764F6CCF6352 /* Pods-sancha-SVProgressHUD-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-SVProgressHUD/Pods-sancha-SVProgressHUD-prefix.pch";
@@ -627,23 +547,23 @@
 			};
 			name = Debug;
 		};
-		E21FE605D418676ECAA482D1 /* Debug */ = {
+		39B5CEAD601E25379FBCFA0D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 347AF2029B33398696A358A7 /* Pods-sancha.debug.xcconfig */;
+			baseConfigurationReference = A8DC202E7719764F6CCF6352 /* Pods-sancha-SVProgressHUD-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-SVProgressHUD/Pods-sancha-SVProgressHUD-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		E9835699E547155888E840AE /* Release */ = {
+		494C56079412A2F7BF44D27F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -677,9 +597,9 @@
 			};
 			name = Release;
 		};
-		F8EDF2CFEEDB37D872E9C363 /* Release */ = {
+		59C2A4D3E1401CAD1009FBD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E6F42DB2FE00729FCB7D556 /* Pods-sancha-AutoScrollLabel-Private.xcconfig */;
+			baseConfigurationReference = DEFBC3C56CFA0BB3788547FA /* Pods-sancha-AutoScrollLabel-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-AutoScrollLabel/Pods-sancha-AutoScrollLabel-prefix.pch";
@@ -693,55 +613,135 @@
 			};
 			name = Release;
 		};
+		5C57A0B3B87BBAE0DCE09424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546B476F7BA9174D7F8C9F6B /* Pods-sancha.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5E2C93C74EF3B33723B11ED4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEFBC3C56CFA0BB3788547FA /* Pods-sancha-AutoScrollLabel-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-AutoScrollLabel/Pods-sancha-AutoScrollLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C83CDFF81261DA808B45E955 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83DA9BDCAECA1990F4008501 /* Pods-sancha.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DB870F1AC7575AAD22B56718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D1F0E89833DA88EDC9BB51C /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-PullToRefreshCoreText/Pods-sancha-PullToRefreshCoreText-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DC0BB2D2D72742C40AC4FE70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D1F0E89833DA88EDC9BB51C /* Pods-sancha-PullToRefreshCoreText-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-sancha-PullToRefreshCoreText/Pods-sancha-PullToRefreshCoreText-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		08AC30A7E287B0231204323F /* Build configuration list for PBXNativeTarget "Pods-sancha-SVProgressHUD" */ = {
+		2F3595720CDA5DE9CCB2AE1A /* Build configuration list for PBXNativeTarget "Pods-sancha-SVProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DEF230C278BF1448AA7AE9C2 /* Debug */,
-				BCA3F7F723008C2149C6C06F /* Release */,
+				345840D07E4686801DB40068 /* Debug */,
+				39B5CEAD601E25379FBCFA0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C8FFC2D6B23586CC6F642C8 /* Build configuration list for PBXNativeTarget "Pods-sancha-PullToRefreshCoreText" */ = {
+		61FA249FE26C9241B333A9DF /* Build configuration list for PBXNativeTarget "Pods-sancha-PullToRefreshCoreText" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8DCEAA3418BCCD2D6577B9A /* Debug */,
-				8F56AFF18E6FC042263AAA14 /* Release */,
+				DC0BB2D2D72742C40AC4FE70 /* Debug */,
+				DB870F1AC7575AAD22B56718 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BCE964BAE6B5D37C55107DE /* Build configuration list for PBXNativeTarget "Pods-sancha" */ = {
+		B0F65F7F26787C2C982FC201 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E21FE605D418676ECAA482D1 /* Debug */,
-				A1CA6599AD2014C8DA8C4AF0 /* Release */,
+				190285E49750D6ED20913BD7 /* Debug */,
+				494C56079412A2F7BF44D27F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8BB0522E3799025F1B5B2E1 /* Build configuration list for PBXProject "Pods" */ = {
+		B7008AE6B5935995353DA320 /* Build configuration list for PBXNativeTarget "Pods-sancha" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4FB98DC76CD79C866082F80A /* Debug */,
-				E9835699E547155888E840AE /* Release */,
+				C83CDFF81261DA808B45E955 /* Debug */,
+				5C57A0B3B87BBAE0DCE09424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC132612F66E2C2846C322D7 /* Build configuration list for PBXNativeTarget "Pods-sancha-AutoScrollLabel" */ = {
+		D28AD3C794A5098947484CB2 /* Build configuration list for PBXNativeTarget "Pods-sancha-AutoScrollLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B625CBCFD72BC0FD1FC49B4B /* Debug */,
-				F8EDF2CFEEDB37D872E9C363 /* Release */,
+				5E2C93C74EF3B33723B11ED4 /* Debug */,
+				59C2A4D3E1401CAD1009FBD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9C76FE3066B0DA831FB6D569 /* Project object */;
+	rootObject = 61A3F39CC80EDCC11630427E /* Project object */;
 }

@@ -54,6 +54,7 @@
     [barButton setTitle:@"Close"];
     barButton.tintColor = MAIN_COLOR;
     searchBar.tintColor = MAIN_COLOR;
+    searchBar.barTintColor = BACKGROUND_COLOR;
     
     self.seachController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
     self.seachController.delegate = self;
