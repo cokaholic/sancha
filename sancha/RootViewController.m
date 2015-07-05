@@ -45,12 +45,12 @@
 {
     self.view.backgroundColor = BACKGROUND_COLOR;
     
-    _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT + SEARCH_BAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - STATUSBAR_HEIGHT - SEARCH_BAR_HEIGHT)];
+    _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT)];
     _eventTableView.dataSource = self;
     _eventTableView.delegate = self;
     _eventTableView.separatorStyle = NO;
     _eventTableView.backgroundColor = CLEAR_COLOR;
-    _eventTableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
+    _eventTableView.contentInset = UIEdgeInsetsMake(-NAVBAR_HEIGHT, 0, 0, 0);
     [self.view addSubview:_eventTableView];
     
     __weak typeof(self) weakSelf = self;
@@ -72,7 +72,7 @@
                                            }];
 
     // search
-    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, self.view.bounds.size.width, SEARCH_BAR_HEIGHT)];
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, SEARCH_BAR_HEIGHT)];
     UIBarButtonItem *barButton = [UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil];
     [barButton setTitle:@"Close"];
     barButton.tintColor = MAIN_COLOR;
@@ -84,28 +84,9 @@
     _searchController.searchResultsDelegate = self;
     _searchController.searchResultsDataSource = self;
     
-    _searchController.searchResultsTableView.frame = CGRectMake(0, STATUSBAR_HEIGHT + SEARCH_BAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - STATUSBAR_HEIGHT - SEARCH_BAR_HEIGHT);
+    _searchController.searchResultsTableView.frame = CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT);
 
-    [_searchController.searchResultsTableView addPullToRefreshWithPullText:@"Pull To Refresh"
-                                                            pullTextColor:[UIColor blackColor]
-                                                             pullTextFont:REFRESH_TEXT_FONT(30)
-                                                           refreshingText:@"Refreshing"
-                                                      refreshingTextColor:MAIN_COLOR
-                                                       refreshingTextFont:REFRESH_TEXT_FONT(30)
-                                                                   action:^{
-                                                                       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0L), ^{
-                                                                           [weakSelf.manager loadData];
-                                                                           dispatch_async(dispatch_get_main_queue(), ^{
-                                                                               [weakSelf filterContentForSearchText:weakSelf.searchString];
-                                                                               [weakSelf.searchController.searchResultsTableView reloadData];
-                                                                               [weakSelf.searchController.searchResultsTableView finishLoading];
-                                                                               [weakSelf.eventTableView reloadData];
-                                                                           });
-                                                                       });
-                                                                   }];
-
-    [self.view addSubview:searchBar];
-     // _eventTableView.tableHeaderView = searchBar;
+    _eventTableView.tableHeaderView = searchBar;
     
     
 }
@@ -119,7 +100,7 @@
 {
     [super viewWillAppear:animated];
     
-    [self.navigationController setNavigationBarHidden:YES];
+//    [self.navigationController setNavigationBarHidden:YES];
 }
 
 #pragma mark - UITableView DataSource
