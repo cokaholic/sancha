@@ -33,7 +33,6 @@
     
     [self initData];
     [self initUI];
-    [self setUI];
 }
 
 - (void)initData
@@ -56,11 +55,6 @@
     [_titleLogoView addSubview:titleLogoImageView];
     
     self.navigationItem.titleView = _titleLogoView;
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_filter"]
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:self
-                                                                            action:@selector(goFilteringViewController)];
     
     _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT)];
     _eventTableView.dataSource = self;
@@ -110,12 +104,17 @@
 
 - (void)setUI
 {
-    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_filter"]
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(goFilteringViewController)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [self setUI];
     
     [self.navigationController.navigationBar setTintColor:MAIN_COLOR];
     [self.navigationController.navigationBar setBarTintColor:ACCENT_COLOR];

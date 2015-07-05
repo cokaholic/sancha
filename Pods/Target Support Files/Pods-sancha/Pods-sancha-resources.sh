@@ -58,34 +58,12 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity.png"
-  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@2x.png"
-  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@2x~ipad.png"
-  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity~ipad.png"
-  install_resource "KINWebBrowser/Assets/backbutton.png"
-  install_resource "KINWebBrowser/Assets/backbutton@2x.png"
-  install_resource "KINWebBrowser/Assets/backbutton@3x.png"
-  install_resource "KINWebBrowser/Assets/forwardbutton.png"
-  install_resource "KINWebBrowser/Assets/forwardbutton@2x.png"
-  install_resource "KINWebBrowser/Assets/forwardbutton@3x.png"
   install_resource "PullToRefreshCoreText/PullToRefreshCoreText/PullToRefreshCoreText/Mask.png"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
-  install_resource "${BUILT_PRODUCTS_DIR}/TUSafariActivity.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity.png"
-  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@2x.png"
-  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity@2x~ipad.png"
-  install_resource "ARChromeActivity/ARChromeActivity/ARChromeActivity~ipad.png"
-  install_resource "KINWebBrowser/Assets/backbutton.png"
-  install_resource "KINWebBrowser/Assets/backbutton@2x.png"
-  install_resource "KINWebBrowser/Assets/backbutton@3x.png"
-  install_resource "KINWebBrowser/Assets/forwardbutton.png"
-  install_resource "KINWebBrowser/Assets/forwardbutton@2x.png"
-  install_resource "KINWebBrowser/Assets/forwardbutton@3x.png"
   install_resource "PullToRefreshCoreText/PullToRefreshCoreText/PullToRefreshCoreText/Mask.png"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
-  install_resource "${BUILT_PRODUCTS_DIR}/TUSafariActivity.bundle"
 fi
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
