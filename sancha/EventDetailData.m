@@ -62,15 +62,13 @@
     self.title = [articleNode findChildTag:@"h2"].contents;
     HTMLNode *detailNode = [articleNode findChildOfClass:@"eventschedule"];
     NSArray *ps = [detailNode findChildTags:@"p"];
-    if (ps.count != 5) {
-        NSLog(@"html format is wrong... : %@", self.url);
-        return;
+    for (HTMLNode *p in ps) {
+        [self parseDateTime:p];
+        [self parseLocation:p];
+        [self parsePerformers:p];
+        [self parseHowTo:p];
+        [self parseOfficialPage:p];
     }
-    [self parseDateTime:ps[0]];
-    [self parseLocation:ps[1]];
-    [self parsePerformers:ps[2]];
-    [self parseHowTo:ps[3]];
-    [self parseOfficialPage:ps[4]];
 }
 
 - (BOOL)checkString:(NSString *) str withPrefix:(NSString *) prefix {
@@ -78,31 +76,45 @@
     return ([[str substringToIndex:prefix.length] isEqualToString:prefix]);
 }
 
+- (NSString *)getsuffixOfNodeContent:(HTMLNode *)node from:(NSInteger)from {
+    NSString *suffix = [node.allContents substringFromIndex:from];
+    NSString *trimmed = [suffix stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    return trimmed;
+}
+
 - (void)parseDateTime:(HTMLNode *)node {
-    if (![self checkString:node.allContents withPrefix:@"■開催日時"]) return;
-    self.datetime = [node.allContents substringFromIndex:5];
+    if ([self checkString:node.allContents withPrefix:@"■開催日時"]) {
+        self.datetime = [self getsuffixOfNodeContent:node from:5];
+    } else if ([self checkString:node.allContents withPrefix:@"■開催日"]) {
+        self.datetime = [self getsuffixOfNodeContent:node from:4];
+    } else if ([self checkString:node.allContents withPrefix:@"■開催時間"]) {
+        if (![self.datetime isEqualToString:@""]) {
+            NSString *str = [self getsuffixOfNodeContent:node from:5];
+            self.datetime = [NSString stringWithFormat:@"%@\n%@", self.datetime, str];
+        }
+    }
 }
 
 - (void)parseLocation:(HTMLNode *)node {
     if (![self checkString:node.allContents withPrefix:@"■会場"]) return;
-    self.location = [node.allContents substringFromIndex:3];
+    self.location = [self getsuffixOfNodeContent:node from:3];
 }
 
 - (void)parsePerformers:(HTMLNode *)node {
     if (![self checkString:node.allContents withPrefix:@"■出演者"]) return;
-    self.performers = [node.allContents substringFromIndex:4];
+    self.performers = [self getsuffixOfNodeContent:node from:4];
 }
 
 - (void)parseHowTo:(HTMLNode *)node {
     if (![self checkString:node.allContents withPrefix:@"■参加方法"]) return;
-    self.howTo = [node.allContents substringFromIndex:5];
+    self.howTo = [self getsuffixOfNodeContent:node from:5];
 }
 
 - (void)parseOfficialPage:(HTMLNode *)node {
     if (![self checkString:node.allContents withPrefix:@"■公式HP"]) return;
     HTMLNode *aNode = [node findChildTag:@"a"];
     if (!aNode) return;
-    self.officialPageTitle = aNode.contents;
+    self.officialPageTitle = [self getsuffixOfNodeContent:aNode from:0];
     self.officialPageURL = [NSURL URLWithString:[aNode getAttributeNamed:@"href"]];
 }
 
