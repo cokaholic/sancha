@@ -33,34 +33,44 @@ static EventDataManager *shared;
     if (self) {
         self.dataList = [NSArray array];
         self.performers = [NSArray array];
-        [self loadData];
     }
     return self;
 }
 
-- (void) loadData {
+- (void) loadData:(void (^)(NSError *error))completionHandler {
     NSString *url = @"http://www.koepota.jp/eventschedule/";
     NSURL *urlRequest = [NSURL URLWithString:url];
-    NSError *error = nil;
-    NSString *html = [NSString stringWithContentsOfURL:urlRequest encoding:NSUTF8StringEncoding error:&error];
-    if (error) {
-        // error!!!!
-        NSLog(@"Error: %@", error);
-        return;
-    }
-    [self parseHTML:html];
     
-    // set performeœrs
-    NSMutableSet *set = [NSMutableSet set];
-    for (EventData *event in self.dataList) {
-        for (NSString *performer in event.performers) {
-            [set addObject:performer];
+    NSURLRequest *req = [NSURLRequest requestWithURL:urlRequest];
+    [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        if (error) {
+            completionHandler(error);
+            return;
         }
-    }
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
-    NSArray *sortedPerformers = [set.allObjects sortedArrayUsingDescriptors:@[sortDescriptor]];
+        NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        
+        [self parseHTML:html];
+        
+        // set performeœrs
+        NSMutableSet *set = [NSMutableSet set];
+        for (EventData *event in self.dataList) {
+            for (NSString *performer in event.performers) {
+                [set addObject:performer];
+            }
+        }
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES];
+        NSArray *sortedPerformers = [set.allObjects sortedArrayUsingDescriptors:@[sortDescriptor]];
+        
+        self.performers = [NSArray arrayWithArray:sortedPerformers];
+        
+        completionHandler(error);
+    }];
     
-    self.performers = [NSArray arrayWithArray:sortedPerformers];
+//    NSError *error = nil;
+//    NSString *html = [NSString stringWithContentsOfURL:urlRequest encoding:NSUTF8StringEncoding error:&error];
+//    if (error) {
+//        // error!!!!
+//    }
 }
 
 - (void) parseHTML:(NSString*)html {

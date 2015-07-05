@@ -14,7 +14,7 @@
 @property(nonatomic, retain, readonly) NSArray *performers;
 
 + (EventDataManager *) sharedManager;
-- (void) loadData;
+- (void) loadData:(void (^)(NSError *error))completionHandler;
 
 - (NSArray *) getFilteredDataList;
 

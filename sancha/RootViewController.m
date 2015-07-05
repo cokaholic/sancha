@@ -16,6 +16,7 @@
 #import "FilteringManager.h"
 #import <UIScrollView+PullToRefreshCoreText.h>
 #import <AutoScrollLabel/CBAutoScrollLabel.h>
+#import <SVProgressHUD.h>
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate>
 
@@ -43,6 +44,17 @@
 - (void)initData
 {
     _manager = [EventDataManager sharedManager];
+    
+    // load data
+    [SVProgressHUD show];
+    [_manager loadData:^(NSError *error) {
+        if (error) {
+            NSLog(@"error : %@", error);
+            return;
+        }
+        [SVProgressHUD dismiss];
+        [self setUI];
+    }];
     _searchData = [NSMutableArray arrayWithCapacity:_manager.dataList.count];
     _dataList = @[];
 }
@@ -87,14 +99,10 @@
                               refreshingTextColor:CANCEL_COLOR
                                refreshingTextFont:REFRESH_TEXT_FONT(30)
                                            action:^{
-                                               dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0L), ^{
-                                                   
-                                                   [weakSelf.manager loadData];
-                                                   dispatch_async(dispatch_get_main_queue(), ^{
-                                                       [weakSelf.eventTableView reloadData];
-                                                       [weakSelf.eventTableView finishLoading];
-                                                   });
-                                               });
+                                               [weakSelf.manager loadData:^(NSError *error) {
+                                                   [weakSelf.eventTableView reloadData];
+                                                   [weakSelf.eventTableView finishLoading];
+                                               }];
                                            }];
 
     // search
@@ -151,29 +159,26 @@
     } else {
         self.navigationItem.titleView = _titleLogoView;
     }
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
-    [self loadFilteredData];
     
-    [self setUI];
-    
-    [self.navigationController.navigationBar setTintColor:CANCEL_COLOR];
-    [self.navigationController.navigationBar setBarTintColor:ACCENT_COLOR];
-}
 
-- (void)loadFilteredData
-{
-    FilteringManager *fmgr = [FilteringManager sharedManager];
+    // load filtered data
     if (!fmgr.saved) {
         [fmgr reset];
     }
     fmgr.saved = NO;
     _dataList = [_manager getFilteredDataList];
     [_eventTableView reloadData];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self setUI];
+    
+    [self.navigationController.navigationBar setTintColor:CANCEL_COLOR];
+    [self.navigationController.navigationBar setBarTintColor:ACCENT_COLOR];
 }
 
 #pragma mark - UITableView DataSource
