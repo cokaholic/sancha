@@ -10,6 +10,7 @@
 #import "EventData.h"
 #import "HTMLParser.h"
 #import "FilteringManager.h"
+#import <SVProgressHUD.h>
 
 @interface EventDataManager ()
 @property(nonatomic, retain, readwrite) NSArray* dataList;

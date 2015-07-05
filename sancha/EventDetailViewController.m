@@ -39,6 +39,7 @@
 }
 
 @property (nonatomic, retain) EventDetailData *eventDetailData;
+@property (nonatomic, retain) GADBannerView *banner;
 
 @end
 
@@ -70,7 +71,7 @@
     
     self.view.backgroundColor = BACKGROUND_COLOR;
     
-    _backScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT)];
+    _backScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT - GAD_SIZE_320x50.height)];
     _backScrollView.showsVerticalScrollIndicator = NO;
     _backScrollView.backgroundColor = BACKGROUND_COLOR;
     [self.view addSubview:_backScrollView];
@@ -89,7 +90,7 @@
     _eventTitleTextView.scrollEnabled = NO;
     _eventTitleTextView.backgroundColor = CLEAR_COLOR;
     _eventTitleTextView.font = DEFAULT_BOLD_FONT(16);
-    _eventTitleTextView.textColor = MAIN_COLOR;
+    _eventTitleTextView.textColor = DETAIL_TITLE_COLOR;
     _eventTitleTextView.dataDetectorTypes = UIDataDetectorTypeNone;
     [_backWhiteView addSubview:_eventTitleTextView];
     
@@ -208,6 +209,15 @@
     tapGestureRecognizer.numberOfTouchesRequired = 1;
     [_officialHPTextView addGestureRecognizer:tapGestureRecognizer];
     [_backWhiteView addSubview:_officialHPTextView];
+    
+    //広告
+    _banner = [[GADBannerView alloc]initWithFrame:CGRectMake(0, [Common screenSize].height - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
+    _banner.adUnitID = MY_BANNER_UNIT_ID;
+    _banner.rootViewController = self;
+    _banner.backgroundColor = [UIColor clearColor];
+    _banner.center = CGPointMake([Common screenSize].width/2, _banner.center.y);
+    [self.view addSubview:_banner];
+    [_banner loadRequest:[GADRequest request]];
 }
 
 - (void)setUI
@@ -269,7 +279,6 @@
 
 - (void)openWebView
 {
-    
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc]init];
     backButton.title = @"戻る";
     self.navigationItem.backBarButtonItem = backButton;
@@ -309,6 +318,8 @@
     _locationIconImageView = nil;
     _howToIconImageView = nil;
     _officialHPIconImageView = nil;
+    
+    _banner = nil;
 }
 
 - (void)didReceiveMemoryWarning {

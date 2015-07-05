@@ -23,6 +23,7 @@
 @property (nonatomic, retain) NSMutableArray *searchData;
 @property (nonatomic, retain) UIView *titleLogoView;
 @property (nonatomic, retain) UISearchDisplayController *searchController;
+@property (nonatomic, retain) GADBannerView *banner;
 @property (nonatomic, retain) NSArray *dataList;
 
 @end
@@ -33,8 +34,8 @@
 {
     [super viewDidLoad];
     
-    [self initData];
     [self initUI];
+    [self initData];
 }
 
 - (void)initData
@@ -59,7 +60,7 @@
     
     self.navigationItem.titleView = _titleLogoView;
     
-    _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT)];
+    _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT - GAD_SIZE_320x50.height)];
     _eventTableView.dataSource = self;
     _eventTableView.delegate = self;
     _eventTableView.separatorStyle = NO;
@@ -69,10 +70,10 @@
     
     __weak typeof(self) weakSelf = self;
     [_eventTableView addPullToRefreshWithPullText:@"Pull To Refresh"
-                                    pullTextColor:[UIColor blackColor]
+                                    pullTextColor:CANCEL_COLOR
                                      pullTextFont:REFRESH_TEXT_FONT(30)
                                    refreshingText:@"Refreshing"
-                              refreshingTextColor:MAIN_COLOR
+                              refreshingTextColor:CANCEL_COLOR
                                refreshingTextFont:REFRESH_TEXT_FONT(30)
                                            action:^{
                                                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0L), ^{
@@ -89,8 +90,8 @@
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, SEARCH_BAR_HEIGHT)];
     UIBarButtonItem *barButton = [UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil];
     [barButton setTitle:@"Close"];
-    barButton.tintColor = MAIN_COLOR;
-    searchBar.tintColor = MAIN_COLOR;
+    barButton.tintColor = CANCEL_COLOR;
+    searchBar.tintColor = CANCEL_COLOR;
     searchBar.barTintColor = BACKGROUND_COLOR;
     [self.view addSubview: searchBar];
     
@@ -100,8 +101,17 @@
     _searchController.searchResultsDataSource = self;
     
     _searchController.searchResultsTableView.frame = CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT);
-
+    _searchController.searchResultsTableView.backgroundColor = BACKGROUND_COLOR;
     _eventTableView.tableHeaderView = searchBar;
+    
+    //広告
+    _banner = [[GADBannerView alloc]initWithFrame:CGRectMake(0, [Common screenSize].height - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
+    _banner.adUnitID = MY_BANNER_UNIT_ID;
+    _banner.rootViewController = self;
+    _banner.backgroundColor = [UIColor clearColor];
+    _banner.center = CGPointMake([Common screenSize].width/2, _banner.center.y);
+    [self.view addSubview:_banner];
+    [_banner loadRequest:[GADRequest request]];
 }
 
 - (void)setUI

@@ -23,6 +23,9 @@
     
     FilteringManager *_manager;
 }
+
+@property (nonatomic, retain) GADBannerView *banner;
+
 @end
 
 @implementation FilteringViewController
@@ -50,14 +53,22 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 {
     self.view.backgroundColor = BACKGROUND_COLOR;
     
-    _filteringTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - 60)];
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 150, 44)];
+    titleLabel.backgroundColor = CLEAR_COLOR;
+    titleLabel.textColor = DEFAULT_TEXT_COLOR;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = DEFAULT_FONT(16);
+    titleLabel.text = @"フィルター";
+    self.navigationItem.titleView = titleLabel;
+    
+    _filteringTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - 60 - GAD_SIZE_320x50.height)];
     _filteringTableView.backgroundColor = ACCENT_COLOR;
     _filteringTableView.dataSource = self;
     _filteringTableView.delegate = self;
     [self.view addSubview:_filteringTableView];
     
     _filteringButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _filteringButton.frame = CGRectMake(10, [Common screenSize].height - 50, [Common screenSize].width - 20, 40);
+    _filteringButton.frame = CGRectMake(10, [Common screenSize].height - 50 - GAD_SIZE_320x50.height, [Common screenSize].width - 20, 40);
     _filteringButton.backgroundColor = MAIN_COLOR;
     _filteringButton.layer.masksToBounds = YES;
     _filteringButton.layer.cornerRadius = _filteringButton.frame.size.height/2;
@@ -69,6 +80,14 @@ static NSString * const kCellIdentifier = @"FilteringCell";
     
     [self.view addSubview:_filteringButton];
     
+    //広告
+    _banner = [[GADBannerView alloc]initWithFrame:CGRectMake(0, [Common screenSize].height - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
+    _banner.adUnitID = MY_BANNER_UNIT_ID2;
+    _banner.rootViewController = self;
+    _banner.backgroundColor = [UIColor clearColor];
+    _banner.center = CGPointMake([Common screenSize].width/2, _banner.center.y);
+    [self.view addSubview:_banner];
+    [_banner loadRequest:[GADRequest request]];
 }
 
 - (void)setUI
@@ -78,6 +97,7 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     [self setUI];
 }
 
