@@ -164,6 +164,10 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]init];
+    backButton.title = @"キャンセル";
+    self.navigationItem.backBarButtonItem = backButton;
+    
     if (indexPath.section==0 && indexPath.row==0) {
         [self.navigationController pushViewController:[[PerformerViewController alloc]init] animated:YES];
     }

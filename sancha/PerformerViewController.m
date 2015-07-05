@@ -17,6 +17,7 @@
 @property(nonatomic, retain) NSArray *performers;
 @property(nonatomic, retain) UISearchDisplayController *seachController;
 @property(nonatomic, retain) UITableView *tableView;
+@property (nonatomic, retain) UIButton *doneButton;
 
 @end
 
@@ -42,7 +43,7 @@
 }
 
 - (void)initUI {
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - 60)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = CLEAR_COLOR;
@@ -62,6 +63,19 @@
     self.seachController.searchResultsDataSource = self;
     
     self.tableView.tableHeaderView = searchBar;
+    
+    _doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _doneButton.frame = CGRectMake(10, [Common screenSize].height - 50, [Common screenSize].width - 20, 40);
+    _doneButton.backgroundColor = MAIN_COLOR;
+    _doneButton.layer.masksToBounds = YES;
+    _doneButton.layer.cornerRadius = _doneButton.frame.size.height/2;
+    [_doneButton setTitle:@"決定" forState:UIControlStateNormal];
+    _doneButton.titleLabel.font = DEFAULT_BOLD_FONT(16);
+    [_doneButton addTarget:self
+                    action:@selector(didSelectFiltering)
+          forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:_doneButton];
 }
 
 - (void)setUI {
@@ -133,6 +147,13 @@
 
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
     [self.tableView reloadData];
+}
+
+#pragma mark - Button Action
+
+- (void)didSelectFiltering
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

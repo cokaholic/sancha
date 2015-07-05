@@ -47,10 +47,10 @@
 {
     self.view.backgroundColor = BACKGROUND_COLOR;
     
-    _titleLogoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width, 44)];
+    _titleLogoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width - 100, 44)];
     _titleLogoView.backgroundColor = ACCENT_COLOR;
     
-    UIImageView *titleLogoImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 5, [Common screenSize].width - 15, 34)];
+    UIImageView *titleLogoImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 5, [Common screenSize].width - 100, 34)];
     titleLogoImageView.backgroundColor = ACCENT_COLOR;
     titleLogoImageView.contentMode = UIViewContentModeScaleAspectFit;
     titleLogoImageView.image = [UIImage imageNamed:@"image_title_logo"];
@@ -213,6 +213,10 @@
 
 - (void)goFilteringViewController
 {
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]init];
+    backButton.title = @"キャンセル";
+    self.navigationItem.backBarButtonItem = backButton;
+    
     [self.navigationController pushViewController:[[FilteringViewController alloc]init] animated:YES];
 }
 
