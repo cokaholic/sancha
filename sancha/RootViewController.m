@@ -20,6 +20,7 @@
 @property (nonatomic, retain) EventDataManager *manager;
 @property (nonatomic, retain) UITableView *eventTableView;
 @property (nonatomic, retain) NSMutableArray *searchData;
+@property (nonatomic, retain) UIView *titleLogoView;
 @property (nonatomic, retain) UISearchDisplayController *searchController;
 
 @end
@@ -44,6 +45,17 @@
 - (void)initUI
 {
     self.view.backgroundColor = BACKGROUND_COLOR;
+    
+    _titleLogoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width, 44)];
+    _titleLogoView.backgroundColor = ACCENT_COLOR;
+    
+    UIImageView *titleLogoImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 5, [Common screenSize].width - 15, 34)];
+    titleLogoImageView.backgroundColor = ACCENT_COLOR;
+    titleLogoImageView.contentMode = UIViewContentModeScaleAspectFit;
+    titleLogoImageView.image = [UIImage imageNamed:@"image_title_logo"];
+    [_titleLogoView addSubview:titleLogoImageView];
+    
+    self.navigationItem.titleView = _titleLogoView;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_filter"]
                                                                              style:UIBarButtonItemStylePlain
@@ -106,6 +118,7 @@
     [super viewWillAppear:animated];
     
     [self.navigationController.navigationBar setTintColor:MAIN_COLOR];
+    [self.navigationController.navigationBar setBarTintColor:ACCENT_COLOR];
 }
 
 #pragma mark - UITableView DataSource
