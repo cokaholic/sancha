@@ -24,7 +24,7 @@
 
 @implementation EventDetailData
 
-- (id)initWithURL:(NSURL *)url {
+- (id)initWithURL:(NSURL *)url completionHandler:(void (^)(NSError *error))completionHandler {
     self = [super init];
     if (self) {
         self.url = url;
@@ -35,28 +35,35 @@
         self.howTo = @"";
         self.officialPageTitle = @"";
         self.officialPageURL = nil;
-        [self reloadData];
+        [self reloadData:completionHandler];
     }
     return self;
 }
 
-- (void)reloadData {
-    NSError *error = nil;
-    NSString *html = [NSString stringWithContentsOfURL:self.url encoding:NSUTF8StringEncoding error:&error];
-    if (error) {
-        // error!!!!
-        NSLog(@"Error: %@", error);
-        return;
-    }
-    [self parseHTML:html];
+- (void)reloadData:(void (^)(NSError *error))completionHandler {
+    NSURLRequest *req = [NSURLRequest requestWithURL:self.url];
+    [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        if (error) {
+            completionHandler(error);
+            return;
+        }
+        NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        
+        if (![self parseHTML:html]) {
+            completionHandler([NSError errorWithDomain:@"html structure error" code:0 userInfo:nil]);
+            return;
+        }
+
+        completionHandler(error);
+    }];
 }
 
-- (void)parseHTML:(NSString *)html {
+- (BOOL)parseHTML:(NSString *)html {
     NSError *error = nil;
     HTMLParser *parser = [[HTMLParser alloc] initWithString:html error:&error];
     if (error) {
         NSLog(@"Error: %@", error);
-        return;
+        return NO;
     }
     HTMLNode *articleNode = [parser.body findChildWithAttribute:@"id" matchingName:@"article" allowPartial:NO];
     self.title = [articleNode findChildTag:@"h2"].contents;
@@ -69,6 +76,7 @@
         [self parseHowTo:p];
         [self parseOfficialPage:p];
     }
+    return YES;
 }
 
 - (BOOL)checkString:(NSString *) str withPrefix:(NSString *) prefix {

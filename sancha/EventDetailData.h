@@ -18,7 +18,7 @@
 @property(nonatomic, retain, readonly) NSString *officialPageTitle;
 @property(nonatomic, retain, readonly) NSURL *officialPageURL;
 
-- (id)initWithURL:(NSURL*)url;
+- (id)initWithURL:(NSURL *)url completionHandler:(void (^)(NSError *error))completionHandler;
 - (void)reloadData;
 
 @end

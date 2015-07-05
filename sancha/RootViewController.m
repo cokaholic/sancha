@@ -18,7 +18,7 @@
 #import <AutoScrollLabel/CBAutoScrollLabel.h>
 #import <SVProgressHUD.h>
 
-@interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate>
+@interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, retain) EventDataManager *manager;
 @property (nonatomic, retain) UITableView *eventTableView;
@@ -36,9 +36,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self initUI];
+
     [self initData];
+    [self initUI];
+    [self setUI];
 }
 
 - (void)initData
@@ -48,11 +49,11 @@
     // load data
     [SVProgressHUD show];
     [_manager loadData:^(NSError *error) {
+        [SVProgressHUD dismiss];
         if (error) {
-            NSLog(@"error : %@", error);
+            [self showErrorAlert];
             return;
         }
-        [SVProgressHUD dismiss];
         [self setUI];
     }];
     _searchData = [NSMutableArray arrayWithCapacity:_manager.dataList.count];
@@ -100,8 +101,13 @@
                                refreshingTextFont:REFRESH_TEXT_FONT(30)
                                            action:^{
                                                [weakSelf.manager loadData:^(NSError *error) {
-                                                   [weakSelf.eventTableView reloadData];
                                                    [weakSelf.eventTableView finishLoading];
+                                                   if (error) {
+                                                       [weakSelf showErrorAlert];
+                                                       return;
+                                                   }
+                                                   [weakSelf setUI];
+                                                   [weakSelf.eventTableView reloadData];
                                                }];
                                            }];
 
@@ -275,6 +281,22 @@
     
     [self.navigationController pushViewController:[[FilteringViewController alloc]init] animated:YES];
 }
+
+- (void)showErrorAlert {
+    [[[UIAlertView alloc]initWithTitle:@"読み込みエラー"
+                               message:@"情報を取得できませんでした。"
+                              delegate:self
+                     cancelButtonTitle:nil
+                     otherButtonTitles:@"OK", nil] show];
+}
+
+#pragma mark - UIAlertView Delegate
+
+- (void)alertView:(nonnull UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    return;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

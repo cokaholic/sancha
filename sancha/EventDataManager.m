@@ -49,7 +49,10 @@ static EventDataManager *shared;
         }
         NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         
-        [self parseHTML:html];
+        if (![self parseHTML:html]) {
+            completionHandler([NSError errorWithDomain:@"html structure error" code:0 userInfo:nil]);
+            return;
+        }
         
         // set performeœrs
         NSMutableSet *set = [NSMutableSet set];
@@ -73,12 +76,12 @@ static EventDataManager *shared;
 //    }
 }
 
-- (void) parseHTML:(NSString*)html {
+- (BOOL) parseHTML:(NSString*)html {
     NSError *error = nil;
     HTMLParser *parser = [[HTMLParser alloc] initWithString:html error:&error];
     if (error) {
         NSLog(@"Error: %@", error);
-        return;
+        return NO;
     }
     
     HTMLNode *bodyNode = [parser body];
@@ -97,6 +100,7 @@ static EventDataManager *shared;
         [array addObject:[[EventData alloc] initWithHTMLNode:rowNode]];
     }
     self.dataList = [NSArray arrayWithArray:array];
+    return YES;
 }
 
 - (NSArray *)getFilteredDataList {
