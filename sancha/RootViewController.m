@@ -15,6 +15,7 @@
 #import "FilteringViewController.h"
 #import "FilteringManager.h"
 #import <UIScrollView+PullToRefreshCoreText.h>
+#import <AutoScrollLabel/CBAutoScrollLabel.h>
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate>
 
@@ -24,6 +25,7 @@
 @property (nonatomic, retain) UIView *titleLogoView;
 @property (nonatomic, retain) UISearchDisplayController *searchController;
 @property (nonatomic, retain) NSArray *dataList;
+@property (nonatomic, retain) CBAutoScrollLabel *navBarTitleLabel;
 
 @end
 
@@ -58,6 +60,15 @@
     [_titleLogoView addSubview:titleLogoImageView];
     
     self.navigationItem.titleView = _titleLogoView;
+    
+    _navBarTitleLabel = [[CBAutoScrollLabel alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width-80, 44)];
+    _navBarTitleLabel.textColor = DEFAULT_TEXT_COLOR;
+    _navBarTitleLabel.font = DEFAULT_FONT(16);
+    _navBarTitleLabel.scrollSpeed = 35;
+    _navBarTitleLabel.labelSpacing = 30;
+    _navBarTitleLabel.pauseInterval = 2.0;
+    _navBarTitleLabel.scrollDirection = CBAutoScrollDirectionLeft;
+    
     
     _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT)];
     _eventTableView.dataSource = self;
@@ -110,18 +121,36 @@
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
                                                                             action:@selector(goFilteringViewController)];
+    
+    FilteringManager *fmgr = [FilteringManager sharedManager];
+    if ([fmgr isFiltering]) {
+        NSString *title = nil;
+        if (fmgr.filteredPerformers.count > 0) {
+            title = [@"出演者：" stringByAppendingString:[fmgr.filteredPerformers componentsJoinedByString:@", "]];
+        }
+        if (fmgr.filteredPrefectures.count > 0) {
+            NSString *preStr = [@"会場：" stringByAppendingString:[fmgr.filteredPrefectures componentsJoinedByString:@", "]];
+            if (title != nil) {
+                title = [NSString stringWithFormat:@"%@　%@", title, preStr];
+            }
+        }
+        _navBarTitleLabel.text = title;
+        self.navigationItem.titleView = _navBarTitleLabel;
+    } else {
+        self.navigationItem.titleView = _titleLogoView;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
+    [self loadFilteredData];
     
     [self setUI];
     
     [self.navigationController.navigationBar setTintColor:CANCEL_COLOR];
     [self.navigationController.navigationBar setBarTintColor:ACCENT_COLOR];
-    
-    [self loadFilteredData];
 }
 
 - (void)loadFilteredData
