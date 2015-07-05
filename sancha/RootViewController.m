@@ -132,6 +132,8 @@
             NSString *preStr = [@"会場：" stringByAppendingString:[fmgr.filteredPrefectures componentsJoinedByString:@", "]];
             if (title != nil) {
                 title = [NSString stringWithFormat:@"%@　%@", title, preStr];
+            } else {
+                title = preStr;
             }
         }
         _navBarTitleLabel.text = title;
