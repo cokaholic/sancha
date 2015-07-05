@@ -14,10 +14,12 @@
 #import "EventDetailViewController.h"
 #import <UIScrollView+PullToRefreshCoreText.h>
 
-@interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate>
 
 @property (nonatomic, retain) EventDataManager *manager;
 @property (nonatomic, retain) UITableView *eventTableView;
+@property (nonatomic, retain) NSMutableArray *searchData;
+@property (nonatomic, retain) UISearchDisplayController *searchController;
 
 @end
 
@@ -35,18 +37,19 @@
 - (void)initData
 {
     _manager = [EventDataManager sharedManager];
+    _searchData = [NSMutableArray arrayWithCapacity: _manager.dataList.count];
 }
 
 - (void)initUI
 {
     self.view.backgroundColor = BACKGROUND_COLOR;
     
-    _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - STATUSBAR_HEIGHT)];
+    _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT)];
     _eventTableView.dataSource = self;
     _eventTableView.delegate = self;
     _eventTableView.separatorStyle = NO;
     _eventTableView.backgroundColor = CLEAR_COLOR;
-    _eventTableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
+    _eventTableView.contentInset = UIEdgeInsetsMake(-NAVBAR_HEIGHT, 0, 0, 0);
     [self.view addSubview:_eventTableView];
     
     __weak typeof(self) weakSelf = self;
@@ -66,6 +69,25 @@
                                                    });
                                                });
                                            }];
+
+    // search
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, SEARCH_BAR_HEIGHT)];
+    UIBarButtonItem *barButton = [UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil];
+    [barButton setTitle:@"Close"];
+    barButton.tintColor = MAIN_COLOR;
+    searchBar.tintColor = MAIN_COLOR;
+    [self.view addSubview: searchBar];
+    
+    _searchController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
+    _searchController.delegate = self;
+    _searchController.searchResultsDelegate = self;
+    _searchController.searchResultsDataSource = self;
+    
+    _searchController.searchResultsTableView.frame = CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT);
+
+    _eventTableView.tableHeaderView = searchBar;
+    
+    
 }
 
 - (void)setUI
@@ -77,7 +99,7 @@
 {
     [super viewWillAppear:animated];
     
-    [self.navigationController setNavigationBarHidden:YES];
+//    [self.navigationController setNavigationBarHidden:YES];
 }
 
 #pragma mark - UITableView DataSource
@@ -89,6 +111,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if(tableView == _searchController.searchResultsTableView) {
+        return _searchData.count;
+    }    
     return _manager.dataList.count;
 }
 
@@ -103,8 +128,15 @@
     if (!cell) {
         cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    
+
     EventData *eventData = (EventData *)_manager.dataList[indexPath.row];
+    
+    if(tableView == self.searchController.searchResultsTableView) {
+        eventData = (EventData *)_searchData[indexPath.row];
+    } else {
+        eventData = (EventData *)_manager.dataList[indexPath.row];
+    }
+
     
     [cell initCellWithData:eventData];
     
@@ -122,6 +154,29 @@
     eventDetailViewController.detailURL = eventData.detailURL;
     [self .navigationController pushViewController:eventDetailViewController animated:YES];
 }
+
+
+- (void)filterContentForSearchText:(NSString*)searchString {
+    [self.searchData removeAllObjects];
+    for(EventData *data in _manager.dataList) {
+        NSString *str = data.title;
+        NSRange range = [str rangeOfString:searchString
+                                   options:NSCaseInsensitiveSearch];
+        if(range.length > 0) {
+            [self.searchData addObject:data];
+        }
+    }
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController*)controller shouldReloadTableForSearchString:(NSString*)searchString {
+    [self filterContentForSearchText: searchString];
+    return YES;
+}
+
+- (void)searchDisplayController:(nonnull UISearchDisplayController *)controller didLoadSearchResultsTableView:(nonnull UITableView *)tableView {
+    [controller.searchResultsTableView setContentOffset:CGPointZero animated:NO]; // scroll to top
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

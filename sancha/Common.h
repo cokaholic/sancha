@@ -14,6 +14,7 @@
 #define DEFAULT_CELL_HEIGHT 44
 #define DEFAULT_HEADER_HEIGHT 30
 #define EVENT_CELL_HEIGHT 90
+#define SEARCH_BAR_HEIGHT 44
 #define DEFAULT_FONT(fontSize) [UIFont fontWithName:@"HiraKakuProN-W3" size:fontSize]
 #define DEFAULT_BOLD_FONT(fontSize) [UIFont fontWithName:@"HiraKakuProN-W6" size:fontSize]
 #define REFRESH_TEXT_FONT(fontSize) [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:fontSize]

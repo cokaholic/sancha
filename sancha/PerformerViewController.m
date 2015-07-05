@@ -126,6 +126,10 @@
     return YES;
 }
 
+- (void)searchDisplayController:(nonnull UISearchDisplayController *)controller didLoadSearchResultsTableView:(nonnull UITableView *)tableView {
+    [controller.searchResultsTableView setContentOffset:CGPointZero animated:NO]; // scroll to top
+}
+
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
     [self.tableView reloadData];
 }
