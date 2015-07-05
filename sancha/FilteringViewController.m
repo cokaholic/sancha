@@ -187,6 +187,7 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 
 - (void)doFiltering
 {
+    [_manager save];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

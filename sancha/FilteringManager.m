@@ -18,6 +18,9 @@
 @property (nonatomic, retain) NSMutableArray *filteredPerformers;
 @property (nonatomic, retain) SortedArray *sortedPerformers;
 @property (nonatomic, retain) SortedArray *sortedPrefectures;
+@property (nonatomic, retain) SortedArray *sortedPerformersTmp;
+@property (nonatomic, retain) SortedArray *sortedPrefecturesTmp;
+
 
 @end
 
@@ -35,6 +38,7 @@ static FilteringManager *shared;
 - (id) init {
     self = [super init];
     if (self) {
+        _saved = NO;
         _userDefaults = [NSUserDefaults standardUserDefaults];
 
         NSArray *prefectures = @[@"北海道", @"青森", @"岩手", @"宮城", @"秋田", @"山形", @"福島",
@@ -50,39 +54,90 @@ static FilteringManager *shared;
             _prefectureToIndex[prefectures[i]] = [NSNumber numberWithInt:i];
         }
         
-        _sortedPrefectures = [[SortedArray alloc] initWithCmp:^(id id1, id id2) {            
+        id prefectureCmp = ^(id id1, id id2) {
             NSNumber *n1 = _prefectureToIndex[id1];
             NSNumber *n2 = _prefectureToIndex[id2];
             if (n1 == nil || n2 == nil) return [id1 compare:id2];
             return [_prefectureToIndex[id1] compare:_prefectureToIndex[id2]];
-        }];
-        _sortedPerformers = [[SortedArray alloc] initWithCmp:^(id id1, id id2) {
+        };
+        _sortedPrefectures = [[SortedArray alloc] initWithCmp:prefectureCmp];
+        _sortedPrefecturesTmp = [[SortedArray alloc] initWithCmp:prefectureCmp];
+        
+        id performerCmp = ^(id id1, id id2) {
             return [id1 compare:id2];
-        }];
+        };
+        
+        _sortedPerformers = [[SortedArray alloc] initWithCmp:performerCmp];
+        _sortedPerformersTmp = [[SortedArray alloc] initWithCmp:performerCmp];
 
-        NSMutableArray *tmp;
-        tmp = [_userDefaults objectForKey:@"filteredPerformers"];
-        if (tmp != nil) {
-            _sortedPerformers.array = [tmp mutableCopy];
-            _filteredPerformers = _sortedPerformers.array;
-        }
-        tmp = [_userDefaults objectForKey:@"filteredPrefectures"];
-        if (tmp != nil) {
-            _sortedPrefectures.array = [tmp mutableCopy];
-            _filteredPrefectures = _sortedPrefectures.array;
-        }
+        [self reset];
     }
     return self;
 }
 
-- (void)setBOOL:(BOOL)flag forPrefecture:(NSString *)name {
+- (void)reset {
+    NSMutableArray *tmp;
+    tmp = [_userDefaults objectForKey:@"filteredPerformers"];
+    if (tmp != nil) {
+        _sortedPerformers.array = [tmp mutableCopy];
+        _sortedPerformersTmp.array = [tmp mutableCopy];
+        _filteredPerformers = _sortedPerformers.array;
+    }
+    tmp = [_userDefaults objectForKey:@"filteredPrefectures"];
+    if (tmp != nil) {
+        _sortedPrefectures.array = [tmp mutableCopy];
+        _filteredPrefectures = _sortedPrefectures.array;
+    }
+}
+
+- (void)save {
+    _saved = YES;
+    [_userDefaults setObject:_sortedPrefectures.array forKey:@"filteredPrefectures"];
+    [_userDefaults setObject:_sortedPerformers.array forKey:@"filteredPerformers"];
+}
+
+- (void)resetPrefecturesTmp {
+    _sortedPrefecturesTmp.array = [_sortedPrefectures.array mutableCopy];
+}
+
+- (void)savePrefectures {
+    _sortedPrefectures.array = [_sortedPrefecturesTmp.array mutableCopy];
+    _filteredPrefectures = _sortedPrefectures.array;
+}
+
+- (void)resetPerformersTmp {
+    _sortedPerformersTmp.array = [_sortedPerformers.array mutableCopy];
+}
+
+- (void)savePerformers {
+    _sortedPerformers.array = [_sortedPerformersTmp.array mutableCopy];
+    _filteredPerformers = _sortedPerformers.array;
+}
+
+
+- (void)setTmpBOOL:(BOOL)flag forPrefecture:(NSString *)name {
+    if (flag) {
+        [_sortedPrefecturesTmp insertObject:name];
+    } else {
+        [_sortedPrefecturesTmp removeObject:name];
+    }
+}
+
+- (void)setTmpBOOL:(BOOL)flag forPerformer:(NSString *)name {
+    if (flag) {
+        [_sortedPerformersTmp insertObject:name];
+    } else {
+        [_sortedPerformersTmp removeObject:name];
+    }
+}
+
+- (void)setBOOL:(BOOL)flag forPrefecture:(NSString *)name {    
     if (flag) {
         [_sortedPrefectures insertObject:name];
     } else {
         [_sortedPrefectures removeObject:name];
     }
     _filteredPrefectures = _sortedPrefectures.array;
-    [_userDefaults setObject:_sortedPrefectures.array forKey:@"filteredPrefectures"];
 }
 
 - (void)setBOOL:(BOOL)flag forPerformer:(NSString *)name {
@@ -92,7 +147,6 @@ static FilteringManager *shared;
         [_sortedPerformers removeObject:name];
     }
     _filteredPerformers = _sortedPerformers.array;
-    [_userDefaults setObject:_sortedPerformers.array forKey:@"filteredPerformers"];
 }
 
 

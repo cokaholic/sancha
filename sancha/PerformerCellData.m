@@ -28,7 +28,7 @@
 
 - (void)setChecked:(BOOL)checked {
     _checked = checked;
-    [[FilteringManager sharedManager] setBOOL:checked forPerformer:self.name];
+    [[FilteringManager sharedManager] setTmpBOOL:checked forPerformer:self.name];
 }
 
 

@@ -13,6 +13,7 @@
 #import "EventData.h"
 #import "EventDetailViewController.h"
 #import "FilteringViewController.h"
+#import "FilteringManager.h"
 #import <UIScrollView+PullToRefreshCoreText.h>
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate>
@@ -125,6 +126,11 @@
 
 - (void)loadFilteredData
 {
+    FilteringManager *fmgr = [FilteringManager sharedManager];
+    if (!fmgr.saved) {
+        [fmgr reset];
+    }
+    fmgr.saved = NO;
     _dataList = [_manager getFilteredDataList];
     [_eventTableView reloadData];
 }

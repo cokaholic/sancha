@@ -29,7 +29,7 @@
 
 - (void)setChecked:(BOOL)checked {
     _checked = checked;
-    [[FilteringManager sharedManager] setBOOL:checked forPrefecture:self.name];
+    [[FilteringManager sharedManager] setTmpBOOL:checked forPrefecture:self.name];
 }
 
 @end

@@ -13,8 +13,10 @@
 
 @property (nonatomic, retain, readonly) NSMutableArray *filteredPrefectures;
 @property (nonatomic, retain, readonly) NSMutableArray *filteredPerformers;
+@property (nonatomic, assign) BOOL saved;
 
 + (FilteringManager *) sharedManager;
+
 
 - (void)setBOOL:(BOOL)flag forPrefecture:(NSString *)name;
 - (void)setBOOL:(BOOL)flag forPerformer:(NSString *)name;
@@ -22,5 +24,14 @@
 - (BOOL)isFilteredPerformer:(NSString *)name;
 - (BOOL)isFilteredEvent:(EventData *)event;
 - (BOOL)isFiltering;
+- (void)reset;
+- (void)save;
+
+- (void)resetPrefecturesTmp;
+- (void)savePrefectures;
+- (void)resetPerformersTmp;
+- (void)savePerformers;
+- (void)setTmpBOOL:(BOOL)flag forPrefecture:(NSString *)name;
+- (void)setTmpBOOL:(BOOL)flag forPerformer:(NSString *)name;
 
 @end
