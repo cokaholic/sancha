@@ -10,8 +10,6 @@
 
 @interface FilteringManager : NSObject
 
-@property(nonatomic, retain) NSArray *performers;
-
 + (FilteringManager *) sharedManager;
 
 - (void)setBOOL:(BOOL)flag forPrefecture:(NSString *)name;

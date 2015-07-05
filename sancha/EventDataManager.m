@@ -9,7 +9,6 @@
 #import "EventDataManager.h"
 #import "EventData.h"
 #import "HTMLParser.h"
-#import "FilteringManager.h"
 
 @interface EventDataManager ()
 @property(nonatomic, retain, readwrite) NSArray* dataList;
@@ -60,8 +59,6 @@ static EventDataManager *shared;
     NSArray *sortedPerformers = [set.allObjects sortedArrayUsingDescriptors:@[sortDescriptor]];
     
     self.performers = [NSArray arrayWithArray:sortedPerformers];
-    
-    [FilteringManager sharedManager].performers = self.performers;
 }
 
 - (void) parseHTML:(NSString*)html {

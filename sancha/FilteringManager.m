@@ -7,6 +7,7 @@
 //
 
 #import "FilteringManager.h"
+#import "EventDataManager.h"
 
 @interface FilteringManager ()
 
@@ -30,7 +31,6 @@ static FilteringManager *shared;
     self = [super init];
     if (self) {
         self.userDefaults = [NSUserDefaults standardUserDefaults];
-        self.performers = [NSArray array];
         self.prefectures = @[@"北海道", @"青森県", @"岩手県", @"宮城県", @"秋田県", @"山形県", @"福島県",
                              @"茨城県", @"栃木県", @"群馬県", @"埼玉県", @"千葉県", @"東京都", @"神奈川県",
                              @"新潟県", @"富山県", @"石川県", @"福井県", @"山梨県", @"長野県", @"岐阜県", @"静岡県", @"愛知県",
@@ -78,8 +78,10 @@ static FilteringManager *shared;
 }
 
 - (NSArray *)getFilteredPerformers {
+    NSArray *performers = [EventDataManager sharedManager].performers;
+    
     NSMutableArray *res = [NSMutableArray array];
-    for (NSString *name in self.performers) {
+    for (NSString *name in performers) {
         if ([self isFilteredPerformer:name]) {
             [res addObject:name];
         }
