@@ -20,7 +20,6 @@
 @property (nonatomic, retain) UITableView *eventTableView;
 @property (nonatomic, retain) NSMutableArray *searchData;
 @property (nonatomic, retain) UISearchDisplayController *searchController;
-@property (nonatomic, retain) NSString *searchString;
 
 @end
 
@@ -171,9 +170,11 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController*)controller shouldReloadTableForSearchString:(NSString*)searchString {
     [self filterContentForSearchText: searchString];
-    [controller.searchResultsTableView setContentOffset:CGPointZero animated:NO]; // scroll to top
-    _searchString = searchString;
     return YES;
+}
+
+- (void)searchDisplayController:(nonnull UISearchDisplayController *)controller didLoadSearchResultsTableView:(nonnull UITableView *)tableView {
+    [controller.searchResultsTableView setContentOffset:CGPointZero animated:NO]; // scroll to top
 }
 
 

@@ -123,8 +123,11 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController*)controller shouldReloadTableForSearchString:(NSString*)searchString {
     [self filterContentForSearchText: searchString];
-    [controller.searchResultsTableView setContentOffset:CGPointZero animated:NO]; // scroll to top
     return YES;
+}
+
+- (void)searchDisplayController:(nonnull UISearchDisplayController *)controller didLoadSearchResultsTableView:(nonnull UITableView *)tableView {
+    [controller.searchResultsTableView setContentOffset:CGPointZero animated:NO]; // scroll to top
 }
 
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
