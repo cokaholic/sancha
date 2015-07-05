@@ -35,6 +35,7 @@ static FilteringManager *shared;
 - (id) init {
     self = [super init];
     if (self) {
+        _saved = NO;
         _userDefaults = [NSUserDefaults standardUserDefaults];
 
         NSArray *prefectures = @[@"北海道", @"青森", @"岩手", @"宮城", @"秋田", @"山形", @"福島",
@@ -75,6 +76,28 @@ static FilteringManager *shared;
     return self;
 }
 
+- (void)reset {
+    NSMutableArray *tmp;
+    tmp = [_userDefaults objectForKey:@"filteredPerformers"];
+    if (tmp != nil) {
+        _sortedPerformers.array = [tmp mutableCopy];
+        _filteredPerformers = _sortedPerformers.array;
+    }
+    tmp = [_userDefaults objectForKey:@"filteredPrefectures"];
+    if (tmp != nil) {
+        _sortedPrefectures.array = [tmp mutableCopy];
+        _filteredPrefectures = _sortedPrefectures.array;
+    }
+}
+
+- (void)save {
+    _saved = YES;
+    [_userDefaults setObject:_sortedPrefectures.array forKey:@"filteredPrefectures"];
+    [_userDefaults setObject:_sortedPerformers.array forKey:@"filteredPerformers"];
+}
+
+
+
 - (void)setBOOL:(BOOL)flag forPrefecture:(NSString *)name {
     if (flag) {
         [_sortedPrefectures insertObject:name];
@@ -82,7 +105,6 @@ static FilteringManager *shared;
         [_sortedPrefectures removeObject:name];
     }
     _filteredPrefectures = _sortedPrefectures.array;
-    [_userDefaults setObject:_sortedPrefectures.array forKey:@"filteredPrefectures"];
 }
 
 - (void)setBOOL:(BOOL)flag forPerformer:(NSString *)name {
@@ -92,7 +114,6 @@ static FilteringManager *shared;
         [_sortedPerformers removeObject:name];
     }
     _filteredPerformers = _sortedPerformers.array;
-    [_userDefaults setObject:_sortedPerformers.array forKey:@"filteredPerformers"];
 }
 
 
