@@ -150,11 +150,10 @@ static NSString * const kCellIdentifier = @"FilteringCell";
         cell.textLabel.textColor = DEFAULT_TEXT_COLOR;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.delegate = self;
+        [cell addDeleteButtonWithIndexPath:indexPath];
     }
     
     cell.textLabel.font = DEFAULT_FONT(16);
-    
-    [cell addDeleteButtonWithIndexPath:indexPath];
     
     return cell;
 }

@@ -33,18 +33,16 @@
 {
     _cellIndexPath = indexPath;
     
-    if (indexPath.row!=0) {
-        _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _deleteButton.frame = CGRectMake([Common screenSize].width - 34, 10, DEFAULT_CELL_HEIGHT - 20, DEFAULT_CELL_HEIGHT - 20);
-        _deleteButton.backgroundColor = CANCEL_COLOR;
-        [_deleteButton setBackgroundImage:[UIImage imageNamed:@"icon_cancel"] forState:UIControlStateNormal];
-        _deleteButton.layer.masksToBounds = YES;
-        _deleteButton.layer.cornerRadius = CGRectGetHeight(_deleteButton.frame)/2;
-        [_deleteButton addTarget:self
-                          action:@selector(selectDeleteButton)
-                forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_deleteButton];
-    }
+    _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _deleteButton.frame = CGRectMake([Common screenSize].width - 34, 10, DEFAULT_CELL_HEIGHT - 20, DEFAULT_CELL_HEIGHT - 20);
+    _deleteButton.backgroundColor = CANCEL_COLOR;
+    [_deleteButton setBackgroundImage:[UIImage imageNamed:@"icon_cancel"] forState:UIControlStateNormal];
+    _deleteButton.layer.masksToBounds = YES;
+    _deleteButton.layer.cornerRadius = CGRectGetHeight(_deleteButton.frame)/2;
+    [_deleteButton addTarget:self
+                      action:@selector(selectDeleteButton)
+            forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:_deleteButton];
 }
 
 - (void)selectDeleteButton
