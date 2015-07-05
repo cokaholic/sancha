@@ -122,10 +122,22 @@
 
 - (void)initCellWithData:(EventData *)data
 {
+    int weekNumber = [Common weekNumberWithDate:data.date];
     NSDictionary *dateDictionary = [Common dateConvertToDateDictionary:data.date];
     
     _yearLabel.text = [NSString stringWithFormat:@"%@",dateDictionary[@"year"]];
     _monthAndDayLabel.text = [NSString stringWithFormat:@"%@/%@",dateDictionary[@"month"],dateDictionary[@"day"]];
+    
+    if (weekNumber==0) {      //日曜日
+        _monthAndDayLabel.textColor = SUNDAY_COLOR;
+    }
+    else if(weekNumber==6) {  //土曜日
+        _monthAndDayLabel.textColor = SATURDAY_COLOR;
+    }
+    else {
+        _monthAndDayLabel.textColor = DEFAULT_TEXT_COLOR;
+    }
+    
     if (data.timeUndefined) {
         _timeLabel.text = @"未定";
     }
@@ -133,6 +145,7 @@
         NSString *minuteString = [Common checkMinute:dateDictionary[@"minute"]];
         _timeLabel.text = [NSString stringWithFormat:@"%@:%@",dateDictionary[@"hour"], minuteString];
     }
+    
     _titleLabel.attributedText = [Common attributedTextWithString:data.title
                                                        lineHeight:5];
     _locationLabel.text = data.prefecture;

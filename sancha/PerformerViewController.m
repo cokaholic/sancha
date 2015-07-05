@@ -19,6 +19,7 @@
 @property(nonatomic, retain) UISearchDisplayController *seachController;
 @property(nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) UIButton *doneButton;
+@property (nonatomic, retain) GADBannerView *banner;
 
 @end
 
@@ -45,7 +46,7 @@
 }
 
 - (void)initUI {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - 60)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - 60 - GAD_SIZE_320x50.height)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = CLEAR_COLOR;
@@ -55,8 +56,8 @@
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44.0f)];
     UIBarButtonItem *barButton = [UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil];
     [barButton setTitle:@"Close"];
-    barButton.tintColor = MAIN_COLOR;
-    searchBar.tintColor = MAIN_COLOR;
+    barButton.tintColor = CANCEL_COLOR;
+    searchBar.tintColor = CANCEL_COLOR;
     searchBar.barTintColor = BACKGROUND_COLOR;
 
     self.seachController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
@@ -67,7 +68,7 @@
     self.tableView.tableHeaderView = searchBar;
 
     _doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _doneButton.frame = CGRectMake(10, [Common screenSize].height - 50, [Common screenSize].width - 20, 40);
+    _doneButton.frame = CGRectMake(10, [Common screenSize].height - 50 - GAD_SIZE_320x50.height, [Common screenSize].width - 20, 40);
     _doneButton.backgroundColor = MAIN_COLOR;
     _doneButton.layer.masksToBounds = YES;
     _doneButton.layer.cornerRadius = _doneButton.frame.size.height/2;
@@ -78,6 +79,15 @@
           forControlEvents:UIControlEventTouchUpInside];
 
     [self.view addSubview:_doneButton];
+    
+    //広告
+    _banner = [[GADBannerView alloc]initWithFrame:CGRectMake(0, [Common screenSize].height - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
+    _banner.adUnitID = MY_BANNER_UNIT_ID2;
+    _banner.rootViewController = self;
+    _banner.backgroundColor = [UIColor clearColor];
+    _banner.center = CGPointMake([Common screenSize].width/2, _banner.center.y);
+    [self.view addSubview:_banner];
+    [_banner loadRequest:[GADRequest request]];
 }
 
 - (void)setUI {

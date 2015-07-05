@@ -44,6 +44,7 @@
 		9F78D6381B4923980032BC8D /* safari~iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F78D6191B4923980032BC8D /* safari~iPad@2x.png */; };
 		9F78D6391B4923980032BC8D /* TUSafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F78D6201B4923980032BC8D /* TUSafariActivity.m */; };
 		9F78D63A1B4923980032BC8D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9F78D6211B4923980032BC8D /* README.md */; };
+		9F78D63C1B496A760032BC8D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F78D63B1B496A760032BC8D /* WebKit.framework */; };
 		9F85226B1B47B793007B7A23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAD61B477E9B003A7464 /* AppDelegate.m */; };
 		9F8522711B47CCD0007B7A23 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */; };
 		9F8522771B48C321007B7A23 /* FilteringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8522761B48C321007B7A23 /* FilteringViewController.m */; };
@@ -138,6 +139,7 @@
 		9F78D61F1B4923980032BC8D /* TUSafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUSafariActivity.h; sourceTree = "<group>"; };
 		9F78D6201B4923980032BC8D /* TUSafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUSafariActivity.m; sourceTree = "<group>"; };
 		9F78D6211B4923980032BC8D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9F78D63B1B496A760032BC8D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9F85226F1B47CCD0007B7A23 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
 		9F8522701B47CCD0007B7A23 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		9F8522751B48C321007B7A23 /* FilteringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteringViewController.h; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F78D63C1B496A760032BC8D /* WebKit.framework in Frameworks */,
 				F35F601FD36B6EE2D1E924A7 /* libPods-sancha.a in Frameworks */,
 				38D2CE7C1B478B1A00110146 /* libxml2.dylib in Frameworks */,
 			);
@@ -443,6 +446,7 @@
 		CC2A30EC3A715A39D2A20AFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F78D63B1B496A760032BC8D /* WebKit.framework */,
 				B187908D7DDED19C0DD6E6D7 /* libPods-sancha.a */,
 			);
 			name = Frameworks;
@@ -730,7 +734,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -767,7 +771,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

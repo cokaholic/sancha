@@ -8,6 +8,16 @@
 
 #import "Common.h"
 
+enum {
+    SUNDAY = 0,
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY
+};
+
 @implementation Common
 
 + (CGSize)screenSize
@@ -49,6 +59,18 @@
     
     NSDate *returnDate = [dateFormatter dateFromString:strDate];
     return returnDate;
+}
+
++ (int)weekNumberWithDate:(NSDate *)date
+{    
+    NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents* comps = [calendar components:NSWeekdayCalendarUnit
+                                          fromDate:date];
+    
+    NSDateFormatter* df = [[NSDateFormatter alloc] init];
+    df.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"ja"];
+    
+    return (int)comps.weekday - 1;
 }
 
 + (NSString *)formatDateString:(NSString *)string

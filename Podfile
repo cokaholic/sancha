@@ -3,10 +3,11 @@
 
 target 'sancha' do
   platform :ios, '7.0'
-  pod 'SVProgressHUD'
   source 'https://github.com/CocoaPods/Specs.git'
+  pod 'SVProgressHUD'
   pod 'PullToRefreshCoreText', '~> 0.2'
   pod 'AutoScrollLabel'
+  pod 'Google-Mobile-Ads-SDK', '~> 7.0'
 end
 
 target 'sanchaTests' do
