@@ -58,14 +58,14 @@
     barButton.tintColor = MAIN_COLOR;
     searchBar.tintColor = MAIN_COLOR;
     searchBar.barTintColor = BACKGROUND_COLOR;
-    
+
     self.seachController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
     self.seachController.delegate = self;
     self.seachController.searchResultsDelegate = self;
     self.seachController.searchResultsDataSource = self;
-    
+
     self.tableView.tableHeaderView = searchBar;
-    
+
     _doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _doneButton.frame = CGRectMake(10, [Common screenSize].height - 50, [Common screenSize].width - 20, 40);
     _doneButton.backgroundColor = MAIN_COLOR;
@@ -76,12 +76,12 @@
     [_doneButton addTarget:self
                     action:@selector(didSelectFiltering)
           forControlEvents:UIControlEventTouchUpInside];
-    
+
     [self.view addSubview:_doneButton];
 }
 
 - (void)setUI {
-    
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -95,24 +95,23 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    
+
     PerformerCellData *data;
     if(tableView == self.seachController.searchResultsTableView) {
         data = self.searchData[indexPath.row];
     } else {
         data = self.performers[indexPath.row];
     }
-    
+
     if (data.checked) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
-    
+
     cell.textLabel.text = data.name;
-    
+
     return cell;
 }
 
