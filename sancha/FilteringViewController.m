@@ -76,9 +76,8 @@ static NSString * const kCellIdentifier = @"FilteringCell";
     [_filteringTableView reloadData];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self setUI];
 }
 
