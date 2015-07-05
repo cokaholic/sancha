@@ -68,7 +68,7 @@ static FilteringManager *shared;
 }
 
 - (NSArray *)getFilteredPrefectures {
-    NSMutableArray *res;
+    NSMutableArray *res = [NSMutableArray array];
     for (NSString *name in self.prefectures) {
         if ([self isFilteredPrefecture:name]) {
             [res addObject:name];
@@ -78,9 +78,9 @@ static FilteringManager *shared;
 }
 
 - (NSArray *)getFilteredPerformers {
-    NSMutableArray *res;
+    NSMutableArray *res = [NSMutableArray array];
     for (NSString *name in self.performers) {
-        if ([self isFilteredPrefecture:name]) {
+        if ([self isFilteredPerformer:name]) {
             [res addObject:name];
         }
     }
