@@ -22,6 +22,7 @@
 @property (nonatomic, retain) NSMutableArray *searchData;
 @property (nonatomic, retain) UIView *titleLogoView;
 @property (nonatomic, retain) UISearchDisplayController *searchController;
+@property (nonatomic, retain) NSArray *dataList;
 
 @end
 
@@ -38,7 +39,7 @@
 - (void)initData
 {
     _manager = [EventDataManager sharedManager];
-    _searchData = [NSMutableArray arrayWithCapacity: _manager.dataList.count];
+    _dataList = @[];
 }
 
 - (void)initUI
@@ -118,6 +119,15 @@
     
     [self.navigationController.navigationBar setTintColor:MAIN_COLOR];
     [self.navigationController.navigationBar setBarTintColor:ACCENT_COLOR];
+    
+    [self loadFilteredData];
+}
+
+- (void)loadFilteredData
+{
+    _searchData = [NSMutableArray arrayWithCapacity: _dataList.count];
+    _dataList = [_manager getFilteredDataList];
+    [_eventTableView reloadData];
 }
 
 #pragma mark - UITableView DataSource
@@ -132,7 +142,7 @@
     if(tableView == _searchController.searchResultsTableView) {
         return _searchData.count;
     }    
-    return _manager.dataList.count;
+    return _dataList.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -147,12 +157,12 @@
         cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
 
-    EventData *eventData = (EventData *)_manager.dataList[indexPath.row];
+    EventData *eventData = (EventData *)_dataList[indexPath.row];
     
     if(tableView == self.searchController.searchResultsTableView) {
         eventData = (EventData *)_searchData[indexPath.row];
     } else {
-        eventData = (EventData *)_manager.dataList[indexPath.row];
+        eventData = (EventData *)_dataList[indexPath.row];
     }
 
     
@@ -167,7 +177,14 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    EventData *eventData = (EventData *)_manager.dataList[indexPath.row];
+    EventData *eventData = (EventData *)_dataList[indexPath.row];
+    
+    if(tableView == self.searchController.searchResultsTableView) {
+        eventData = (EventData *)_searchData[indexPath.row];
+    } else {
+        eventData = (EventData *)_dataList[indexPath.row];
+    }
+
     EventDetailViewController *eventDetailViewController = [[EventDetailViewController alloc]init];
     eventDetailViewController.detailURL = eventData.detailURL;
     [self .navigationController pushViewController:eventDetailViewController animated:YES];
@@ -176,7 +193,7 @@
 
 - (void)filterContentForSearchText:(NSString*)searchString {
     [self.searchData removeAllObjects];
-    for(EventData *data in _manager.dataList) {
+    for(EventData *data in _dataList) {
         NSString *str = data.title;
         NSRange range = [str rangeOfString:searchString
                                    options:NSCaseInsensitiveSearch];

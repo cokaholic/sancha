@@ -44,6 +44,7 @@
 }
 
 - (BOOL)existObject:(NSObject *)obj {
+    if (obj == nil) return NO;
     NSUInteger idx = [_array indexOfObject:obj
                              inSortedRange:NSMakeRange(0, _array.count)
                                    options:NSBinarySearchingFirstEqual
