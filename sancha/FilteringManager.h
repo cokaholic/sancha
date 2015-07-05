@@ -21,5 +21,6 @@
 - (BOOL)isFilteredPrefecture:(NSString *)name;
 - (BOOL)isFilteredPerformer:(NSString *)name;
 - (BOOL)isFilteredEvent:(EventData *)event;
+- (BOOL)isFiltering;
 
 @end

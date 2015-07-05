@@ -9,6 +9,7 @@
 #import "EventDataManager.h"
 #import "EventData.h"
 #import "HTMLParser.h"
+#import "FilteringManager.h"
 
 @interface EventDataManager ()
 @property(nonatomic, retain, readwrite) NSArray* dataList;

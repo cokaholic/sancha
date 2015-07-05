@@ -110,4 +110,8 @@ static FilteringManager *shared;
     return NO;
 }
 
+- (BOOL)isFiltering {
+    return _filteredPerformers.count > 0 || _filteredPrefectures.count > 0;
+}
+
 @end
