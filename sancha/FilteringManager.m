@@ -44,18 +44,18 @@ static FilteringManager *shared;
                              @"徳島県", @"香川県", @"愛媛県", @"高知県",
                              @"福岡県", @"佐賀県", @"長崎県", @"熊本県", @"大分県", @"宮崎県", @"鹿児島県", @"沖縄県"];
         _prefectureToIndex = [NSMutableDictionary dictionary];
-        
+
         for (int i = 0; i < prefectures.count; ++i) {
             _prefectureToIndex[prefectures[i]] = [NSNumber numberWithInt:i];
         }
-        
+
         _sortedPrefectures = [[SortedArray alloc] initWithCmp:^(id id1, id id2) {
             return [_prefectureToIndex[id1] compare:_prefectureToIndex[id2]];
         }];
         _sortedPerformers = [[SortedArray alloc] initWithCmp:^(id id1, id id2) {
             return [id1 compare:id2];
         }];
-        
+
         NSMutableArray *tmp;
         tmp = [_userDefaults objectForKey:@"filteredPerformers"];
         if (tmp != nil) {
@@ -100,5 +100,14 @@ static FilteringManager *shared;
     return [_sortedPerformers existObject:name];
 }
 
+- (BOOL)isFilteredEvent:(EventData *)event {
+    if ([self isFilteredPrefecture:event.prefecture]) return YES;
+    for (NSString *performer in event.performers) {
+        if ([self isFilteredPerformer:performer]) {
+            return YES;
+        }
+    }
+    return NO;
+}
 
 @end

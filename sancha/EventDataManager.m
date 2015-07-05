@@ -87,5 +87,18 @@ static EventDataManager *shared;
     self.dataList = [NSArray arrayWithArray:array];
 }
 
+- (NSArray *)getFilteredDataList {
+    NSMutableArray *array = [NSMutableArray array];
+    FilteringManager *filteringManager = [FilteringManager sharedManager];
+    
+    for (EventData *event in self.dataList) {
+        if ([filteringManager isFilteredEvent:event]) {
+            [array addObject:event];
+        }
+    }
+    
+    return [NSArray arrayWithArray:array];
+}
+
 
 @end

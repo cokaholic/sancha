@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EventData.h"
 
 @interface FilteringManager : NSObject
 
@@ -19,5 +20,6 @@
 - (void)setBOOL:(BOOL)flag forPerformer:(NSString *)name;
 - (BOOL)isFilteredPrefecture:(NSString *)name;
 - (BOOL)isFilteredPerformer:(NSString *)name;
+- (BOOL)isFilteredEvent:(EventData *)event;
 
 @end
