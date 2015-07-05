@@ -272,9 +272,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self.navigationController setNavigationBarHidden:NO];
-    [self.navigationController.navigationBar setTintColor:MAIN_COLOR];
 }
 
 - (void)openWebView

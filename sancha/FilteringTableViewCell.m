@@ -45,6 +45,15 @@
     [self addSubview:_deleteButton];
 }
 
+- (void)removeDeleteButton
+{
+    for (id view in self.subviews) {
+        if ([[view class] isEqual:[UIButton class]]) {
+            [view removeFromSuperview];
+        }
+    }
+}
+
 - (void)selectDeleteButton
 {
     if (_cellIndexPath.section==0) {

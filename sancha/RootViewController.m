@@ -12,6 +12,7 @@
 #import "EventDataManager.h"
 #import "EventData.h"
 #import "EventDetailViewController.h"
+#import "FilteringViewController.h"
 #import <UIScrollView+PullToRefreshCoreText.h>
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate>
@@ -19,6 +20,7 @@
 @property (nonatomic, retain) EventDataManager *manager;
 @property (nonatomic, retain) UITableView *eventTableView;
 @property (nonatomic, retain) NSMutableArray *searchData;
+@property (nonatomic, retain) UIView *titleLogoView;
 @property (nonatomic, retain) UISearchDisplayController *searchController;
 
 @end
@@ -43,6 +45,22 @@
 - (void)initUI
 {
     self.view.backgroundColor = BACKGROUND_COLOR;
+    
+    _titleLogoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width, 44)];
+    _titleLogoView.backgroundColor = ACCENT_COLOR;
+    
+    UIImageView *titleLogoImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 5, [Common screenSize].width - 15, 34)];
+    titleLogoImageView.backgroundColor = ACCENT_COLOR;
+    titleLogoImageView.contentMode = UIViewContentModeScaleAspectFit;
+    titleLogoImageView.image = [UIImage imageNamed:@"image_title_logo"];
+    [_titleLogoView addSubview:titleLogoImageView];
+    
+    self.navigationItem.titleView = _titleLogoView;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_filter"]
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(goFilteringViewController)];
     
     _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT)];
     _eventTableView.dataSource = self;
@@ -99,7 +117,8 @@
 {
     [super viewWillAppear:animated];
     
-//    [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController.navigationBar setTintColor:MAIN_COLOR];
+    [self.navigationController.navigationBar setBarTintColor:ACCENT_COLOR];
 }
 
 #pragma mark - UITableView DataSource
@@ -177,6 +196,10 @@
     [controller.searchResultsTableView setContentOffset:CGPointZero animated:NO]; // scroll to top
 }
 
+- (void)goFilteringViewController
+{
+    [self.navigationController pushViewController:[[FilteringViewController alloc]init] animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
