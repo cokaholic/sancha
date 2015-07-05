@@ -12,6 +12,7 @@
 #import "EventDataManager.h"
 #import "EventData.h"
 #import "EventDetailViewController.h"
+#import "FilteringViewController.h"
 #import <UIScrollView+PullToRefreshCoreText.h>
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate>
@@ -43,6 +44,11 @@
 - (void)initUI
 {
     self.view.backgroundColor = BACKGROUND_COLOR;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_filter"]
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(goFilteringViewController)];
     
     _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - NAVBAR_HEIGHT)];
     _eventTableView.dataSource = self;
@@ -99,7 +105,7 @@
 {
     [super viewWillAppear:animated];
     
-//    [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController.navigationBar setTintColor:MAIN_COLOR];
 }
 
 #pragma mark - UITableView DataSource
@@ -177,6 +183,10 @@
     [controller.searchResultsTableView setContentOffset:CGPointZero animated:NO]; // scroll to top
 }
 
+- (void)goFilteringViewController
+{
+    [self.navigationController pushViewController:[[FilteringViewController alloc]init] animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

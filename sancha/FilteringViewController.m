@@ -138,6 +138,7 @@ static NSString * const kCellIdentifier = @"FilteringCell";
         cell.textLabel.text = [NSString stringWithFormat:@"%@を選ぶ",_sectionTitleList[indexPath.section]];
         cell.textLabel.textColor = PALE_TEXT_COLOR;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        [cell removeDeleteButton];
     }
     else {
         if (indexPath.section==0) {

@@ -16,6 +16,8 @@
 
 - (void)addDeleteButtonWithIndexPath:(NSIndexPath *)indexPath;
 
+- (void)removeDeleteButton;
+
 @end
 
 @protocol FilteringTableViewCellDelegate <NSObject>
