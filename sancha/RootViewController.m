@@ -117,7 +117,7 @@
     
     [self setUI];
     
-    [self.navigationController.navigationBar setTintColor:MAIN_COLOR];
+    [self.navigationController.navigationBar setTintColor:CANCEL_COLOR];
     [self.navigationController.navigationBar setBarTintColor:ACCENT_COLOR];
     
     [self loadFilteredData];
@@ -183,6 +183,10 @@
     } else {
         eventData = (EventData *)_dataList[indexPath.row];
     }
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]init];
+    backButton.title = @"戻る";
+    self.navigationItem.backBarButtonItem = backButton;
 
     EventDetailViewController *eventDetailViewController = [[EventDetailViewController alloc]init];
     eventDetailViewController.detailURL = eventData.detailURL;

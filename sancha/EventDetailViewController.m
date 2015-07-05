@@ -269,10 +269,15 @@
 
 - (void)openWebView
 {
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]init];
+    backButton.title = @"戻る";
+    self.navigationItem.backBarButtonItem = backButton;
+    
     KINWebBrowserViewController *webBrowser = [KINWebBrowserViewController webBrowser];
     webBrowser.showsPageTitleInNavigationBar = YES;
     webBrowser.showsURLInNavigationBar = YES;
-    webBrowser.tintColor = MAIN_COLOR;
+    webBrowser.tintColor = CANCEL_COLOR;
     webBrowser.barTintColor = ACCENT_COLOR;
     webBrowser.progressView.tintColor = MAIN_COLOR;
     [self.navigationController pushViewController:webBrowser animated:YES];
