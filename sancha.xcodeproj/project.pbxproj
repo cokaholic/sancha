@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		388535E91B49100500A2BD37 /* SortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 388535E81B49100500A2BD37 /* SortedArray.m */; };
 		38D2CE701B47840B00110146 /* EventDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE6F1B47840B00110146 /* EventDataManager.m */; };
 		38D2CE731B47855800110146 /* EventData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE721B47855800110146 /* EventData.m */; };
 		38D2CE791B478AF600110146 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D2CE761B478AF600110146 /* HTMLNode.m */; };
@@ -43,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		111E302BAAD08455688221FF /* Pods-sancha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sancha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sancha/Pods-sancha.debug.xcconfig"; sourceTree = "<group>"; };
+		388535E71B49100500A2BD37 /* SortedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortedArray.h; sourceTree = "<group>"; };
+		388535E81B49100500A2BD37 /* SortedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortedArray.m; sourceTree = "<group>"; };
 		38D2CE6E1B47840A00110146 /* EventDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDataManager.h; sourceTree = "<group>"; };
 		38D2CE6F1B47840B00110146 /* EventDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDataManager.m; sourceTree = "<group>"; };
 		38D2CE711B47855800110146 /* EventData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventData.h; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				38D2CE931B48066100110146 /* PrefectureCellData.m */,
 				38D2CE9B1B480E0F00110146 /* PerformerCellData.h */,
 				38D2CE9C1B480E0F00110146 /* PerformerCellData.m */,
+				388535E71B49100500A2BD37 /* SortedArray.h */,
+				388535E81B49100500A2BD37 /* SortedArray.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				38D2CE701B47840B00110146 /* EventDataManager.m in Sources */,
 				38D2CE791B478AF600110146 /* HTMLNode.m in Sources */,
 				9FF3EAD41B477E9B003A7464 /* main.m in Sources */,
+				388535E91B49100500A2BD37 /* SortedArray.m in Sources */,
 				38D2CE731B47855800110146 /* EventData.m in Sources */,
 				38D2CE7A1B478AF600110146 /* HTMLParser.m in Sources */,
 				9F8522711B47CCD0007B7A23 /* EventDetailViewController.m in Sources */,

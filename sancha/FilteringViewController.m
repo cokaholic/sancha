@@ -91,8 +91,8 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section==0) return [_manager getFilteredPerformers].count + 1;
-    else            return [_manager getFilteredPrefectures].count + 1;
+    if (section==0) return _manager.filteredPerformers.count + 1;
+    else            return _manager.filteredPrefectures.count + 1;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -141,10 +141,10 @@ static NSString * const kCellIdentifier = @"FilteringCell";
     }
     else {
         if (indexPath.section==0) {
-            cell.textLabel.text = [_manager getFilteredPerformers][indexPath.row-1];
+            cell.textLabel.text = _manager.filteredPerformers[indexPath.row-1];
         }
         else {
-            cell.textLabel.text = [_manager getFilteredPrefectures][indexPath.row-1];
+            cell.textLabel.text = _manager.filteredPrefectures[indexPath.row-1];
         }
         
         cell.textLabel.textColor = DEFAULT_TEXT_COLOR;

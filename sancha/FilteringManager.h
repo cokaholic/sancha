@@ -10,13 +10,14 @@
 
 @interface FilteringManager : NSObject
 
+@property (nonatomic, retain, readonly) NSMutableArray *filteredPrefectures;
+@property (nonatomic, retain, readonly) NSMutableArray *filteredPerformers;
+
 + (FilteringManager *) sharedManager;
 
 - (void)setBOOL:(BOOL)flag forPrefecture:(NSString *)name;
 - (void)setBOOL:(BOOL)flag forPerformer:(NSString *)name;
 - (BOOL)isFilteredPrefecture:(NSString *)name;
 - (BOOL)isFilteredPerformer:(NSString *)name;
-- (NSArray *)getFilteredPrefectures;
-- (NSArray *)getFilteredPerformers;
 
 @end
