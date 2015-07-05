@@ -14,10 +14,13 @@
 #import "EventDetailViewController.h"
 #import <UIScrollView+PullToRefreshCoreText.h>
 
-@interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate, UISearchBarDelegate>
 
 @property (nonatomic, retain) EventDataManager *manager;
 @property (nonatomic, retain) UITableView *eventTableView;
+@property (nonatomic, retain) NSMutableArray *searchData;
+@property (nonatomic, retain) UISearchDisplayController *searchController;
+@property (nonatomic, retain) NSString *searchString;
 
 @end
 
@@ -35,13 +38,14 @@
 - (void)initData
 {
     _manager = [EventDataManager sharedManager];
+    _searchData = [NSMutableArray arrayWithCapacity: _manager.dataList.count];
 }
 
 - (void)initUI
 {
     self.view.backgroundColor = BACKGROUND_COLOR;
     
-    _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - STATUSBAR_HEIGHT)];
+    _eventTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT + SEARCH_BAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - STATUSBAR_HEIGHT - SEARCH_BAR_HEIGHT)];
     _eventTableView.dataSource = self;
     _eventTableView.delegate = self;
     _eventTableView.separatorStyle = NO;
@@ -66,6 +70,44 @@
                                                    });
                                                });
                                            }];
+
+    // search
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, self.view.bounds.size.width, SEARCH_BAR_HEIGHT)];
+    UIBarButtonItem *barButton = [UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil];
+    [barButton setTitle:@"Close"];
+    barButton.tintColor = MAIN_COLOR;
+    searchBar.tintColor = MAIN_COLOR;
+    [self.view addSubview: searchBar];
+    
+    _searchController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
+    _searchController.delegate = self;
+    _searchController.searchResultsDelegate = self;
+    _searchController.searchResultsDataSource = self;
+    
+    _searchController.searchResultsTableView.frame = CGRectMake(0, STATUSBAR_HEIGHT + SEARCH_BAR_HEIGHT, [Common screenSize].width, [Common screenSize].height - STATUSBAR_HEIGHT - SEARCH_BAR_HEIGHT);
+
+    [_searchController.searchResultsTableView addPullToRefreshWithPullText:@"Pull To Refresh"
+                                                            pullTextColor:[UIColor blackColor]
+                                                             pullTextFont:REFRESH_TEXT_FONT(30)
+                                                           refreshingText:@"Refreshing"
+                                                      refreshingTextColor:MAIN_COLOR
+                                                       refreshingTextFont:REFRESH_TEXT_FONT(30)
+                                                                   action:^{
+                                                                       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0L), ^{
+                                                                           [weakSelf.manager loadData];
+                                                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                                                               [weakSelf filterContentForSearchText:weakSelf.searchString];
+                                                                               [weakSelf.searchController.searchResultsTableView reloadData];
+                                                                               [weakSelf.searchController.searchResultsTableView finishLoading];
+                                                                               [weakSelf.eventTableView reloadData];
+                                                                           });
+                                                                       });
+                                                                   }];
+
+    [self.view addSubview:searchBar];
+     // _eventTableView.tableHeaderView = searchBar;
+    
+    
 }
 
 - (void)setUI
@@ -89,6 +131,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if(tableView == _searchController.searchResultsTableView) {
+        return _searchData.count;
+    }    
     return _manager.dataList.count;
 }
 
@@ -103,8 +148,15 @@
     if (!cell) {
         cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    
+
     EventData *eventData = (EventData *)_manager.dataList[indexPath.row];
+    
+    if(tableView == self.searchController.searchResultsTableView) {
+        eventData = (EventData *)_searchData[indexPath.row];
+    } else {
+        eventData = (EventData *)_manager.dataList[indexPath.row];
+    }
+
     
     [cell initCellWithData:eventData];
     
@@ -122,6 +174,27 @@
     eventDetailViewController.detailURL = eventData.detailURL;
     [self .navigationController pushViewController:eventDetailViewController animated:YES];
 }
+
+
+- (void)filterContentForSearchText:(NSString*)searchString {
+    [self.searchData removeAllObjects];
+    for(EventData *data in _manager.dataList) {
+        NSString *str = data.title;
+        NSRange range = [str rangeOfString:searchString
+                                   options:NSCaseInsensitiveSearch];
+        if(range.length > 0) {
+            [self.searchData addObject:data];
+        }
+    }
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController*)controller shouldReloadTableForSearchString:(NSString*)searchString {
+    [self filterContentForSearchText: searchString];
+    [controller.searchResultsTableView setContentOffset:CGPointZero animated:NO]; // scroll to top
+    _searchString = searchString;
+    return YES;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
