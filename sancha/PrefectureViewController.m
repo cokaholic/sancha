@@ -10,6 +10,7 @@
 #import "PrefectureViewController.h"
 #import "Common.h"
 #import "PrefectureCellData.h"
+#import "FilteringManager.h"
 
 @interface PrefectureViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -51,6 +52,7 @@
         [tmp addObject:arr];
     }
     self.areaPrefectures = [NSArray arrayWithArray:tmp];
+    [[FilteringManager sharedManager] resetPrefecturesTmp];
 }
 
 - (void)initUI {
@@ -120,6 +122,7 @@
 
 - (void)didSelectFiltering
 {
+    [[FilteringManager sharedManager] savePrefectures];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

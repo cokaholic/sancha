@@ -10,6 +10,7 @@
 #import "EventDataManager.h"
 #import "PerformerCellData.h"
 #import "Common.h"
+#import "FilteringManager.h"
 
 @interface PerformerViewController () <UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -40,6 +41,7 @@
     }
     self.performers = [NSArray arrayWithArray:array];
     self.searchData = [NSMutableArray arrayWithCapacity: self.performers.count];
+    [[FilteringManager sharedManager] resetPerformersTmp];
 }
 
 - (void)initUI {
@@ -153,6 +155,7 @@
 
 - (void)didSelectFiltering
 {
+    [[FilteringManager sharedManager] savePerformers];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
