@@ -147,6 +147,14 @@
                                                                             action:@selector(goFilteringViewController)];
     
     FilteringManager *fmgr = [FilteringManager sharedManager];
+    
+    if (!fmgr.saved) {
+        // キャンセルで戻ってきた場合はリセット
+        [fmgr reset];
+    }
+    fmgr.saved = NO;
+    
+    
     if ([fmgr isFiltering]) {
         NSString *title = nil;
         if (fmgr.filteredPerformers.count > 0) {
@@ -165,16 +173,9 @@
     } else {
         self.navigationItem.titleView = _titleLogoView;
     }
-    
 
-    // load filtered data
-    if (!fmgr.saved) {
-        [fmgr reset];
-    }
-    fmgr.saved = NO;
     _dataList = [_manager getFilteredDataList];
     [_eventTableView reloadData];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
