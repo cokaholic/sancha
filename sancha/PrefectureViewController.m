@@ -57,6 +57,8 @@
 }
 
 - (void)initUI {
+    self.view.backgroundColor = BACKGROUND_COLOR;
+
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - 60 - GAD_SIZE_320x50.height)];
     tableView.delegate = self;
     tableView.dataSource = self;
