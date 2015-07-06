@@ -91,12 +91,6 @@ static FilteringManager *shared;
     return _sortedPerformers.array;
 }
 
-
-- (void)save {
-    _saved = YES;
-}
-
-
 - (void)setBOOL:(BOOL)flag forPrefecture:(NSString *)name {    
     if (flag) {
         [_sortedPrefectures insertObject:name];
@@ -138,5 +132,16 @@ static FilteringManager *shared;
 - (BOOL)isFiltering {
     return self.filteredPerformers.count > 0 || self.filteredPrefectures.count > 0;
 }
+
+- (void)clearPrefecture {
+    [_sortedPrefectures.array removeAllObjects];
+    [_userDefaults setObject:_sortedPrefectures.array forKey:@"filteredPrefectures"];
+}
+
+- (void)clearPerfomer {
+    [_sortedPerformers.array removeAllObjects];
+    [_userDefaults setObject:_sortedPerformers.array forKey:@"filteredPerformers"];
+}
+
 
 @end

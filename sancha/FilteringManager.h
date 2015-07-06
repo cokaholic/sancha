@@ -23,5 +23,7 @@
 - (BOOL)isFilteredPerformer:(NSString *)name;
 - (BOOL)isFilteredEvent:(EventData *)event;
 - (BOOL)isFiltering;
+- (void)clearPrefecture;
+- (void)clearPerfomer;
 
 @end

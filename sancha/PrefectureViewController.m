@@ -14,6 +14,7 @@
 
 @interface PrefectureViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) NSArray *areaNames;
 @property (nonatomic, retain) NSArray *areaPrefectures;
 @property (nonatomic, retain) GADBannerView *banner;
@@ -57,12 +58,12 @@
 - (void)initUI {
     self.view.backgroundColor = BACKGROUND_COLOR;
 
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - GAD_SIZE_320x50.height)];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    tableView.backgroundColor = CLEAR_COLOR;
-    [self.view addSubview:tableView];
-    [tableView reloadData];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - GAD_SIZE_320x50.height)];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.backgroundColor = CLEAR_COLOR;
+    [self.view addSubview:self.tableView];
+    [self.tableView reloadData];
     
     //広告
     _banner = [[GADBannerView alloc]initWithFrame:CGRectMake(0, [Common screenSize].height - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
@@ -72,12 +73,33 @@
     _banner.center = CGPointMake([Common screenSize].width/2, _banner.center.y);
     [self.view addSubview:_banner];
     [_banner loadRequest:[GADRequest request]];
+    
+    // navigation bar button item
+    UIBarButtonItem* clearButton = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"クリア"
+                                    style:UIBarButtonItemStyleBordered
+                                    target:self
+                                    action:@selector(didClearButtonPushed)];
+    self.navigationItem.rightBarButtonItem = clearButton;
 }
 
 - (void)setUI {
     
 }
 
+- (void)didClearButtonPushed {
+    FilteringManager *mgr = [FilteringManager sharedManager];
+    if (mgr.filteredPrefectures.count == 0) {
+        return;
+    }
+    [mgr clearPrefecture];
+    for (NSArray *arr in self.areaPrefectures) {
+        for (PrefectureCellData *data in arr) {
+            data.checked = NO;
+        }
+    }
+    [self.tableView reloadData];
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     PrefectureCellData *data = self.areaPrefectures[indexPath.section][indexPath.row];

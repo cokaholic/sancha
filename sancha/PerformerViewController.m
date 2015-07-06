@@ -75,10 +75,30 @@
     _banner.center = CGPointMake([Common screenSize].width/2, _banner.center.y);
     [self.view addSubview:_banner];
     [_banner loadRequest:[GADRequest request]];
+    
+    // navigation bar button item
+    UIBarButtonItem* clearButton = [[UIBarButtonItem alloc]
+                               initWithTitle:@"クリア"
+                               style:UIBarButtonItemStyleBordered
+                               target:self
+                               action:@selector(didClearButtonPushed)];
+    self.navigationItem.rightBarButtonItem = clearButton;
 }
 
 - (void)setUI {
 
+}
+
+- (void)didClearButtonPushed {
+    FilteringManager *mgr = [FilteringManager sharedManager];
+    if (mgr.filteredPerformers.count == 0) {
+        return;
+    }
+    [mgr clearPerfomer];
+    for (PerformerCellData *data in self.performers) {
+        data.checked = NO;
+    }
+    [self.tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
