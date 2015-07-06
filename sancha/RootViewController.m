@@ -147,14 +147,7 @@
                                                                             action:@selector(goFilteringViewController)];
     
     FilteringManager *fmgr = [FilteringManager sharedManager];
-    
-    if (!fmgr.saved) {
-        // キャンセルで戻ってきた場合はリセット
-        [fmgr reset];
-    }
-    fmgr.saved = NO;
-    
-    
+        
     if ([fmgr isFiltering]) {
         NSString *title = nil;
         if (fmgr.filteredPerformers.count > 0) {
@@ -275,11 +268,7 @@
 }
 
 - (void)goFilteringViewController
-{
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]init];
-    backButton.title = @"キャンセル";
-    self.navigationItem.backBarButtonItem = backButton;
-    
+{    
     [self.navigationController pushViewController:[[FilteringViewController alloc]init] animated:YES];
 }
 

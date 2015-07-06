@@ -14,7 +14,6 @@
 
 @interface PrefectureViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, retain) UIButton *doneButton;
 @property (nonatomic, retain) NSArray *areaNames;
 @property (nonatomic, retain) NSArray *areaPrefectures;
 @property (nonatomic, retain) GADBannerView *banner;
@@ -53,31 +52,17 @@
         [tmp addObject:arr];
     }
     self.areaPrefectures = [NSArray arrayWithArray:tmp];
-    [[FilteringManager sharedManager] resetPrefecturesTmp];
 }
 
 - (void)initUI {
     self.view.backgroundColor = BACKGROUND_COLOR;
 
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - 60 - GAD_SIZE_320x50.height)];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - GAD_SIZE_320x50.height)];
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.backgroundColor = CLEAR_COLOR;
     [self.view addSubview:tableView];
     [tableView reloadData];
-    
-    _doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _doneButton.frame = CGRectMake(10, [Common screenSize].height - 50 - GAD_SIZE_320x50.height, [Common screenSize].width - 20, 40);
-    _doneButton.backgroundColor = MAIN_COLOR;
-    _doneButton.layer.masksToBounds = YES;
-    _doneButton.layer.cornerRadius = _doneButton.frame.size.height/2;
-    [_doneButton setTitle:@"決定" forState:UIControlStateNormal];
-    _doneButton.titleLabel.font = DEFAULT_BOLD_FONT(16);
-    [_doneButton addTarget:self
-                         action:@selector(didSelectFiltering)
-               forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:_doneButton];
     
     //広告
     _banner = [[GADBannerView alloc]initWithFrame:CGRectMake(0, [Common screenSize].height - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
@@ -128,14 +113,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.areaNames.count;
-}
-
-#pragma mark - Button Action
-
-- (void)didSelectFiltering
-{
-    [[FilteringManager sharedManager] savePrefectures];
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

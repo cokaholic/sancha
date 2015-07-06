@@ -16,7 +16,6 @@
 @interface FilteringViewController () <UITableViewDelegate, UITableViewDataSource, FilteringTableViewCellDelegate>
 {
     UITableView *_filteringTableView;
-    UIButton *_filteringButton;
     
     NSArray *_sectionIconList;
     NSArray *_sectionTitleList;
@@ -61,25 +60,12 @@ static NSString * const kCellIdentifier = @"FilteringCell";
     titleLabel.text = @"フィルター";
     self.navigationItem.titleView = titleLabel;
     
-    _filteringTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - 60 - GAD_SIZE_320x50.height)];
+    _filteringTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - GAD_SIZE_320x50.height)];
     _filteringTableView.backgroundColor = ACCENT_COLOR;
     _filteringTableView.dataSource = self;
     _filteringTableView.delegate = self;
     [self.view addSubview:_filteringTableView];
-    
-    _filteringButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _filteringButton.frame = CGRectMake(10, [Common screenSize].height - 50 - GAD_SIZE_320x50.height, [Common screenSize].width - 20, 40);
-    _filteringButton.backgroundColor = MAIN_COLOR;
-    _filteringButton.layer.masksToBounds = YES;
-    _filteringButton.layer.cornerRadius = _filteringButton.frame.size.height/2;
-    [_filteringButton setTitle:@"この条件で絞り込む" forState:UIControlStateNormal];
-    _filteringButton.titleLabel.font = DEFAULT_BOLD_FONT(16);
-    [_filteringButton addTarget:self
-                      action:@selector(doFiltering)
-            forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:_filteringButton];
-    
+
     //広告
     _banner = [[GADBannerView alloc]initWithFrame:CGRectMake(0, [Common screenSize].height - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
     _banner.adUnitID = MY_BANNER_UNIT_ID2;
@@ -184,10 +170,6 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]init];
-    backButton.title = @"キャンセル";
-    self.navigationItem.backBarButtonItem = backButton;
-    
     if (indexPath.section==0 && indexPath.row==0) {
         [self.navigationController pushViewController:[[PerformerViewController alloc]init] animated:YES];
     }
@@ -201,14 +183,6 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 - (void)didSelectDeleteButton
 {
     [_filteringTableView reloadData];
-}
-
-#pragma mark - Button Action
-
-- (void)doFiltering
-{
-    [_manager save];
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

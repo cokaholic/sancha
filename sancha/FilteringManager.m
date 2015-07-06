@@ -18,8 +18,6 @@
 @property (nonatomic, retain) NSMutableArray *filteredPerformers;
 @property (nonatomic, retain) SortedArray *sortedPerformers;
 @property (nonatomic, retain) SortedArray *sortedPrefectures;
-@property (nonatomic, retain) SortedArray *sortedPerformersTmp;
-@property (nonatomic, retain) SortedArray *sortedPrefecturesTmp;
 
 
 @end
@@ -61,27 +59,22 @@ static FilteringManager *shared;
             return [_prefectureToIndex[id1] compare:_prefectureToIndex[id2]];
         };
         _sortedPrefectures = [[SortedArray alloc] initWithCmp:prefectureCmp];
-        _sortedPrefecturesTmp = [[SortedArray alloc] initWithCmp:prefectureCmp];
         
         id performerCmp = ^(id id1, id id2) {
             return [id1 compare:id2];
         };
-        
         _sortedPerformers = [[SortedArray alloc] initWithCmp:performerCmp];
-        _sortedPerformersTmp = [[SortedArray alloc] initWithCmp:performerCmp];
 
-        [self reset];
+        [self loadFromUserDefaults];
     }
     return self;
 }
 
-- (void)reset {
+- (void)loadFromUserDefaults {
     NSMutableArray *tmp;
     tmp = [_userDefaults objectForKey:@"filteredPerformers"];
     if (tmp != nil) {
         _sortedPerformers.array = [tmp mutableCopy];
-        _sortedPerformersTmp.array = [tmp mutableCopy];
-        _filteredPerformers = _sortedPerformers.array;
     }
     tmp = [_userDefaults objectForKey:@"filteredPrefectures"];
     if (tmp != nil) {
@@ -90,46 +83,19 @@ static FilteringManager *shared;
     }
 }
 
+- (NSMutableArray *)filteredPrefectures {
+    return _sortedPrefectures.array;
+}
+
+- (NSMutableArray *)filteredPerformers {
+    return _sortedPerformers.array;
+}
+
+
 - (void)save {
     _saved = YES;
-    [_userDefaults setObject:_sortedPrefectures.array forKey:@"filteredPrefectures"];
-    [_userDefaults setObject:_sortedPerformers.array forKey:@"filteredPerformers"];
 }
 
-- (void)resetPrefecturesTmp {
-    _sortedPrefecturesTmp.array = [_sortedPrefectures.array mutableCopy];
-}
-
-- (void)savePrefectures {
-    _sortedPrefectures.array = [_sortedPrefecturesTmp.array mutableCopy];
-    _filteredPrefectures = _sortedPrefectures.array;
-}
-
-- (void)resetPerformersTmp {
-    _sortedPerformersTmp.array = [_sortedPerformers.array mutableCopy];
-}
-
-- (void)savePerformers {
-    _sortedPerformers.array = [_sortedPerformersTmp.array mutableCopy];
-    _filteredPerformers = _sortedPerformers.array;
-}
-
-
-- (void)setTmpBOOL:(BOOL)flag forPrefecture:(NSString *)name {
-    if (flag) {
-        [_sortedPrefecturesTmp insertObject:name];
-    } else {
-        [_sortedPrefecturesTmp removeObject:name];
-    }
-}
-
-- (void)setTmpBOOL:(BOOL)flag forPerformer:(NSString *)name {
-    if (flag) {
-        [_sortedPerformersTmp insertObject:name];
-    } else {
-        [_sortedPerformersTmp removeObject:name];
-    }
-}
 
 - (void)setBOOL:(BOOL)flag forPrefecture:(NSString *)name {    
     if (flag) {
@@ -137,7 +103,7 @@ static FilteringManager *shared;
     } else {
         [_sortedPrefectures removeObject:name];
     }
-    _filteredPrefectures = _sortedPrefectures.array;
+    [_userDefaults setObject:_sortedPrefectures.array forKey:@"filteredPrefectures"];
 }
 
 - (void)setBOOL:(BOOL)flag forPerformer:(NSString *)name {
@@ -146,7 +112,7 @@ static FilteringManager *shared;
     } else {
         [_sortedPerformers removeObject:name];
     }
-    _filteredPerformers = _sortedPerformers.array;
+    [_userDefaults setObject:_sortedPerformers.array forKey:@"filteredPerformers"];
 }
 
 
@@ -159,8 +125,8 @@ static FilteringManager *shared;
 }
 
 - (BOOL)isFilteredEvent:(EventData *)event {
-    if (_filteredPrefectures.count > 0 && ![self isFilteredPrefecture:event.prefecture]) return NO;
-    if (_filteredPerformers.count == 0) return YES;
+    if (self.filteredPrefectures.count > 0 && ![self isFilteredPrefecture:event.prefecture]) return NO;
+    if (self.filteredPerformers.count == 0) return YES;
     for (NSString *performer in event.performers) {
         if ([self isFilteredPerformer:performer]) {
             return YES;
@@ -170,7 +136,7 @@ static FilteringManager *shared;
 }
 
 - (BOOL)isFiltering {
-    return _filteredPerformers.count > 0 || _filteredPrefectures.count > 0;
+    return self.filteredPerformers.count > 0 || self.filteredPrefectures.count > 0;
 }
 
 @end
