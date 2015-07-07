@@ -14,6 +14,7 @@
 
 @property (nonatomic, retain, readwrite) NSIndexPath *indexPath;
 @property (nonatomic, retain) NSMutableArray *deleteButtonArray;
+
 @end
 
 @implementation FilteringTableViewCell
@@ -39,11 +40,40 @@
 {
     _indexPath = indexPath;
     self.rightUtilityButtons = _deleteButtonArray;
+    
+    _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _deleteButton.frame = CGRectMake([Common screenSize].width - DEFAULT_CELL_HEIGHT, 0, DEFAULT_CELL_HEIGHT, DEFAULT_CELL_HEIGHT);
+    _deleteButton.backgroundColor = CLEAR_COLOR;
+    [_deleteButton setBackgroundImage:[UIImage imageNamed:@"icon_cancel"] forState:UIControlStateNormal];
+    _deleteButton.layer.masksToBounds = YES;
+    _deleteButton.layer.cornerRadius = CGRectGetHeight(_deleteButton.frame)/2;
+    [_deleteButton addTarget:self
+                      action:@selector(selectDeleteButton)
+            forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:_deleteButton];
 }
 
 - (void)removeDeleteButton
 {
     self.rightUtilityButtons = @[];
+    
+    for (id view in self.subviews) {
+        if ([[view class] isEqual:[UIButton class]]) {
+            [view removeFromSuperview];
+        }
+    }
+}
+
+- (void)selectDeleteButton
+{
+    if (_indexPath.section==0) {
+        [[FilteringManager sharedManager] setBOOL:NO forPerformer:self.textLabel.text];
+    }
+    else if (_indexPath.section==1) {
+        [[FilteringManager sharedManager] setBOOL:NO forPrefecture:self.textLabel.text];
+    }
+    
+    [_deleteButtonDelegate didSelectDeleteButton];
 }
 
 @end

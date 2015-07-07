@@ -13,7 +13,7 @@
 #import "PerformerViewController.h"
 #import "PrefectureViewController.h"
 
-@interface FilteringViewController () <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate>
+@interface FilteringViewController () <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate, FilteringTableViewCellDeleteButtonDelegate>
 {
     UITableView *_filteringTableView;
     
@@ -157,6 +157,7 @@ static NSString * const kCellIdentifier = @"FilteringCell";
         cell.textLabel.textColor = DEFAULT_TEXT_COLOR;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.deleteButtonDelegate = self;
         [cell addDeleteButtonWithIndexPath:indexPath];
     }
     
@@ -181,6 +182,18 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 
 #pragma mark - SWTableViewCell Delegate
 
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state
+{
+    FilteringTableViewCell *filteringCell = (FilteringTableViewCell *)cell;
+    
+    if (state==kCellStateCenter) {
+        filteringCell.deleteButton.hidden = NO;
+    }
+    else {
+        filteringCell.deleteButton.hidden = YES;
+    }
+}
+
 - (void)swipeableTableViewCell:(FilteringTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
 {
     if (cell.indexPath.section==0) {
@@ -190,6 +203,13 @@ static NSString * const kCellIdentifier = @"FilteringCell";
         [[FilteringManager sharedManager] setBOOL:NO forPrefecture:cell.textLabel.text];
     }
 
+    [_filteringTableView reloadData];
+}
+
+#pragma mark - FilteringTableViewCellDeleteButton Delegate
+
+- (void)didSelectDeleteButton
+{
     [_filteringTableView reloadData];
 }
 

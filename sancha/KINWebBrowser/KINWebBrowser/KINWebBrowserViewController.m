@@ -562,7 +562,7 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 
 - (void)launchExternalAppWithURL:(NSURL *)URL {
     self.URLToLaunchWithPermission = URL;
-    [self.externalAppPermissionAlertView show];
+//    [self.externalAppPermissionAlertView show];
 }
 
 #pragma mark - UIAlertViewDelegate

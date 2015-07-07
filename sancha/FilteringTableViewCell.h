@@ -9,11 +9,24 @@
 #import <UIKit/UIKit.h>
 #import <SWTableViewCell.h>
 
+@protocol FilteringTableViewCellDeleteButtonDelegate;
+
 @interface FilteringTableViewCell : SWTableViewCell
 
+@property (nonatomic, weak) id<FilteringTableViewCellDeleteButtonDelegate>deleteButtonDelegate;
+
+@property (nonatomic, retain) UIButton *deleteButton;
 @property (nonatomic, retain, readonly) NSIndexPath *indexPath;
 
 - (void)addDeleteButtonWithIndexPath:(NSIndexPath *)indexPath;
 - (void)removeDeleteButton;
+
+@end
+
+@protocol FilteringTableViewCellDeleteButtonDelegate <NSObject>
+
+@required
+
+- (void)didSelectDeleteButton;
 
 @end

@@ -46,6 +46,8 @@
 		9FF3EAF91B478247003A7464 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAF81B478247003A7464 /* RootViewController.m */; };
 		9FF3EAFC1B478552003A7464 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAFB1B478552003A7464 /* EventTableViewCell.m */; };
 		9FF3EAFF1B478B09003A7464 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF3EAFE1B478B09003A7464 /* Common.m */; };
+		9FF41BEE1B4B7FA200218366 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FF41BF01B4B7FA200218366 /* InfoPlist.strings */; };
+		9FF41BF31B4B7FA300218366 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FF41BF51B4B7FA300218366 /* InfoPlist.strings */; };
 		F35F601FD36B6EE2D1E924A7 /* libPods-sancha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B187908D7DDED19C0DD6E6D7 /* libPods-sancha.a */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,8 @@
 		9FF3EAFB1B478552003A7464 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
 		9FF3EAFD1B478B09003A7464 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		9FF3EAFE1B478B09003A7464 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		9FF41BEF1B4B7FA200218366 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9FF41BF41B4B7FA300218366 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B187908D7DDED19C0DD6E6D7 /* libPods-sancha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sancha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D91AA0B8DEFD3662D3685F /* Pods-sancha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sancha.release.xcconfig"; path = "Pods/Target Support Files/Pods-sancha/Pods-sancha.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -341,6 +345,7 @@
 		9FF3EAD11B477E9B003A7464 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9FF41BF51B4B7FA300218366 /* InfoPlist.strings */,
 				9FF3EAD21B477E9B003A7464 /* Info.plist */,
 				9FF3EAD31B477E9B003A7464 /* main.m */,
 			);
@@ -359,6 +364,7 @@
 		9FF3EAEB1B477E9B003A7464 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9FF41BF01B4B7FA200218366 /* InfoPlist.strings */,
 				9FF3EAEC1B477E9B003A7464 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -437,7 +443,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 				cs,
 				de,
@@ -475,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F78D6271B4923980032BC8D /* LICENSE in Resources */,
+				9FF41BF31B4B7FA300218366 /* InfoPlist.strings in Resources */,
 				9F78D62C1B4923980032BC8D /* forwardbutton.png in Resources */,
 				9F78D6301B4923980032BC8D /* LICENSE in Resources */,
 				9FF3EADF1B477E9B003A7464 /* Images.xcassets in Resources */,
@@ -494,6 +500,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF41BEE1B4B7FA200218366 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +587,25 @@
 			targetProxy = 9FF3EAE81B477E9B003A7464 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FF41BF01B4B7FA200218366 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FF41BEF1B4B7FA200218366 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9FF41BF51B4B7FA300218366 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FF41BF41B4B7FA300218366 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9FF3EAEF1B477E9B003A7464 /* Debug */ = {
