@@ -15,11 +15,11 @@
 
 @property (nonatomic, weak) id<FilteringTableViewCellDeleteButtonDelegate>deleteButtonDelegate;
 
-@property (nonatomic, retain) UIButton *deleteButton;
 @property (nonatomic, retain, readonly) NSIndexPath *indexPath;
 
 - (void)addDeleteButtonWithIndexPath:(NSIndexPath *)indexPath;
 - (void)removeDeleteButton;
+- (void)setDeleteButtonHidden:(BOOL)isHidden;
 
 @end
 

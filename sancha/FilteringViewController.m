@@ -184,14 +184,9 @@ static NSString * const kCellIdentifier = @"FilteringCell";
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state
 {
-    FilteringTableViewCell *filteringCell = (FilteringTableViewCell *)cell;
-    
-    if (state==kCellStateCenter) {
-        filteringCell.deleteButton.hidden = NO;
-    }
-    else {
-        filteringCell.deleteButton.hidden = YES;
-    }
+    NSIndexPath *indexPath = [_filteringTableView indexPathForCell:cell];
+    FilteringTableViewCell *filteringCell = (FilteringTableViewCell *)[_filteringTableView cellForRowAtIndexPath:indexPath];
+    [filteringCell setDeleteButtonHidden:![cell isUtilityButtonsHidden]];
 }
 
 - (void)swipeableTableViewCell:(FilteringTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
