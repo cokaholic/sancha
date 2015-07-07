@@ -9,6 +9,7 @@ target 'sancha' do
   pod 'AutoScrollLabel'
   pod 'Google-Mobile-Ads-SDK', '~> 7.0'
   pod 'TUSafariActivity', '~> 1.0'
+  pod 'SWTableViewCell', '~> 0.3.7'
 end
 
 target 'sanchaTests' do

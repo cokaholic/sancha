@@ -11,16 +11,22 @@
 #import "FilteringManager.h"
 
 @interface FilteringTableViewCell ()
-{
-    UIButton *_deleteButton;
-    NSIndexPath *_cellIndexPath;
-}
+
+@property (nonatomic, retain, readwrite) NSIndexPath *indexPath;
+@property (nonatomic, retain) NSMutableArray *deleteButtonArray;
 @end
 
 @implementation FilteringTableViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        _deleteButtonArray = [NSMutableArray new];
+        [_deleteButtonArray sw_addUtilityButtonWithColor:
+         [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
+                                                   title:@"削除"];        
+    }
+    return self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -31,39 +37,13 @@
 
 - (void)addDeleteButtonWithIndexPath:(NSIndexPath *)indexPath
 {
-    _cellIndexPath = indexPath;
-    
-    _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _deleteButton.frame = CGRectMake([Common screenSize].width - 34, 10, DEFAULT_CELL_HEIGHT - 20, DEFAULT_CELL_HEIGHT - 20);
-    _deleteButton.backgroundColor = CANCEL_COLOR;
-    [_deleteButton setBackgroundImage:[UIImage imageNamed:@"icon_cancel"] forState:UIControlStateNormal];
-    _deleteButton.layer.masksToBounds = YES;
-    _deleteButton.layer.cornerRadius = CGRectGetHeight(_deleteButton.frame)/2;
-    [_deleteButton addTarget:self
-                      action:@selector(selectDeleteButton)
-            forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:_deleteButton];
+    _indexPath = indexPath;
+    self.rightUtilityButtons = _deleteButtonArray;
 }
 
 - (void)removeDeleteButton
 {
-    for (id view in self.subviews) {
-        if ([[view class] isEqual:[UIButton class]]) {
-            [view removeFromSuperview];
-        }
-    }
-}
-
-- (void)selectDeleteButton
-{
-    if (_cellIndexPath.section==0) {
-        [[FilteringManager sharedManager] setBOOL:NO forPerformer:self.textLabel.text];
-    }
-    else if (_cellIndexPath.section==1) {
-        [[FilteringManager sharedManager] setBOOL:NO forPrefecture:self.textLabel.text];
-    }
-    
-    [_delegate didSelectDeleteButton];
+    self.rightUtilityButtons = @[];
 }
 
 @end

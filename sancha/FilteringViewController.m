@@ -13,7 +13,7 @@
 #import "PerformerViewController.h"
 #import "PrefectureViewController.h"
 
-@interface FilteringViewController () <UITableViewDelegate, UITableViewDataSource, FilteringTableViewCellDelegate>
+@interface FilteringViewController () <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate>
 {
     UITableView *_filteringTableView;
     
@@ -137,11 +137,13 @@ static NSString * const kCellIdentifier = @"FilteringCell";
     FilteringTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     if (!cell) {
         cell = [[FilteringTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier];
+        cell.delegate = self;
     }
     
     if (indexPath.row==0) {
         cell.textLabel.text = [NSString stringWithFormat:@"%@を選ぶ",_sectionTitleList[indexPath.section]];
         cell.textLabel.textColor = PALE_TEXT_COLOR;
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         [cell removeDeleteButton];
     }
@@ -152,10 +154,9 @@ static NSString * const kCellIdentifier = @"FilteringCell";
         else {
             cell.textLabel.text = _manager.filteredPrefectures[indexPath.row-1];
         }
-        
         cell.textLabel.textColor = DEFAULT_TEXT_COLOR;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.delegate = self;
+        cell.accessoryType = UITableViewCellAccessoryNone;
         [cell addDeleteButtonWithIndexPath:indexPath];
     }
     
@@ -178,10 +179,17 @@ static NSString * const kCellIdentifier = @"FilteringCell";
     }
 }
 
-#pragma mark - FilteringTableViewCell Delegate
+#pragma mark - SWTableViewCell Delegate
 
-- (void)didSelectDeleteButton
+- (void)swipeableTableViewCell:(FilteringTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
 {
+    if (cell.indexPath.section==0) {
+        [[FilteringManager sharedManager] setBOOL:NO forPerformer:cell.textLabel.text];
+    }
+    else if (cell.indexPath.section==1) {
+        [[FilteringManager sharedManager] setBOOL:NO forPrefecture:cell.textLabel.text];
+    }
+
     [_filteringTableView reloadData];
 }
 
