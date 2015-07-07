@@ -28,7 +28,7 @@ static NSString *encodeByAddingPercentEscapes(NSString *input) {
 
 - (void)commonInit {
     _callbackSource = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"CFBundleName"];
-    _activityTitle = @"Open in Chrome";
+    _activityTitle = @"Chromeで開く";
 }
 
 - (id)init {

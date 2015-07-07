@@ -8,6 +8,7 @@ target 'sancha' do
   pod 'PullToRefreshCoreText', '~> 0.2'
   pod 'AutoScrollLabel'
   pod 'Google-Mobile-Ads-SDK', '~> 7.0'
+  pod 'TUSafariActivity', '~> 1.0'
 end
 
 target 'sanchaTests' do
