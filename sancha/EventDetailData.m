@@ -47,6 +47,11 @@
             completionHandler(error);
             return;
         }
+        NSInteger statusCode = [((NSHTTPURLResponse *)response) statusCode];
+        if (statusCode >= 400) {
+            completionHandler([NSError errorWithDomain:[NSString stringWithFormat:@"error code %ld", statusCode] code:0 userInfo:nil]);
+        }
+        
         NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         
         if (![self parseHTML:html]) {
