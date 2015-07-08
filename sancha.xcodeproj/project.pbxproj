@@ -161,6 +161,8 @@
 				38D2CE741B478ADE00110146 /* HTMLParser */,
 				9FF3EAFD1B478B09003A7464 /* Common.h */,
 				9FF3EAFE1B478B09003A7464 /* Common.m */,
+				388535E71B49100500A2BD37 /* SortedArray.h */,
+				388535E81B49100500A2BD37 /* SortedArray.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -177,8 +179,6 @@
 				38D2CE931B48066100110146 /* PrefectureCellData.m */,
 				38D2CE9B1B480E0F00110146 /* PerformerCellData.h */,
 				38D2CE9C1B480E0F00110146 /* PerformerCellData.m */,
-				388535E71B49100500A2BD37 /* SortedArray.h */,
-				388535E81B49100500A2BD37 /* SortedArray.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";

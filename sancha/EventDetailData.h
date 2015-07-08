@@ -19,6 +19,6 @@
 @property(nonatomic, retain, readonly) NSURL *officialPageURL;
 
 - (id)initWithURL:(NSURL *)url completionHandler:(void (^)(NSError *error))completionHandler;
-- (void)reloadData;
+- (void)reloadData:(void (^)(NSError *error))completionHandler;
 
 @end

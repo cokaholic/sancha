@@ -77,12 +77,6 @@ static EventDataManager *shared;
         
         completionHandler(error);
     }];
-    
-//    NSError *error = nil;
-//    NSString *html = [NSString stringWithContentsOfURL:urlRequest encoding:NSUTF8StringEncoding error:&error];
-//    if (error) {
-//        // error!!!!
-//    }
 }
 
 - (BOOL) parseHTML:(NSString*)html {
