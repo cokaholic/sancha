@@ -60,9 +60,13 @@ static EventDataManager *shared;
         }
         
         // set performeœrs
+        NSMutableSet *ngStrings = [NSMutableSet setWithArray:@[@"他", @"主演キャスト", @"未定"]];
         NSMutableSet *set = [NSMutableSet set];
         for (EventData *event in self.dataList) {
             for (NSString *performer in event.performers) {
+                if ([ngStrings containsObject:performer]) {
+                    continue;
+                }
                 [set addObject:performer];
             }
         }
