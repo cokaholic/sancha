@@ -136,6 +136,7 @@
     }
 
     cell.textLabel.text = data.name;
+    cell.textLabel.textColor = DEFAULT_TEXT_COLOR;
 
     return cell;
 }

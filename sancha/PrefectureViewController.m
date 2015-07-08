@@ -71,7 +71,6 @@
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = CLEAR_COLOR;
     [self.view addSubview:self.tableView];
-    [self.tableView reloadData];
     
     //広告
     _banner = [[GADBannerView alloc]initWithFrame:CGRectMake(0, [Common screenSize].height - GAD_SIZE_320x50.height, GAD_SIZE_320x50.width, GAD_SIZE_320x50.height)];
@@ -92,7 +91,7 @@
 }
 
 - (void)setUI {
-    
+    [self.tableView reloadData];
 }
 
 - (void)didClearButtonPushed {
@@ -119,8 +118,25 @@
     return ((NSArray*)self.areaPrefectures[section]).count;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return self.areaNames[section];
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width, DEFAULT_HEADER_HEIGHT)];
+    headerView.backgroundColor = BACKGROUND_COLOR;
+    
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, 100, 30)];
+    titleLabel.backgroundColor = CLEAR_COLOR;
+    titleLabel.font = DEFAULT_BOLD_FONT(16);
+    titleLabel.textColor = DEFAULT_TEXT_COLOR;
+    titleLabel.textAlignment = NSTextAlignmentLeft;
+    titleLabel.text = self.areaNames[section];
+    [headerView addSubview:titleLabel];
+    
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
+{
+    return DEFAULT_HEADER_HEIGHT;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -131,6 +147,7 @@
     }
     PrefectureCellData *data = self.areaPrefectures[indexPath.section][indexPath.row];
     cell.textLabel.text = data.name;
+    cell.textLabel.textColor = DEFAULT_TEXT_COLOR;
     if (data.checked) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {

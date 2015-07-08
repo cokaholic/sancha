@@ -113,7 +113,7 @@ static NSString * const kCellIdentifier = @"FilteringCell";
     
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 0, 100, 30)];
     titleLabel.backgroundColor = CLEAR_COLOR;
-    titleLabel.font = DEFAULT_BOLD_FONT(14);
+    titleLabel.font = DEFAULT_BOLD_FONT(16);
     titleLabel.textColor = DEFAULT_TEXT_COLOR;
     titleLabel.textAlignment = NSTextAlignmentLeft;
     titleLabel.text = _sectionTitleList[section];
