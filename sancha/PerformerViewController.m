@@ -45,6 +45,14 @@
 
 - (void)initUI {
     self.view.backgroundColor = BACKGROUND_COLOR;
+    
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 150, 44)];
+    titleLabel.backgroundColor = CLEAR_COLOR;
+    titleLabel.textColor = DEFAULT_TEXT_COLOR;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = DEFAULT_FONT(16);
+    titleLabel.text = @"出演者";
+    self.navigationItem.titleView = titleLabel;
 
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - GAD_SIZE_320x50.height)];
     self.tableView.delegate = self;
@@ -55,7 +63,7 @@
 
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44.0f)];
     UIBarButtonItem *barButton = [UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil];
-    [barButton setTitle:@"Close"];
+    [barButton setTitle:@"閉じる"];
     barButton.tintColor = CANCEL_COLOR;
     searchBar.tintColor = CANCEL_COLOR;
     searchBar.barTintColor = BACKGROUND_COLOR;

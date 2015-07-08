@@ -57,7 +57,7 @@ static NSString * const kCellIdentifier = @"FilteringCell";
     titleLabel.textColor = DEFAULT_TEXT_COLOR;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.font = DEFAULT_FONT(16);
-    titleLabel.text = @"フィルター";
+    titleLabel.text = @"絞り込み";
     self.navigationItem.titleView = titleLabel;
     
     _filteringTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - GAD_SIZE_320x50.height)];

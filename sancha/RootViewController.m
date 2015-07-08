@@ -114,7 +114,7 @@
     // search
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, SEARCH_BAR_HEIGHT)];
     UIBarButtonItem *barButton = [UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil];
-    [barButton setTitle:@"Close"];
+    [barButton setTitle:@"閉じる"];
     barButton.tintColor = CANCEL_COLOR;
     searchBar.tintColor = CANCEL_COLOR;
     searchBar.barTintColor = BACKGROUND_COLOR;

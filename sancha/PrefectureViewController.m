@@ -58,6 +58,14 @@
 - (void)initUI {
     self.view.backgroundColor = BACKGROUND_COLOR;
 
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 150, 44)];
+    titleLabel.backgroundColor = CLEAR_COLOR;
+    titleLabel.textColor = DEFAULT_TEXT_COLOR;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = DEFAULT_FONT(16);
+    titleLabel.text = @"会場";
+    self.navigationItem.titleView = titleLabel;
+
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [Common screenSize].width, [Common screenSize].height - GAD_SIZE_320x50.height)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
