@@ -8,6 +8,7 @@
 
 #import "EventDetailData.h"
 #import "HTMLParser.h"
+#import "NSData+EncodeHelpers.h"
 
 @interface EventDetailData()
 
@@ -52,7 +53,7 @@
             completionHandler([NSError errorWithDomain:[NSString stringWithFormat:@"error code %ld", statusCode] code:0 userInfo:nil]);
         }
         
-        NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSString *html = [data UTF8String];
         
         if (![self parseHTML:html]) {
             completionHandler([NSError errorWithDomain:@"html structure error" code:0 userInfo:nil]);

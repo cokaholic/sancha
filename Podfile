@@ -7,7 +7,7 @@ target 'sancha' do
   pod 'SVProgressHUD'
   pod 'PullToRefreshCoreText', '~> 0.2'
   pod 'AutoScrollLabel'
-  pod 'Google-Mobile-Ads-SDK', '~> 7.0'
+  pod 'Google-Mobile-Ads-SDK', '~> 7.6.0'
   pod 'TUSafariActivity', '~> 1.0'
   pod 'SWTableViewCell', '~> 0.3.7'
 end

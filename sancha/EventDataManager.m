@@ -10,6 +10,7 @@
 #import "EventData.h"
 #import "HTMLParser.h"
 #import "FilteringManager.h"
+#import "NSData+EncodeHelpers.h"
 #import <SVProgressHUD.h>
 
 @interface EventDataManager ()
@@ -52,7 +53,7 @@ static EventDataManager *shared;
             completionHandler([NSError errorWithDomain:[NSString stringWithFormat:@"error code %ld", statusCode] code:0 userInfo:nil]);
         }
         
-        NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSString *html = [data UTF8String];
         
         if (![self parseHTML:html]) {
             completionHandler([NSError errorWithDomain:@"html structure error" code:0 userInfo:nil]);

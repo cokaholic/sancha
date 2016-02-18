@@ -1,6 +1,6 @@
 PODS:
   - AutoScrollLabel (0.4.1)
-  - Google-Mobile-Ads-SDK (7.3.1)
+  - Google-Mobile-Ads-SDK (7.6.0)
   - PullToRefreshCoreText (0.2)
   - SVProgressHUD (1.1.3)
   - SWTableViewCell (0.3.7)
@@ -8,7 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - AutoScrollLabel
-  - Google-Mobile-Ads-SDK (~> 7.0)
+  - Google-Mobile-Ads-SDK (~> 7.6.0)
   - PullToRefreshCoreText (~> 0.2)
   - SVProgressHUD
   - SWTableViewCell (~> 0.3.7)
@@ -16,10 +16,10 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AutoScrollLabel: afe272014f82c707c9203f1383f3fe4e32443fa2
-  Google-Mobile-Ads-SDK: 3647bfddc7384c514ab96a8bed86d98b31e623e4
+  Google-Mobile-Ads-SDK: 0290020329c61183c4685304264b73382bc49fb4
   PullToRefreshCoreText: c843e71fc5ae5b033c0281067368905efd05c7b2
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.39.0
